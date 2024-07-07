@@ -1,1 +1,12 @@
 /* app global css */
+
+@font-face {
+    font-family: 'Yekan';
+    src: url('/fonts/Yekan.ttf');
+}
+
+body{
+    font-family: 'Yekan' !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
