@@ -1,12 +1,12 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <div class="style relative-position" >
-      <q-header  class="q-pa-md   absolute text-white" elevated style="width: 1280px; margin: auto; border-radius: 1000px;margin-top:60px;background: #CCE4FF;">
+    <div class="banner-styles relative-position" >
+      <q-header  class="q-pa-md header  absolute text-white" elevated >
       <ToolbarNavigation/>
     </q-header>
     <h1 class="absolute fixed-center  banner-title text-white flex justify-center items-center">بیمه،راه جبران خسارت</h1>
     </div>
-    <q-page-container>
+    <q-page-container style="padding-top: 0px; transform: translateY(-50px);"> 
       <router-view />
     </q-page-container>
     <FooterSection/>
@@ -29,7 +29,7 @@ export default defineComponent({
 })
 </script>
 <style scoped>
-.style{
+.banner-styles{
   background: url(../assets/banner.png);
   background-position: center;
   background-size: cover;
@@ -39,5 +39,16 @@ export default defineComponent({
 }
 .banner-title{
   font-weight: 900;
+  background-color: #007BFF;
+  opacity: 40%;
+  width: 100%;
+  padding: 10px;
+}
+.header{
+  width: 1280px;
+   margin: auto; 
+   border-radius: 1000px;
+   margin-top:60px;
+   background: #CCE4FF;
 }
 </style>
