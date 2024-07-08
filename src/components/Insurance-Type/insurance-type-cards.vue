@@ -1,5 +1,5 @@
 <template>
- <div class="row justify-center items-center cards-container shadow-10  absolute-top q-pa-xl">
+ <div class="row justify-center items-center cards-container shadow-10   q-pa-xl">
   <div class="col-md-auto col-sm-3 card-column" v-for="item in insuranceTypes" :key="item.id">
     <q-card
       class="card text-white"

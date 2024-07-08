@@ -6,7 +6,7 @@
     </q-header>
     <h1 class="absolute fixed-center  banner-title text-white flex justify-center items-center">بیمه،راه جبران خسارت</h1>
     </div>
-    <q-page-container style="padding-top: 0px; transform: translateY(-50px);"> 
+    <q-page-container> 
       <router-view />
     </q-page-container>
     <FooterSection/>
