@@ -43,7 +43,7 @@
     margin-top: 4rem;
    }
    .just-click-title{
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     transform: translateY(30px);
    }
@@ -56,7 +56,7 @@
     margin-top: 4rem;
    }
    .insurance-advice-title{
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     transform: translateY(30px);
    }

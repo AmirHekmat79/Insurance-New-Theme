@@ -1,10 +1,12 @@
 <template>
   <q-page class="flex flex-center ">
    <InsuranceTypeCards/>
-   <div style="width:100%">
-    <InsuranceFeatures/>
-   </div>
-   <ConsultRequest/>
+    <div class="column">
+      <div style="width: 100%;">
+        <InsuranceFeatures/>
+      </div>
+      <ConsultRequest/>
+    </div>
   </q-page>
 </template>
 

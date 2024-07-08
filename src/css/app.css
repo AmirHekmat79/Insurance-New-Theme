@@ -1,12 +1,12 @@
 /* app global css */
 
 @font-face {
-    font-family: 'Yekan';
-    src: url('/fonts/Yekan.ttf');
+    font-family: 'iransans';
+    src: url('/fonts/IranianSans.ttf');
 }
 
 body{
-    font-family: 'Yekan' !important;
+    font-family: 'iransans' !important;
     margin: 0px !important;
     padding: 0px !important;
 }

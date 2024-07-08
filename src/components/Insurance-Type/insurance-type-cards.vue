@@ -6,7 +6,7 @@
     >
       <q-card-section class="text-center q-pa-sm">
         <q-img class="card-img fixed-top" :src="item.src" ></q-img>
-        <div class="text-h5 card-title q-my-lg">{{ item.title }}</div>
+        <div class="text-h6 card-title q-my-lg">{{ item.title }}</div>
         
       </q-card-section>
     </q-card>
