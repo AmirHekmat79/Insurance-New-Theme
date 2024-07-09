@@ -1,13 +1,13 @@
 <template>
- <div class="column">
-  <div class="just-click-title-container text-center q-ml-auto"><p class="just-click-title">فقط با چند کلیک</p>  </div>
-<div class="row justify-center items-center q-my-md">
-  <div class="col-md-3 q-ma-md text-center " v-for="item in insuranceFeatures" :key="item.id">
-   <div class="feature-img-container text-center"><q-img :src="item.src" width="80px"></q-img></div>
+ <div class="column justify-between items-center q-pa-lg">
+  <div class="just-click-title-container  q-ml-auto"><p class="just-click-title">فقط با چند کلیک</p>  </div>
+<div class="row justify-between items-center">
+  <div class="col-md-3 col-sm-4 col-xs-12 q-ma-sm text-center " v-for="item in insuranceFeatures" :key="item.id">
+   <div class="feature-img-container"><q-img :src="item.src" width="100px"></q-img></div>
    <span class="feature-title text-h6">{{ item.title }}</span>
   </div>
 </div>
-<div  dir="rtl" class="insurance-advice-title-container q-mr-auto"><p class="insurance-advice-title">خودت رو  بیمه کن!</p> </div>
+<div  class="insurance-advice-title-container q-mr-auto"><p class="insurance-advice-title">خودت رو  بیمه کن!</p> </div>
  </div>
 </template>
    
@@ -63,9 +63,13 @@
    .feature-img-container{
     background-color: #F0F7FF;
     border-radius: 80px;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
    }
    .feature-title{
     font-weight: bolder;
+    font-size: 16px;
    }
    </style>

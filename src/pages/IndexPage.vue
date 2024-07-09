@@ -2,9 +2,10 @@
   <q-page class="flex flex-center ">
    <InsuranceTypeCards/>
     <div class="column">
-      <div style="width: 100%;">
+      <div>
         <InsuranceFeatures/>
       </div>
+      <InsuranceCompanies/>
       <ConsultRequest/>
     </div>
   </q-page>
@@ -15,12 +16,14 @@ import { defineComponent } from 'vue'
 import InsuranceTypeCards from '../components/Insurance-Type/insurance-type-cards.vue';
 import InsuranceFeatures from '../components/Insurance-Options/insurance-features.vue';
 import ConsultRequest from '../components/Consult-Request/consult-request.vue';
+import InsuranceCompanies from '../components/Co-Companies/insurance-companies.vue';
 export default defineComponent({
   name: 'IndexPage' ,
   components : {
     InsuranceTypeCards ,
     InsuranceFeatures,
-    ConsultRequest
+    ConsultRequest ,
+    InsuranceCompanies
   }
 })
 </script>

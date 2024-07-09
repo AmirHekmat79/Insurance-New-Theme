@@ -109,6 +109,7 @@
           .getPolicyIntroduction('sabz')
           .then((response) => {
             this.InsuranceFooterTitle = response.data.message;
+            console.log(this.InsuranceFooterTitle);
           })
           .catch((error) => {
             console.error('Error fetching insurance centre info:', error);
