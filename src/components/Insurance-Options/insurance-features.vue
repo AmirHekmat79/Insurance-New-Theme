@@ -48,9 +48,9 @@
     transform: translateY(30px);
    }
    .insurance-advice-title-container{
-    background: #CCE4FF;
+    background: #003975;
     border-radius: 210px;
-    color : #003975;
+    color : #fff;
     width: 435px;
     height: 150px;
     margin-top: 4rem;
@@ -58,7 +58,7 @@
    .insurance-advice-title{
     font-size: 2rem;
     text-align: center;
-    transform: translateY(30px);
+    transform: translateY(40px);
    }
    .feature-img-container{
     background-color: #F0F7FF;

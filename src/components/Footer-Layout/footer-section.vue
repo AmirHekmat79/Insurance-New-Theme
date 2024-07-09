@@ -65,7 +65,7 @@
        </div>
       </div>
       <div class="col-md-6">
-        <q-img src="../../assets/map.png" width="640px"></q-img>
+        <div id="footer-map" style="height: 200px; width:640px;"></div>
       </div>
      
     </section>
@@ -75,7 +75,8 @@
   </template>
   
   <script>
-
+  import L from 'leaflet'
+  import 'leaflet/dist/leaflet.css'
   import apiService from 'src/services/api-services';
   export default {
     name: 'FooterSection',
@@ -86,11 +87,23 @@
       }
     },
     mounted() {
-      
+      this.initMap();
       this.getPolicyIntroduction();
     },
     methods: {
+      initMap() {
+        this.map = L.map('footer-map', {
+          center: [51.5074, -0.1278],
+          zoom: 13,
+          scrollWheelZoom: false ,
+        })
+      
+        L.tileLayer('@/assets/map.png', {
+        }).addTo(this.map)
   
+        L.marker([51.5074, -0.1278]).addTo(this.map)
+      
+      } ,
       getPolicyIntroduction() {
         apiService
           .getPolicyIntroduction('sabz')
