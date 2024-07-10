@@ -7,6 +7,9 @@
       </div>
       <InsuranceCompanies/>
       <ConsultRequest/>
+      <InsuranceForm/>
+      <ImageGallery/>
+      <VideoGallery/>
     </div>
   </q-page>
 </template>
@@ -17,13 +20,19 @@ import InsuranceTypeCards from '../components/Insurance-Type/insurance-type-card
 import InsuranceFeatures from '../components/Insurance-Options/insurance-features.vue';
 import ConsultRequest from '../components/Consult-Request/consult-request.vue';
 import InsuranceCompanies from '../components/Co-Companies/insurance-companies.vue';
+import VideoGallery from '../components/Video-Gallery/video-gallery.vue';
+import ImageGallery from '../components/Image-Gallery/image-gallery.vue';
+import InsuranceForm from '../components/Prolong-Insurance/insurance-form.vue';
 export default defineComponent({
   name: 'IndexPage' ,
   components : {
     InsuranceTypeCards ,
     InsuranceFeatures,
     ConsultRequest ,
-    InsuranceCompanies
+    InsuranceCompanies ,
+    VideoGallery ,
+    ImageGallery ,
+    InsuranceForm
   }
 })
 </script>

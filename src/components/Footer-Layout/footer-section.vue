@@ -1,10 +1,9 @@
 <template>
-    <section  class="row justify-center items-center shadow-10 top-footer q-gutter-lg">
+    <section  class="row justify-around items-center shadow-12 top-footer q-gutter-lg">
      
-      <div class="col-md-3 common-link-container  col-sm-6 col-xs-12"> 
+      <div class="col-lg-3  col-xl-6  col-md-6 common-link-container   col-xs-12"> 
         <h2 class="title q-mr-sm"> لینک های پر کاربرد </h2>
         <ul class="contactus">
-          <div>
             <li class="row q-gutter-sm items-center q-my-sm">
               آدرس بیمه مرکزی
             </li>
@@ -22,10 +21,9 @@
              <li class="row q-gutter-sm items-center q-my-sm"> 
               قوانین و مقررات
             </li>
-          </div>
         </ul>
       </div>
-      <div class="col-md-3 site-feature-container  col-sm-6 col-xs-12"> 
+      <div class="col-lg-3 col-xl-6  col-md-6 site-feature-container   col-xs-12"> 
         <h2 class="title q-mr-sm"> امکانات سایت </h2>
         <ul class="site-features">
           <li><a>   درباره ما </a></li>
@@ -36,10 +34,10 @@
           
         </ul>
       </div>
-      <div class="col-md-3 col-sm-6 col-xs-12 sign-img-container">
+      <div class="col-lg-3 col-xl-6  col-md-6  col-xs-12 sign-img-container">
         <q-img class="enahad-sign" src="../../assets/enahad.png" width="150px"></q-img>
       </div>
-      <div class="col-md-3 col-sm-6 col-xs-12 sign-img-container"> 
+      <div class="col-lg-3  col-xl-6 col-md-6  col-xs-12 sign-img-container"> 
         <q-img class="international-sign" src="../../assets/internationalSign.png" width="150px"></q-img>
       </div>
     </section>
@@ -132,8 +130,7 @@
     overflow: hidden;
   }
   .top-footer {
-    padding-bottom:  130px;
-    padding-right: 40px;
+    padding: 30px 40px;
     background: #ffff;
   }
   .sub-footer{
@@ -150,10 +147,23 @@
     font : 14px 'iransans';
   }
   .site-features li{
-    margin: 12px auto;
+    margin-top: 30px ;
+    cursor: pointer;
+  }
+  .site-features li:hover{
+    color : #007BFF;
+  }
+  .contactus li{
+    margin-top: 30px ;
+    cursor: pointer;
+  }
+  .contactus li:hover{
+    color : #007BFF;
   }
 
-
+  li::marker {
+  color: #003975 !important;
+}
 .common-link-container , .site-feature-container {
   border : 1px solid #007BFF;
   border-radius: 20px;

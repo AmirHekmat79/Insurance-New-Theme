@@ -1,6 +1,6 @@
 <template>
- <div class="column justify-between items-center q-pa-lg">
-  <div class="just-click-title-container  q-ml-auto"><p class="just-click-title">فقط با چند کلیک</p>  </div>
+ <div class="column justify-between items-center q-pa-xl">
+  <div class="just-click-title-container q-mb-lg q-ml-auto"><p class="just-click-title">فقط با چند کلیک</p>  </div>
 <div class="row justify-between items-center">
   <div class="col-md-3 col-sm-4 col-xs-12 q-ma-sm text-center " v-for="item in insuranceFeatures" :key="item.id">
    <div class="feature-img-container"><q-img :src="item.src" width="100px"></q-img></div>
@@ -59,6 +59,7 @@
     font-size: 2rem;
     text-align: center;
     transform: translateY(40px);
+    direction: rtl;
    }
    .feature-img-container{
     background-color: #F0F7FF;
