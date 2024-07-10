@@ -5,7 +5,7 @@
                            <div class="col-md-4">
                             <q-input  class="Input" rounded outlined v-model="text">
                                 <template v-slot:prepend>
-                                    <img src="src/assets/building.png">
+                                    <img class="img-inner" src="src/assets/month.svg">
                                 </template>
                                 <template v-slot:append>
                                     <label  class="text-subtitle2 label-font">ماه</label>
@@ -15,7 +15,7 @@
                            <div class="col-md-4">
                             <q-input  class="Input" rounded outlined v-model="text">
                                 <template v-slot:prepend>
-                                    <img src="src/assets/building.png">
+                                    <img class="img-inner" src="src/assets/email.svg">
                                 </template>
                                 <template v-slot:append>
                                     <label  class="text-subtitle2 label-font"> ایمیل</label>
@@ -25,7 +25,7 @@
                            <div class="col-md-4">
                             <q-input  class="Input" rounded outlined v-model="text">
                                 <template v-slot:prepend>
-                                    <img src="src/assets/building.png">
+                                    <img  class="img-inner" src="src/assets/phone.svg">
                                 </template>
                                 <template v-slot:append>
                                     <label  class="text-subtitle2 label-font"> شماره همراه</label>
@@ -35,7 +35,7 @@
                            <div class="col-md-4">
                             <q-input  class="Input" rounded outlined v-model="text">
                                 <template v-slot:prepend>
-                                    <img src="src/assets/building.png">
+                                    <img class="img-inner" src="src/assets/umberella.svg">
                                 </template>
                                 <template v-slot:append>
                                     <label  class="text-subtitle2 label-font">نوع بیمه</label>
@@ -46,7 +46,7 @@
                            <div class="col-md-4">
                             <q-input  class="Input" rounded outlined v-model="text">
                                 <template v-slot:prepend>
-                                    <img src="src/assets/building.png">
+                                    <img class="img-inner" src="src/assets/location.svg">
                                 </template>
                                 <template v-slot:append>
                                     <label  class="text-subtitle2 label-font">استان </label>
@@ -56,7 +56,7 @@
                            <div class="col-md-4">
                             <q-input  class="Input" rounded outlined v-model="text">
                                 <template v-slot:prepend>
-                                    <img src="src/assets/building.png">
+                                    <img class="img-inner" src="src/assets/person.svg">
                                 </template>
                                 <template v-slot:append>
                                     <label  class="text-subtitle2 label-font">نام خانوادگی  </label>
@@ -67,7 +67,7 @@
                            <div class="col-md-4">
                             <q-input  class="Input" rounded outlined v-model="text">
                                 <template v-slot:prepend>
-                                    <img src="src/assets/building.png">
+                                    <img class="img-inner" src="src/assets/month.svg">
                                 </template>
                                 <template v-slot:append>
                                     <label class="text-subtitle2 label-font">   روز</label>
@@ -77,7 +77,7 @@
                            <div class="col-md-4">
                             <q-input  class="Input" rounded outlined v-model="text">
                                 <template v-slot:prepend>
-                                    <img src="src/assets/building.png">
+                                    <img class="img-inner" src="src/assets/person.svg">
                                 </template>
                                 <template v-slot:append>
                                     <label  class="text-subtitle2 label-font">نام  </label>
@@ -87,7 +87,7 @@
                            <div class="col-md-4">
                             <q-input  class="Input" rounded outlined v-model="text">
                                 <template v-slot:prepend>
-                                    <img src="src/assets/building.png">
+                                    <img class="img-inner" src="src/assets/building.png">
                                 </template>
                                 <template v-slot:append>
                                     <label  class="text-subtitle2 label-font">شهر </label>
@@ -133,5 +133,9 @@
     background: #007BFF;
     color:#fff;
     padding: 8px 24px;
+  }
+  .img-inner{
+    width: 24px;
+    height: 24px;
   }
   </style>

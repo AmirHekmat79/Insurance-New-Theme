@@ -2,9 +2,30 @@
     <div  class="row q-my-xl justify-center text-center reverse-wrap  items-center q-py-lg q-gutter-md">
         <div class="col-md-6 col-sm-6 col-xs-12">
          <form>
-                <q-input  class="Input"  rounded  standout="bg-blue-3 text-white" v-model="text" label="نام خانوادگی" />
-                <q-input  class="q-my-md Input" rounded standout="bg-blue-3 text-white" v-model="text" label="شماره همراه" />
-                <q-input class="Input"  rounded  standout="bg-blue-3 text-white" v-model="text" label="نوع بیمه"  />
+                <q-input   class="Input"  rounded  standout="bg-blue-3 text-white" v-model="text"  >
+                    <template v-slot:prepend>
+                       <img class="img-inner" src="src/assets/person.svg">
+                    </template>
+                    <template v-slot:append>
+                       <label  class="text-subtitle2 label-font">نام خانوادگی  </label>
+                    </template>             
+                </q-input>
+                <q-input  class="q-my-md Input" rounded standout="bg-blue-3 text-white" v-model="text"  >
+                    <template v-slot:prepend>
+                        <img  class="img-inner" src="src/assets/phone.svg">
+                     </template>
+                    <template v-slot:append>
+                       <label  class="text-subtitle2 label-font"> شماره همراه  </label>
+                    </template> 
+                </q-input>
+                <q-input class="Input"  rounded  standout="bg-blue-3 text-white" v-model="text" >
+                    <template v-slot:prepend>
+                       <img class="img-inner" src="src/assets/umberella.svg">
+                    </template>
+                    <template v-slot:append>
+                       <label  class="text-subtitle2 label-font"> نوع بیمه  </label>
+                    </template> 
+                </q-input>
                 <q-btn class="submit-request q-my-md"> <q-img class="q-mx-sm" src="../../assets/requestSubmit.png" width="20px"></q-img>ثبت درخواست</q-btn>
          </form>
         </div>
@@ -49,5 +70,14 @@ export default defineComponent({
         height:100% !important;
         
     }
+} 
+.img-inner{
+    width: 24px;
+    height: 24px;
+}
+
+.Input{
+       text-align: right;
+       cursor: end;
 }
 </style>
