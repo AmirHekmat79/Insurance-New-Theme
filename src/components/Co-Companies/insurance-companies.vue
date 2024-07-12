@@ -2,16 +2,29 @@
   <div class="q-pa-md q-my-lg text-center Companies-Container">
     <h2 class="company-section-title">شرکت های بیمه</h2>
     <div class="row justify-around items-center text-center q-gutter-md">
-      <div
-        class="col-md-1 company-container"
-        v-for="item in InsuranceCompanies.slice(0, 6)"
-        :key="item.id"
-      >
-        <q-card class="card">
-          <q-card-section>
-            <q-img :src="item.metaMediaLogoFileUrl"></q-img>
-          </q-card-section>
-        </q-card>
+      <div class="q-pa-md">
+        <q-carousel
+          v-model="slide"
+          swipeable
+          animated
+          navigation
+          padding
+          height="300px"
+          class="bg-purple text-white rounded-borders"
+        >
+          <q-carousel-slide
+            name="style"
+            class="row justify-around items-center"
+            v-for="item in InsuranceCompanies"
+            :key="item.id"
+          >
+            <q-card class="card">
+              <q-card-section>
+                <q-img :src="item.metaMediaLogoFileUrl"></q-img>
+              </q-card-section>
+            </q-card>
+          </q-carousel-slide>
+        </q-carousel>
       </div>
     </div>
   </div>
@@ -28,20 +41,17 @@ export default defineComponent({
       currentSlide: "0",
       autoplay: true,
       autoplayInterval: 3000,
-      numSlides: 0,
     };
   },
-
+  setup() {
+    return {
+      slide: ref("style"),
+    };
+  },
   mounted() {
     this.getPolicyIntroduction();
   },
   methods: {
-    prevSlide() {
-      this.currentSlide = (parseInt(this.currentSlide) - 1).toString();
-    },
-    nextSlide() {
-      this.currentSlide = (parseInt(this.currentSlide) + 1).toString();
-    },
     getPolicyIntroduction() {
       console.log(23, "sdasd");
       apiService
@@ -54,13 +64,6 @@ export default defineComponent({
         .catch((error) => {
           console.error("Error fetching insurance centre info:", error);
         });
-    },
-  },
-  watch: {
-    currentSlide(newSlide) {
-      if (newSlide === this.numSlides.toString()) {
-        this.currentSlide = "0"; // Reset the slide to the first one
-      }
     },
   },
 });
