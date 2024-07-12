@@ -1,85 +1,95 @@
 <template>
-    <div class="q-py-lg q-my-lg q-mx-md  text-center image-full-content shadow-1">
-      <div class="row justify-end q-mr-md items-center">
-        <h2 class="gallery-title"> گالری تصاویر </h2>
-      </div>
-      <div class="row justify-around items-center wrap q-gutter-sm large-scale-gallery">
-        <div class="col-md-3 flip-box" v-for="(item,index) in InsuranceImageAlbums.slice(0,4)" :key="index">
-           <div class="flip-box-inner">
-             <div class="flip-box-front">
-                <q-img class="img-item" :src="item?.metaMediaFileUrl"></q-img>
-             </div>
-             <div class="flip-box-back shadow-10">
-                <h6 class="text-center image-title">{{ item.title }}</h6>
-                
-                </div>
-           </div>
-        </div>
-      </div>
-      <div class="row justify-around items-center wrap q-gutter-sm small-scale-gallery">
-        <div class="col-md-3 flip-box" v-for="(item,index) in InsuranceImageAlbums" :key="index">
-           <div class="flip-box-inner">
-             <div class="flip-box-front">
-                <q-img class="img-item" :src="item?.metaMediaFileUrl"></q-img>
-             </div>
-             <div class="flip-box-back shadow-10">
-                <h6>{{ item.title }}</h6>
-                
-                </div>
-           </div>
+  <div class="q-py-lg q-my-lg q-mx-md text-center image-full-content shadow-1">
+    <div class="row justify-end q-mr-md items-center">
+      <h2 class="gallery-title">گالری تصاویر</h2>
+    </div>
+    <div
+      class="row justify-around items-center wrap q-gutter-sm large-scale-gallery"
+    >
+      <div
+        class="col-md-3 flip-box"
+        v-for="(item, index) in InsuranceImageAlbums.slice(0, 4)"
+        :key="index"
+      >
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <q-img class="img-item" :src="item?.metaMediaFileUrl"></q-img>
+          </div>
+          <div class="flip-box-back shadow-10">
+            <h6 class="text-center image-title">{{ item.title }}</h6>
+          </div>
         </div>
       </div>
     </div>
-  </template>
-  
-  <script>
-  import { defineComponent } from 'vue';
-  import apiService from 'src/services/api-services';
-  export default defineComponent({
-    name: 'ImageGallery',
-    data(){
-        return{
-            InsuranceImageAlbums : []
-        }
+    <div
+      class="row justify-around items-center wrap q-gutter-sm small-scale-gallery"
+    >
+      <div
+        class="col-md-3 flip-box"
+        v-for="(item, index) in InsuranceImageAlbums"
+        :key="index"
+      >
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <q-img class="img-item" :src="item?.metaMediaFileUrl"></q-img>
+          </div>
+          <div class="flip-box-back shadow-10">
+            <h6 class="text-center image-title">{{ item.title }}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { defineComponent } from "vue";
+import apiService from "src/services/api-services";
+export default defineComponent({
+  name: "ImageGallery",
+  data() {
+    return {
+      InsuranceImageAlbums: [],
+    };
+  },
+  mounted() {
+    this.getPolicyIntroduction();
+  },
+
+  methods: {
+    getPolicyIntroduction() {
+      apiService
+        .getPolicyIntroduction("sabz")
+        .then((response) => {
+          this.InsuranceImageAlbums = response.data.message?.imageAlbums || [];
+        })
+        .catch((error) => {
+          console.error("Error fetching insurance centre info:", error);
+        });
     },
-    mounted() {
-      this.getPolicyIntroduction();
-    },
-  
-    methods: {
-      getPolicyIntroduction() {
-        apiService
-          .getPolicyIntroduction('sabz')
-          .then((response) => {
-            this.InsuranceImageAlbums = response.data.message?.imageAlbums || [];
-          })
-          .catch((error) => {
-            console.error('Error fetching insurance centre info:', error);
-          });
-      },
-    },
-  
-  });
-  </script>
-  
-  <style scoped>
-  .image-title{
-    transform: translateY(50%);
-  }
-   .gallery-title{
-    font-size: 32px;
-    font-weight: bolder;
-    text-align: right;
-    color : #003975 !important;
-   }
- .image-full-content{
-      background: #dfedfc;
-      border-radius: 80px;
-      padding: 30px;
-      opacity: 0.9;
- }
- 
- .img-item {
+  },
+});
+</script>
+
+<style scoped>
+.image-title {
+  margin: 70px auto !important;
+  text-align: center;
+}
+.gallery-title {
+  font-size: 32px;
+  font-weight: bolder;
+  text-align: right;
+  color: #003975 !important;
+}
+.image-full-content {
+  background: #dfedfc;
+  border-radius: 80px;
+  padding: 30px;
+  opacity: 0.9;
+}
+
+.img-item {
   width: 300px;
   height: 200px;
   border-radius: 10px;
@@ -89,7 +99,7 @@
   width: 300px;
   height: 200px;
   border: 1px solid #f1f1f1;
-  perspective: 1000px; 
+  perspective: 1000px;
   margin-top: 20px;
 }
 
@@ -106,12 +116,12 @@
   transform: rotateY(180deg);
 }
 
-
-.flip-box-front, .flip-box-back {
+.flip-box-front,
+.flip-box-back {
   position: absolute;
   width: 300px;
   height: 200px;
-  -webkit-backface-visibility: hidden; 
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -126,14 +136,14 @@
   transform: rotateY(180deg);
 }
 
-@media screen  and (min-width: 1200px){
-    .small-scale-gallery{
-        display: none;
-    }
+@media screen and (min-width: 1200px) {
+  .small-scale-gallery {
+    display: none;
+  }
 }
-@media screen  and (max-width: 1199px){
-    .large-scale-gallery{
-        display: none;
-    }
+@media screen and (max-width: 1199px) {
+  .large-scale-gallery {
+    display: none;
+  }
 }
-  </style>
+</style>

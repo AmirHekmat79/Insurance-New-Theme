@@ -1,8 +1,8 @@
 <template>
-  <div class="row justify-center items-center q-pa-lg q-my-lg">
+  <div class="row justify-center reverse-wrap items-center q-pa-lg q-my-lg">
     <div class="col-md-8">
       <div class="row justify-center items-center q-gutter-md">
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-4 col-xs-6">
           <q-input class="Input" rounded outlined v-model="text">
             <template v-slot:append>
               <img class="img-inner" src="src/assets/month.svg" />
@@ -12,7 +12,7 @@
             </template>
           </q-input>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-4 col-xs-6">
           <q-input class="Input" rounded outlined v-model="text">
             <template v-slot:append>
               <img class="img-inner" src="src/assets/email.svg" />
@@ -22,7 +22,7 @@
             </template>
           </q-input>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-4 col-xs-6">
           <q-input class="Input" rounded outlined v-model="text">
             <template v-slot:append>
               <img class="img-inner" src="src/assets/phone.svg" />
@@ -34,7 +34,7 @@
             </template>
           </q-input>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-4 col-xs-6">
           <q-input class="Input" rounded outlined v-model="text">
             <template v-slot:append>
               <img class="img-inner" src="src/assets/umberella.svg" />
@@ -44,7 +44,7 @@
             </template>
           </q-input>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-4 col-xs-6">
           <q-input class="Input" rounded outlined v-model="text">
             <template v-slot:append>
               <img class="img-inner" src="src/assets/location.svg" />
@@ -54,7 +54,7 @@
             </template>
           </q-input>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-4 col-xs-6">
           <q-input class="Input" rounded outlined v-model="text">
             <template v-slot:append>
               <img class="img-inner" src="src/assets/person.svg" />
@@ -67,7 +67,7 @@
           </q-input>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-4 col-xs-6">
           <q-input class="Input" rounded outlined v-model="text">
             <template v-slot:append>
               <img class="img-inner" src="src/assets/month.svg" />
@@ -77,7 +77,7 @@
             </template>
           </q-input>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-4 col-xs-6">
           <q-input class="Input" rounded outlined v-model="text">
             <template v-slot:append>
               <img class="img-inner" src="src/assets/person.svg" />
@@ -87,7 +87,7 @@
             </template>
           </q-input>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-4 col-xs-6">
           <q-input class="Input" rounded outlined v-model="text">
             <template v-slot:append>
               <img class="img-inner" src="src/assets/building.png" />
@@ -97,7 +97,7 @@
             </template>
           </q-input>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-4 col-xs-6">
           <q-btn class="submit-btn">یادآوری کن</q-btn>
         </div>
       </div>
@@ -124,6 +124,7 @@ export default defineComponent({
 .form-title {
   font-size: 26px;
   color: #003975;
+  text-align: center !important;
 }
 .submit-btn {
   cursor: pointer;
