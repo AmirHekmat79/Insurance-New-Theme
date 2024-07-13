@@ -123,6 +123,9 @@ export default defineComponent({
   height: 200px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
 }
 
 .flip-box-front {
