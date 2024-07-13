@@ -172,7 +172,7 @@ export default defineComponent({
 
 .navLink-item a {
   text-decoration: none;
-  color: #fff;
+  color: #000;
   cursor: pointer;
 }
 .navLink-btn {
@@ -223,7 +223,7 @@ export default defineComponent({
 
 .sidebar-navLink-item a {
   text-decoration: none;
-  color: #fff;
+  color: #000;
   cursor: pointer;
 }
 
