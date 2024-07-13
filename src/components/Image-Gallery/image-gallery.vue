@@ -124,7 +124,9 @@ export default defineComponent({
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-color: #0093E9;
-  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+ 
 
 }
 

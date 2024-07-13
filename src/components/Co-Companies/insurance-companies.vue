@@ -1,56 +1,45 @@
 <template>
-  <div class="q-pa-md q-my-lg text-center Companies-Container">
-    <h2 class="company-section-title">شرکت های بیمه</h2>
-    <div class="row justify-around items-center text-center q-gutter-md">
-      <div class="q-pa-md">
-        <q-carousel
-          v-model="slide"
-          swipeable
-          animated
-          navigation
-          padding
-          height="300px"
-          class="bg-purple text-white rounded-borders"
-        >
-          <q-carousel-slide
-            name="style"
-            class="row justify-around items-center"
-            v-for="item in InsuranceCompanies"
-            :key="item.id"
-          >
-            <q-card class="card">
-              <q-card-section>
-                <q-img :src="item.metaMediaLogoFileUrl"></q-img>
-              </q-card-section>
-            </q-card>
-          </q-carousel-slide>
-        </q-carousel>
+  <q-page style="min-height:400px">
+    <section class="q-py-lg">
+      <div class="container q-mx-auto">
+        <div class="title q-py-md row justify-center text-center items-center">
+          <h5 class="text-weight-bold">شرکت های بیمه</h5>
+        
+        </div>
       </div>
-    </div>
-  </div>
+      <div class="container">
+         <div class="row justify-around items-center">
+          <q-card class="card" v-for="item in InsuranceCompanies" :key="item.id">
+            <q-card-section>
+              <q-img :src="item.metaMediaLogoFileUrl" width="125px" :ratio="1/1" fit="contain"> </q-img>
+            </q-card-section>
+          </q-card>
+
+
+
+          
+         </div>
+      </div>
+    </section>
+  </q-page>
 </template>
 
 <script>
-import { defineComponent, ref } from "vue";
+import { defineComponent } from "vue";
 import apiService from "src/services/api-services";
 export default defineComponent({
   name: "InsuranceCompanies",
   data() {
     return {
       InsuranceCompanies: [],
-      currentSlide: "0",
-      autoplay: true,
-      autoplayInterval: 3000,
+      
     };
   },
-  setup() {
-    return {
-      slide: ref("style"),
-    };
-  },
+
   mounted() {
     this.getPolicyIntroduction();
   },
+
   methods: {
     getPolicyIntroduction() {
       console.log(23, "sdasd");
@@ -65,6 +54,7 @@ export default defineComponent({
           console.error("Error fetching insurance centre info:", error);
         });
     },
+
   },
 });
 </script>
@@ -73,9 +63,18 @@ export default defineComponent({
 .company-section-title {
   font-size: 24px;
 }
+.overflow-auto {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
 .card {
   width: 150px;
   height: 150px;
   background: #fff;
+  display: inline-block;
 }
+
+ 
 </style>

@@ -4,6 +4,7 @@
   >
     <div class="col-md-6 col-sm-6 col-xs-12">
       <form>
+        
         <q-input class="Input" rounded outlined v-model="text">
           <template v-slot:append>
             <img class="img-inner" src="src/assets/person.svg" />
