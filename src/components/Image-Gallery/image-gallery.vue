@@ -101,9 +101,11 @@ export default defineComponent({
   border: 1px solid #f1f1f1;
   perspective: 1000px;
   margin-top: 20px;
+  border-radius: 80px;
 }
 
 .flip-box-inner {
+  border-radius:10px;
   position: relative;
   width: 300px;
   height: 200px;
@@ -118,6 +120,7 @@ export default defineComponent({
 
 .flip-box-front,
 .flip-box-back {
+  border-radius: 10px;
   position: absolute;
   width: 300px;
   height: 200px;
