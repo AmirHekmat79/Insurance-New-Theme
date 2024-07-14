@@ -98,7 +98,7 @@
           </q-input>
         </div>
         <div class="col-md-4 col-sm-4 col-xs-6">
-          <q-btn class="submit-btn">یادآوری کن</q-btn>
+          <q-btn class="submit-btn" ><q-img class="submit-img q-mr-sm" src="src/assets/leftArrow.png"></q-img>یاد آوری کن </q-btn>
         </div>
       </div>
     </div>
@@ -120,6 +120,9 @@ export default defineComponent({
 <style scoped>
 .form-img {
   width: 300px;
+}
+.submit-img{
+  width : 16px;
 }
 .form-title {
   font-size: 26px;
