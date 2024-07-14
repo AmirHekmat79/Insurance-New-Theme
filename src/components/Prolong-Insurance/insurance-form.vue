@@ -1,5 +1,5 @@
 <template>
-  <div class="row justify-center reverse-wrap items-center q-pa-lg q-my-lg">
+  <div class="row justify-center reverse-wrap items-center q-pa-xl q-mb-lg">
     <div class="col-md-8">
       <div class="row justify-center items-center q-gutter-md">
         <div class="col-md-4 col-sm-4 col-xs-6">

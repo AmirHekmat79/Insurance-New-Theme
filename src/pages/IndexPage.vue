@@ -7,6 +7,7 @@
       </div>
       <InsuranceCompanies />
       <ConsultRequest />
+      <InsuranceNews/>
       <InsuranceForm />
       <ImageGallery />
       <VideoGallery />
@@ -23,6 +24,7 @@ import InsuranceCompanies from "../components/Co-Companies/insurance-companies.v
 import VideoGallery from "../components/Video-Gallery/video-gallery.vue";
 import ImageGallery from "../components/Image-Gallery/image-gallery.vue";
 import InsuranceForm from "../components/Prolong-Insurance/insurance-form.vue";
+import InsuranceNews from "../components/Insurance-News/insurance-news.vue";
 export default defineComponent({
   name: "IndexPage",
   components: {
@@ -33,6 +35,7 @@ export default defineComponent({
     VideoGallery,
     ImageGallery,
     InsuranceForm,
+    InsuranceNews
   },
 });
 </script>

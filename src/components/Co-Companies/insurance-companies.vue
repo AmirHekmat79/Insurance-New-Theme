@@ -7,27 +7,28 @@
         
         </div>
       </div>
-      <div class="container q-px-lg q-mx-auto">
+      <div class="container  q-mx-auto">
          <div class="row justify-center items-center text-center q-gutter-md">
-          <div class="col-md-2 change-opacity" v-for="item in InsuranceCompanies.filter(item=>item.id!=32).slice(7,9)" :key="item.id">
+          <div class="col-md-1 change-opacity" v-for="item in InsuranceCompanies.filter(item=>item.id!=32).slice(7,10)" :key="item.id">
             <q-card class="card shadow-10">
             <q-card-section>
-              <q-img :src="item.metaMediaLogoFileUrl" width="125px"> </q-img>
+              <q-img :src="item.metaMediaLogoFileUrl" width="70px"> </q-img>
             </q-card-section>
           </q-card>
-          </div>
+        
+         </div>
           <div  style="z-index: 1;" class="col-md-2" v-for="item in InsuranceCompanies.filter(item=>item.id==32)" :key="item.id">
-            <q-card class="card shadow-10">
+            <q-card class="main-card shadow-10">
             <q-card-section>
               <q-img :src="item.metaMediaLogoFileUrl" width="125px"> </q-img>
             </q-card-section>
           </q-card>
 
           </div>
-          <div class="col-md-2 change-opacity" v-for="item in InsuranceCompanies.filter(item=>item.id!=32).slice(3,5)" :key="item.id">
+          <div class="col-md-1 change-opacity" v-for="item in InsuranceCompanies.filter(item=>item.id!=32).slice(3,6)" :key="item.id">
             <q-card class="card shadow-10">
             <q-card-section>
-              <q-img :src="item.metaMediaLogoFileUrl" width="125px"> </q-img>
+              <q-img :src="item.metaMediaLogoFileUrl" width="70px"> </q-img>
             </q-card-section>
           </q-card>
 
@@ -85,16 +86,28 @@ export default defineComponent({
   overflow-y: hidden;
   white-space: nowrap;
 }
-
+.glass{
+  background: rgba(255, 255, 255, 0.29);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);  
+}
 .card {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   background: #fff;
   display: inline-block;
 }
-
+.main-card{
+  width: 160px;
+  height: 160px;
+  background: #fff;
+  display: inline-block;
+}
 .change-opacity{
-  opacity: 0.5;
+  opacity: 0.9;
 } 
 @media screen and (max-width:892px) {
   .change-opacity{

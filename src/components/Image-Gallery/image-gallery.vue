@@ -73,7 +73,7 @@ export default defineComponent({
 
 <style scoped>
 .image-title {
-  margin: 70px auto !important;
+  margin: 80px auto !important;
   text-align: center;
 }
 .gallery-title {

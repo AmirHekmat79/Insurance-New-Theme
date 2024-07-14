@@ -146,8 +146,10 @@ export default defineComponent({
 }
 .entrance-btn {
   /* padding: 8px 50px !important; */
-  background: #007BFF !important;
-  color: #fff;
+  background: #eee;
+  color : #007BFF;
+  border : 2px solid #007BFF;
+  border-radius: 16px;
   text-align: center;
   cursor: pointer;
   margin-left: 20px !important;
