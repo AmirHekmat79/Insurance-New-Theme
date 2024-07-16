@@ -4,7 +4,6 @@
   >
     <div class="col-md-6 col-sm-6 col-xs-12">
       <form>
-        
         <q-input class="Input" rounded outlined v-model="text">
           <template v-slot:append>
             <img class="img-inner" src="src/assets/person.svg" />
@@ -44,8 +43,14 @@
       </form>
     </div>
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <h5 class="consult-title">درخواست مشاوره</h5>
-      <q-img class="consult-img" src="../../assets/consultRequest.png"></q-img>
+      <div class="row justify-center items-center q-gutter-md">
+        <q-img src="../../assets/speech.svg" width="32px"></q-img>
+        <h5 class="consult-title">درخواست مشاوره</h5>
+      </div>
+      <q-img
+        class="consult-img q-my-md"
+        src="../../assets/consultRequest.png"
+      ></q-img>
     </div>
   </div>
 </template>

@@ -15,6 +15,7 @@
       </div>
     </section>
   </div>
+ 
 </template>
 
 <script>
@@ -38,7 +39,6 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-
 @media screen and (min-width: 864px) {
   .insurance-types-container {
     width: 100%;

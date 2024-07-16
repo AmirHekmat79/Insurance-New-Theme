@@ -98,12 +98,21 @@
           </q-input>
         </div>
         <div class="col-md-4 col-sm-4 col-xs-6">
-          <q-btn class="submit-btn" ><q-img class="submit-img q-mr-sm" src="src/assets/leftArrow.png"></q-img>یاد آوری کن </q-btn>
+          <q-btn class="submit-btn"
+            ><q-img
+              class="submit-img q-mr-sm"
+              src="src/assets/leftArrow.png"
+            ></q-img
+            >یاد آوری کن
+          </q-btn>
         </div>
       </div>
     </div>
     <div class="col-md-4">
-      <h2 class="form-title">یادآور تمدید بیمه نامه</h2>
+      <div class="row justify-center items-center q-gutter-sm">
+        <h2 class="form-title">یادآور تمدید بیمه نامه</h2>
+        <q-img src="src/assets/head-idea-icon.svg" width="32px"></q-img>
+      </div>
       <q-img class="form-img" src="src/assets/calender.png"></q-img>
     </div>
   </div>
@@ -121,8 +130,8 @@ export default defineComponent({
 .form-img {
   width: 300px;
 }
-.submit-img{
-  width : 16px;
+.submit-img {
+  width: 16px;
 }
 .form-title {
   font-size: 26px;

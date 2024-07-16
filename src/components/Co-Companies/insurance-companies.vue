@@ -1,44 +1,59 @@
 <template>
-  <q-page style="min-height:400px">
+  <q-page style="min-height: 400px">
     <section class="q-py-lg">
-      <div class="container q-mx-auto">
-        <div class="title q-py-md row justify-center text-center items-center">
-          <h5 class="text-weight-bold company-title">شرکت  بیمه</h5>
-        
+      <div class="container q-mx-auto q-mb-md">
+        <div
+          class="title q-py-md row justify-center text-center items-center q-gutter-sm"
+        >
+          <q-img src="../../assets/protect-icon.svg" width="32px"></q-img>
+          <h5 class="text-weight-bold company-title">شرکت بیمه</h5>
         </div>
       </div>
-      <div class="container   q-mx-auto">
-         <div class="row justify-center items-center text-center q-gutter-md ">
+      <div class="container q-mx-auto">
+        <div class="row justify-center items-center text-center q-gutter-md">
           <div class="glass"></div>
-          <div class="col-md-1 change-opacity" v-for="item in InsuranceCompanies.filter(item=>item.id!=32).slice(7,10)" :key="item.id">
+          <div
+            class="col-md-1 change-opacity"
+            v-for="item in InsuranceCompanies.filter(
+              (item) => item.id != 32
+            ).slice(7, 10)"
+            :key="item.id"
+          >
             <q-card class="card shadow-10">
-            <q-card-section>
-              <q-img :src="item.metaMediaLogoFileUrl" width="70px"> </q-img>
-            </q-card-section>
-          </q-card>
-        
-         </div>
-          <div  style="z-index: 1;" class="col-md-2" v-for="item in InsuranceCompanies.filter(item=>item.id==32)" :key="item.id">
+              <q-card-section>
+                <q-img :src="item.metaMediaLogoFileUrl" width="70px"> </q-img>
+              </q-card-section>
+            </q-card>
+          </div>
+          <div
+            style="z-index: 1"
+            class="col-md-2"
+            v-for="item in InsuranceCompanies.filter((item) => item.id == 32)"
+            :key="item.id"
+          >
             <q-card class="main-card shadow-10">
-            <q-card-section>
-              <q-img :src="item.metaMediaLogoFileUrl" width="125px"> </q-img>
-            </q-card-section>
-          </q-card>
-
+              <q-card-section>
+                <q-img :src="item.metaMediaLogoFileUrl" width="125px"> </q-img>
+              </q-card-section>
+            </q-card>
           </div>
-         
-          <div class="col-md-1 change-opacity" v-for="item in InsuranceCompanies.filter(item=>item.id!=32).slice(3,6)" :key="item.id">
-            <q-card class="card shadow-10">
-            <q-card-section>
-              <q-img :src="item.metaMediaLogoFileUrl" width="70px"> </q-img>
-            </q-card-section>
-          </q-card>
 
+          <div
+            class="col-md-1 change-opacity"
+            v-for="item in InsuranceCompanies.filter(
+              (item) => item.id != 32
+            ).slice(3, 6)"
+            :key="item.id"
+          >
+            <q-card class="card shadow-10">
+              <q-card-section>
+                <q-img :src="item.metaMediaLogoFileUrl" width="70px"> </q-img>
+              </q-card-section>
+            </q-card>
           </div>
 
           <div class="glass"></div>
-
-         </div>
+        </div>
       </div>
     </section>
   </q-page>
@@ -52,7 +67,6 @@ export default defineComponent({
   data() {
     return {
       InsuranceCompanies: [],
-      
     };
   },
 
@@ -74,7 +88,6 @@ export default defineComponent({
           console.error("Error fetching insurance centre info:", error);
         });
     },
-
   },
 });
 </script>
@@ -83,10 +96,10 @@ export default defineComponent({
 .company-section-title {
   font-size: 24px;
 }
-.company-title{
-  color : #003975;
+.company-title {
+  color: #003975;
 }
-.glass{
+.glass {
   background: rgba(255, 255, 255, 0.07);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -103,17 +116,17 @@ export default defineComponent({
   background: #fff;
   display: inline-block;
 }
-.main-card{
+.main-card {
   width: 160px;
   height: 160px;
   background: #fff;
   display: inline-block;
 }
-.change-opacity{
+.change-opacity {
   opacity: 0.8;
 }
-@media screen and (max-width:892px) {
-  .change-opacity{
+@media screen and (max-width: 892px) {
+  .change-opacity {
     display: none;
   }
 }

@@ -1,6 +1,7 @@
 <template>
   <div class="q-py-lg q-my-lg q-mx-md text-center image-full-content shadow-1">
-    <div class="row justify-end q-mr-md items-center">
+    <div class="row justify-center q-gutter-lg items-center q-mb-md">
+      <q-img src="../../assets/img-gallery.svg" width="32px"></q-img>
       <h2 class="gallery-title">گالری تصاویر</h2>
     </div>
     <div
@@ -105,7 +106,7 @@ export default defineComponent({
 }
 
 .flip-box-inner {
-  border-radius:10px;
+  border-radius: 10px;
   position: relative;
   width: 300px;
   height: 200px;
@@ -126,11 +127,9 @@ export default defineComponent({
   height: 200px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background-color: #0093E9;
-  background-color: #8BC6EC;
-  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
- 
-
+  background-color: #0093e9;
+  background-color: #8bc6ec;
+  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
 }
 
 .flip-box-front {
