@@ -15,7 +15,6 @@
       </div>
     </section>
   </div>
-  <div class="separator"></div>
 </template>
 
 <script>
@@ -39,12 +38,7 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-.separator {
-  width: 400px;
-  height: 1px;
-  background-color: #e4e4e4;
-  margin: 50px auto;
-}
+
 @media screen and (min-width: 864px) {
   .insurance-types-container {
     width: 100%;

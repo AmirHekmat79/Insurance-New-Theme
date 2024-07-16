@@ -15,8 +15,6 @@
       </div>
     </section>
   </div>
-  <div class="separator"></div>
-  <p class="q-mt-md text-center">فرم های پیشنهاد الکترونیکی به تفکیک رشته</p>
 </template>
 
 <script>

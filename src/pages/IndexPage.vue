@@ -1,5 +1,6 @@
 <template>
   <q-page class="flex flex-center">
+    <div class="separator"></div>
     <InsuranceTypes />
     <div class="column">
       <InsurancePlans />
@@ -43,4 +44,4 @@ export default defineComponent({
 });
 </script>
 
-<style></style>
+<style scoped></style>

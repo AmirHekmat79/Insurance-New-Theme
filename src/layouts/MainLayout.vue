@@ -1,54 +1,79 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <div class="banner-styles relative-position" >
-      <q-header  class="q-pa-md header  absolute text-white" elevated >
-      <ToolbarNavigation/>
-    </q-header>
-    <h1 class="absolute fixed-center  banner-title text-white flex justify-center items-center">بیمه،راه جبران خسارت</h1>
+    <div class="banner-styles relative-position">
+      <q-header class="q-pa-md header absolute text-white" elevated>
+        <ToolbarNavigation />
+      </q-header>
+      <h1
+        ref="bannerTitle"
+        class="absolute fixed-center banner-title text-white flex justify-center items-center"
+      >
+        بیمه،راه جبران خسارت
+      </h1>
     </div>
-    <q-page-container> 
+    <q-page-container>
       <router-view />
     </q-page-container>
-    <FooterSection/>
+    <FooterSection />
   </q-layout>
 </template>
 
 <script>
-import { defineComponent, } from 'vue'
-import ToolbarNavigation from '../components/Header/toolbar-navigation.vue';
-import FooterSection from '../components/Footer-Layout/footer-section.vue';
-
+import { defineComponent, ref } from "vue";
+import ToolbarNavigation from "../components/Header/toolbar-navigation.vue";
+import FooterSection from "../components/Footer-Layout/footer-section.vue";
 
 export default defineComponent({
-  name: 'MainLayout',
- 
+  name: "MainLayout",
   components: {
     ToolbarNavigation,
-    FooterSection
+    FooterSection,
   },
-})
+  mounted() {
+    this.TypeWritterEffect();
+  },
+  methods: {
+    TypeWritterEffect() {
+      const bannerTitle = this.$refs.bannerTitle;
+      if (!bannerTitle) return;
+
+      let text = bannerTitle.textContent;
+      bannerTitle.textContent = "";
+      let i = 0;
+      let timer = setInterval(() => {
+        if (i >= text.length) {
+          clearInterval(timer);
+          return;
+        }
+        bannerTitle.textContent += text[i];
+        i++;
+      }, 100);
+    },
+  },
+});
 </script>
+
 <style scoped>
-.banner-styles{
+.banner-styles {
   background: url(../assets/banner.png);
   background-position: center;
   background-size: cover;
   width: 100%;
   height: 600px;
-  opacity:0/80;
+  opacity: 0/80;
 }
-.banner-title{
+.banner-title {
   font-weight: 900;
-  background-color: #007BFF;
+  background-color: #007bff;
   opacity: 40%;
   width: 100%;
   padding: 10px;
 }
-.header{
+.header {
   width: 1280px;
-   margin: auto; 
-   border-radius: 1000px;
-   margin-top:60px;
-   background: #CCE4FF;
+  margin: auto;
+  border-radius: 1000px;
+  margin-top: 60px;
+  background: #cce4ff;
 }
 </style>
