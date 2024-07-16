@@ -1,19 +1,18 @@
 <template>
-  <div class="column justify-between items-center q-pa-xl">
-    <div class="just-click-title-container q-mb-md q-ml-auto back-move">
+  <div class="column justify-between items-center q-pa-md feature-banner">
+    <div class="just-click-title-container q-ml-auto back-move">
       <p class="just-click-title">فقط با چند کلیک</p>
     </div>
 
-    <div id="particles-container"></div>
-    <q-card class="card-feature shadow-4">
-      <div class="row justify-center items-center q-gutter-md">
+    <q-card class="card-feature shadow-4 q-my-md">
+      <div class="row justify-center items-center q-gutter-lg">
         <div
           class="text-center"
           v-for="item in insuranceFeatures"
           :key="item.id"
         >
           <div class="feature-img-container">
-            <q-img :src="item.src" style="width: 5vw"></q-img>
+            <q-img :src="item.src" style="width: 80px"></q-img>
           </div>
           <span class="feature-title text-h6">{{ item.title }}</span>
         </div>
@@ -42,65 +41,6 @@ export default defineComponent({
       ],
     };
   },
-
-  mounted() {
-    particlesJS("particles-container", {
-      particles: {
-        number: { value: 100, density: { enable: true, value_area: 800 } },
-        color: { value: "#2980b9" },
-        shape: { type: "circle", stroke: { width: 0, color: "#2980b9" } },
-        opacity: {
-          value: 0.5,
-          random: false,
-          anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
-        },
-        size: {
-          value: 5,
-          random: true,
-          anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
-        },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#2980b9",
-          opacity: 0.4,
-          width: 0.3,
-        },
-        move: {
-          enable: true,
-          speed: 6,
-          direction: "none",
-          random: false,
-          straight: false,
-          out_mode: "out",
-          bounce: false,
-          attract: { enable: false, rotateX: 600, rotateY: 1200 },
-        },
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: { enable: true, mode: "repulse" },
-          onclick: { enable: true, mode: "push" },
-          resize: true,
-        },
-        modes: {
-          grab: { distance: 350, line_linked: { opacity: 0.5 } },
-          bubble: {
-            distance: 400,
-            size: 40,
-            duration: 2,
-            opacity: 8,
-            speed: 3,
-          },
-          repulse: { distance: 200, duration: 0.4 },
-          push: { particles_nb: 4 },
-          remove: { particles_nb: 2 },
-        },
-      },
-      retina_detect: true,
-    });
-  },
 });
 </script>
 
@@ -108,9 +48,15 @@ export default defineComponent({
 * {
   overflow-x: hidden;
 }
+
+.feature-banner {
+  background: url(../../assets/Insure_tech_1.jpg);
+  background-size: cover;
+  background-position: center;
+}
 .card-feature {
   width: 50%;
-  padding: 70px;
+  padding: 50px;
   border-radius: 3px;
   border-bottom-right-radius: 20%;
   border-top-left-radius: 20%;
@@ -123,7 +69,6 @@ export default defineComponent({
   width: 280px;
   height: 114px;
   text-align: center;
-  margin-top: 2rem;
 }
 .just-click-title {
   font-size: 1.5rem;
@@ -136,7 +81,6 @@ export default defineComponent({
   color: #fff;
   width: 300px;
   height: 110px;
-  margin-top: 2rem;
 }
 .insurance-advice-title {
   font-size: 1.5rem;
@@ -150,7 +94,7 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
 }
 .feature-title {
   font-weight: bolder;
@@ -185,14 +129,5 @@ export default defineComponent({
 
 .back-move {
   animation: back-move 4s ease forwards;
-}
-
-#particles-container {
-  /* position: absolute;
-  top: 0;
-  left: 0; */
-  width: 50%;
-  height: 50%;
-  z-index: -1;
 }
 </style>

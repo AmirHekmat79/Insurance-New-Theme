@@ -117,6 +117,7 @@ export default defineComponent({
 
 .flip-box:hover .flip-box-inner {
   transform: rotateY(180deg);
+  cursor: pointer;
 }
 
 .flip-box-front,

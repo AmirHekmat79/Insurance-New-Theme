@@ -7,7 +7,7 @@
     class="row justify-center items-center text-center q-gutter-lg cards-container q-pa-xl q-mb-lg"
   >
     <div class="col-md-3" v-for="item in InsuranceNews" :key="item.id">
-      <q-card class="card text-white q-py-sm">
+      <q-card class="card text-white q-py-sm shadow-1">
         <q-card-section class="text-center">
           <q-img class="card-img" :src="item.src"></q-img>
           <h6 class="card-title">عنوان خبر</h6>
@@ -53,5 +53,11 @@ export default defineComponent({
   width: 100%;
   height: 100%;
   margin: auto;
+  transition: transform 0.3s ease;
+}
+
+.card-img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 </style>

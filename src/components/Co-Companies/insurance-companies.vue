@@ -125,8 +125,11 @@ export default defineComponent({
 .change-opacity {
   opacity: 0.8;
 }
-@media screen and (max-width: 892px) {
+@media screen and (max-width: 1060px) {
   .change-opacity {
+    display: none;
+  }
+  .glass {
     display: none;
   }
 }
