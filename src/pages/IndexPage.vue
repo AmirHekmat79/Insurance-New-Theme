@@ -1,13 +1,14 @@
 <template>
   <q-page class="flex flex-center">
-    <InsuranceTypeCards />
+    <InsuranceTypes />
     <div class="column">
+      <InsurancePlans />
       <div>
         <InsuranceFeatures />
       </div>
       <InsuranceCompanies />
       <ConsultRequest />
-      <InsuranceNews/>
+      <InsuranceNews />
       <InsuranceForm />
       <ImageGallery />
       <VideoGallery />
@@ -17,7 +18,8 @@
 
 <script>
 import { defineComponent } from "vue";
-import InsuranceTypeCards from "../components/Insurance-Type/insurance-type-cards.vue";
+import InsuranceTypes from "../components/Insurance-Types/insurance-types.vue";
+import InsurancePlans from "../components/Insurance-Plans/insurance-plans.vue";
 import InsuranceFeatures from "../components/Insurance-Options/insurance-features.vue";
 import ConsultRequest from "../components/Consult-Request/consult-request.vue";
 import InsuranceCompanies from "../components/Co-Companies/insurance-companies.vue";
@@ -28,14 +30,15 @@ import InsuranceNews from "../components/Insurance-News/insurance-news.vue";
 export default defineComponent({
   name: "IndexPage",
   components: {
-    InsuranceTypeCards,
+    InsuranceTypes,
+    InsurancePlans,
     InsuranceFeatures,
     ConsultRequest,
     InsuranceCompanies,
     VideoGallery,
     ImageGallery,
     InsuranceForm,
-    InsuranceNews
+    InsuranceNews,
   },
 });
 </script>
