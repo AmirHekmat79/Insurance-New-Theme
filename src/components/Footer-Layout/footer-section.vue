@@ -3,7 +3,7 @@
     <section dir="rtl" class="row justify-center items-center sub-footer ">
       <div class="col-md-4"> 
        <q-btn class="logo-btn q-my-md"><q-img src="../../assets/footerLogo.png" width="200px"></q-img></q-btn>
-       <div class="row justify-start items-center q-my-lg q-gutter-sm">
+       <div class="row justify-start items-center q-my-lg q-gutter-md">
          <q-img src="../../assets/telegramX.png" width="24px"></q-img>
          <q-img src="../../assets/linkedin.png" width="24px"></q-img>
          <q-img src="../../assets/youtube.png" width="24px"></q-img>
@@ -11,14 +11,20 @@
         <q-img src="../../assets/telegram.png" width="24px"></q-img>
        </div>
        <div class="row justify-start items-center q-gutter-sm ">
-         <div class="q-mb-lg"> <q-img src="../../assets/Call.png" width="24px"></q-img></div>
+         <div class="q-mb-md"> <q-img src="../../assets/Call.png" width="24px"></q-img></div>
          <p class="text-subtitle call-number">021 - 12345678</p>
        </div>
+       <div class="row justify-start items-center q-gutter-sm ">
+         <div class="q-mb-md"> <q-img src="../../assets/email.svg" width="24px"></q-img></div>
+         <p class="text-subtitle call-number">Info@easybimeh.com</p>
+       </div>
        <div class="row justify-start items-center ">
-          <div class="q-mb-xl"><q-img src="../../assets/Location.png" width="24px"></q-img></div>
-            <p class="sub-footer-location-text">
+         
+           <div>
+             <p class="sub-footer-location-text">
               تهران  -  خیابان ولیعصر  -   نبش خیابان توانیر(عباس پور)   -   پلاک ۲۴۹۲   -    طبقه ۱  -   واحد ۱۰۴
             </p>
+           </div>
        </div>
       </div>
      
@@ -62,15 +68,18 @@
      
     </section>
 
-    <section  class="row justify-center items-center shadow-1 top-footer q-gutter-lg">
+    <section  class="row justify-center items-center shadow-1 top-footer">
      
-     <div class="col-lg-3 col-xl-6  col-md-6  col-xs-12 sign-img-container">
+     <div class="col-sm-3  col-xs-6 sign-img-container">
        <q-img class="enahad-sign" src="../../assets/enahad.png" width="80px"></q-img>
      </div>
-     <div class="col-lg-3" v-for="(item , index) in InsuranceCompanies.filter(item => item.id == 32)" :key="index">
+     <div class="col-sm-3  col-xs-6 sign-img-container">
+       <q-img class="kargozar-sign" src="../../assets/kargozar.png" width="80px"></q-img>
+     </div>
+     <div class="col-sm-3 col-xs-6" v-for="(item , index) in InsuranceCompanies.filter(item => item.id == 32)" :key="index">
       <q-img :src="item.metaMediaLogoFileUrl" width="80px"> </q-img>
      </div>
-     <div class="col-lg-3  col-xl-6 col-md-6  col-xs-12 sign-img-container"> 
+     <div class="col-sm-3  col-xs-6  sign-img-container"> 
        <q-img class="international-sign" src="../../assets/internationalSign.png" width="80px"></q-img>
      </div>
    </section>
@@ -140,7 +149,8 @@
     overflow: hidden;
   }
   .top-footer {
-    padding: 30px 40px;
+    text-align: center;
+    padding: 50px ;
     background: #ffff;
   }
   .sub-footer{
@@ -182,29 +192,18 @@
   direction: rtl;
 }
 
-.sign-img-container{
 
-  direction: rtl;
-  
-}
-.international-sign{
-  margin: 60px 20px;
-  text-align: center;
-}
-.enahad-sign{
-  margin: 60px 20px;
-  text-align: center;
-}
+
 .logo-btn{
   background: #003975;
   border-radius: 20px;
 }
 .sub-footer-location-text{
   white-space: wrap;
-  line-height: 20px;
+  line-height: 30px;
   width:405px;
-  height: 122px;
-  margin-top: 50px;
+  height: 102px;
+  margin-top: 10px;
   color:#003975;
   font-weight: bolder;
 }
