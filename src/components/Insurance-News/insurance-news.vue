@@ -1,10 +1,10 @@
 <template>
-  <div class="row justify-center q-gutter-sm items-center">
+  <div class="row justify-center items-center">
     <q-img src="../../assets/radio.svg" width="32px"></q-img>
-    <h6 class="titleStyle text-center">اخبار</h6>
+    <h6 class="titleStyle text-center q-mx-sm">اخبار</h6>
   </div>
   <div
-    class="row justify-center items-center text-center q-gutter-lg cards-container q-pa-xl q-mb-lg"
+    class="row justify-center items-center text-center cards-container "
   >
     <div class="col-md-3" v-for="item in InsuranceNews" :key="item.id">
       <q-card class="card text-white q-py-sm shadow-1">

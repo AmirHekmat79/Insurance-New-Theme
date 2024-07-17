@@ -1,5 +1,6 @@
 <template>
-  <div class="flex flex-center q-my-md">
+  <div class="flex flex-center q-my-xl q-mx-auto">
+    <q-separator class="q-my-lg" light style="width: 100%;"/>
     <section>
       <div class="row justify-around items-center">
         <q-card

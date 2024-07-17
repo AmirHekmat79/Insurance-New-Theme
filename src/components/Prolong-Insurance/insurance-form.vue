@@ -1,5 +1,5 @@
 <template>
-  <div class="row justify-center reverse-wrap items-center q-pa-xl q-mb-lg">
+  <div class="row justify-center reverse-wrap items-center q-pa-xl q-my-xl">
     <div class="col-md-8">
       <div class="row justify-center items-center q-gutter-md">
         <div class="col-md-4 col-sm-4 col-xs-6">
@@ -109,8 +109,8 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="row justify-center items-center q-gutter-sm">
-        <h2 class="form-title">یادآور تمدید بیمه نامه</h2>
+      <div class="row justify-center items-center">
+        <h2 class="form-title q-mx-sm">یادآور تمدید بیمه نامه</h2>
         <q-img src="src/assets/head-idea-icon.svg" width="32px"></q-img>
       </div>
       <q-img class="form-img" src="src/assets/calender.png"></q-img>

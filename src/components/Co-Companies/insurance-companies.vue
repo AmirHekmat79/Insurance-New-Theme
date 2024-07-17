@@ -3,10 +3,10 @@
     <section class="q-py-lg">
       <div class="container q-mx-auto q-mb-md">
         <div
-          class="title q-py-md row justify-center text-center items-center q-gutter-sm"
+          class="row justify-center text-center items-center   q-py-md "
         >
           <q-img src="../../assets/protect-icon.svg" width="32px"></q-img>
-          <h5 class="text-weight-bold company-title">شرکت بیمه</h5>
+          <h5 class="text-weight-bold company-title q-mx-sm">شرکت بیمه</h5>
         </div>
       </div>
       <div class="container q-mx-auto">

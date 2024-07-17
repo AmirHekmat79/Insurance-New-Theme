@@ -43,9 +43,9 @@
       </form>
     </div>
     <div class="col-md-4 col-sm-6 col-xs-12">
-      <div class="row justify-center items-center q-gutter-md">
+      <div class="row justify-center items-center">
         <q-img src="../../assets/speech.svg" width="32px"></q-img>
-        <h5 class="consult-title">درخواست مشاوره</h5>
+        <h5 class="consult-title q-mx-sm">درخواست مشاوره</h5>
       </div>
       <q-img
         class="consult-img q-my-md"

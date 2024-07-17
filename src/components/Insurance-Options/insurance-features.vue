@@ -4,7 +4,7 @@
       <p class="just-click-title">فقط با چند کلیک</p>
     </div>
 
-    <q-card class="card-feature shadow-4 q-my-md">
+    <q-card class="card-feature shadow-8 q-my-md">
       <div class="row justify-center items-center q-gutter-lg">
         <div
           class="text-center"
@@ -55,11 +55,10 @@ export default defineComponent({
   background-position: center;
 }
 .card-feature {
-  width: 50%;
+  width: 50vw;
   padding: 50px;
-  border-radius: 3px;
-  border-bottom-right-radius: 20%;
-  border-top-left-radius: 20%;
+  border-radius: 8px;
+  
   background: #cce4ff;
 }
 .just-click-title-container {

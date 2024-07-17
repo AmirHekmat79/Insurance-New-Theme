@@ -1,8 +1,9 @@
 <template>
   <div class="q-py-lg q-my-lg q-mx-md text-center image-full-content shadow-1">
-    <div class="row justify-center q-gutter-lg items-center q-mb-md">
+    <div class="row justify-center  items-center q-mb-md">
       <q-img src="../../assets/img-gallery.svg" width="32px"></q-img>
-      <h2 class="gallery-title">گالری تصاویر</h2>
+      <h2 class="gallery-title q-mx-sm">گالری تصاویر</h2>
+      <q-img src="../../assets/img-gallery.svg" width="32px"></q-img>
     </div>
     <div
       class="row justify-around items-center wrap q-gutter-sm large-scale-gallery"
