@@ -59,7 +59,7 @@ export default defineComponent({
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 600px;
+  height: 400px;
   opacity: 0/80;
 }
 .banner-title {

@@ -141,8 +141,8 @@ video {
 }
 .expand-video {
   border-radius: 10px;
-  width: 646px;
-  height: 380px;
+  width:690px;
+  height: 480px;
   background-position: center;
   background-size: cover;
   border-style: none;

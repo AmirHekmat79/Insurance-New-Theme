@@ -1,11 +1,12 @@
 <template>
   
-  <div class="flex flex-center">
+  <div class="flex flex-center Container">
     <section class="insurance-types-container">
       <div class="text-center column justify-center items-center">
-    <h4>بازار آنلاین  خرید بهترین بیمه</h4>
-    <p>  نوع بیمه خود را انتخاب کنید </p>
-  </div>
+      <h3>بازار آنلاین  خرید بهترین بیمه</h3>
+      <br/>
+      <h5 class="insurance-type">  نوع بیمه خود را انتخاب کنید </h5>
+    </div>
       <div class="row justify-around items-center">
         <InsurancePlans/>
         <div
@@ -61,6 +62,20 @@ export default defineComponent({
     max-width: 80%;
   }
 } */
+ 
+/* @font-face {
+    font-family: 'IRANSans';
+    src: url('/fonts/IRANSansXNoEn-Bold.ttf');
+} */
+.Container{
+  margin-top: -100px;
+}
+.insurance-type{
+  margin: -20px;
+}
+h3{
+  font-weight: bolder;
+}
 .cards {
   background:none;
   width: 145px;
