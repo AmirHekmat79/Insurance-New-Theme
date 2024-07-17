@@ -1,12 +1,11 @@
 <template>
-  <div class="q-py-lg q-my-lg q-mx-md text-center image-full-content shadow-1">
-    <div class="row justify-center  items-center q-mb-md">
-      <q-img src="../../assets/img-gallery.svg" width="32px"></q-img>
-      <h2 class="gallery-title q-mx-sm">گالری تصاویر</h2>
+  <div class="q-py-lg q-my-lg q-mx-md text-center image-full-content " >
+    <div class="row justify-center  items-center title-container">
+      <h2 class="gallery-title ">گالری تصاویر</h2>
       <q-img src="../../assets/img-gallery.svg" width="32px"></q-img>
     </div>
     <div
-      class="row justify-around items-center wrap q-gutter-sm large-scale-gallery"
+      class="row justify-center items-center wrap   large-scale-gallery"
     >
       <div
         class="col-md-3 flip-box"
@@ -24,7 +23,7 @@
       </div>
     </div>
     <div
-      class="row justify-around items-center wrap q-gutter-sm small-scale-gallery"
+      class="row justify-center items-center wrap q-gutter-sm small-scale-gallery"
     >
       <div
         class="col-md-3 flip-box"
@@ -35,13 +34,14 @@
           <div class="flip-box-front">
             <q-img class="img-item" :src="item?.metaMediaFileUrl"></q-img>
           </div>
-          <div class="flip-box-back shadow-10">
+          <div class="flip-box-back shadow-3">
             <h6 class="text-center image-title">{{ item.title }}</h6>
           </div>
         </div>
       </div>
     </div>
   </div>
+  
 </template>
 
 <script>
@@ -74,21 +74,34 @@ export default defineComponent({
 </script>
 
 <style scoped>
+*{
+  
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.title-container{
+  margin-bottom: 20px !important;
+}
 .image-title {
   margin: 80px auto !important;
   text-align: center;
 }
 .gallery-title {
   font-size: 32px;
+  margin-right: 10px !important;
   font-weight: bolder;
   text-align: right;
   color: #003975 !important;
 }
 .image-full-content {
   max-width: 100%;
-  background: #dfedfc;
-  border-radius: 80px;
-  padding: 30px;
+  width: 100%; /* add this */
+  box-sizing: border-box; /* add this */
+  background: #ECEFF1;
+  padding-top: 20px !important;
+  padding-bottom: 50px !important;
+  padding-left: 0px;
+  padding-right: 0px;
   opacity: 0.9;
 }
 
@@ -103,7 +116,8 @@ export default defineComponent({
   height: 200px;
   border: 1px solid #f1f1f1;
   perspective: 1000px;
-  margin-top: 20px;
+  margin-top: 20px !important;
+  margin-left: 10px !important;
   border-radius: 80px;
 }
 

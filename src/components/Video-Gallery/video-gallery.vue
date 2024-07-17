@@ -3,7 +3,6 @@
     class="q-pa-md q-my-lg q-mx-md-lg q-mx-auto text-center video-full-content"
   >
     <div class="row justify-center q-mr-md items-center">
-      <q-img src="../../assets/video-status-icon.svg" width="32px"></q-img>
       <h3 class="gallery-title q-my-md q-mx-sm">گالری ویدئوها</h3>
       <q-img src="../../assets/video-status-icon.svg" width="32px"></q-img>
     </div>

@@ -59,7 +59,7 @@ export default defineComponent({
 }
 
 .feature-banner {
-  background: #cce4ff;
+  background: #ECEFF1;
   background-size: cover;
   background-position: center;
 }

@@ -1,6 +1,39 @@
 <template>
-    <section  class="row justify-around items-center shadow-12 top-footer q-gutter-lg">
+  
+    <section dir="rtl" class="row justify-center items-center sub-footer ">
+      <div class="col-md-4"> 
+       <q-btn class="logo-btn q-my-md"><q-img src="../../assets/footerLogo.png" width="200px"></q-img></q-btn>
+       <div class="row justify-start items-center q-my-lg q-gutter-sm">
+         <q-img src="../../assets/telegramX.png" width="24px"></q-img>
+         <q-img src="../../assets/linkedin.png" width="24px"></q-img>
+         <q-img src="../../assets/youtube.png" width="24px"></q-img>
+         <q-img src="../../assets/whatsapp.png" width="24px"></q-img>
+        <q-img src="../../assets/telegram.png" width="24px"></q-img>
+       </div>
+       <div class="row justify-start items-center q-gutter-sm ">
+         <div class="q-mb-lg"> <q-img src="../../assets/Call.png" width="24px"></q-img></div>
+         <p class="text-subtitle call-number">021 - 12345678</p>
+       </div>
+       <div class="row justify-start items-center ">
+          <div class="q-mb-xl"><q-img src="../../assets/Location.png" width="24px"></q-img></div>
+            <p class="sub-footer-location-text">
+              تهران  -  خیابان ولیعصر  -   نبش خیابان توانیر(عباس پور)   -   پلاک ۲۴۹۲   -    طبقه ۱  -   واحد ۱۰۴
+            </p>
+       </div>
+      </div>
      
+      
+      <div class="col-lg-3 col-xl-6  col-md-6 site-feature-container   col-xs-12"> 
+        <h2 class="title q-mr-sm"> امکانات سایت </h2>
+        <ul class="site-features">
+          <li><a>   درباره ما </a></li>
+          <li><a> خدمات ما  </a> </li>
+          <li><a> تماس با ما </a></li>
+          <li><a> پیشنهادات ، انتقادات و شکایات </a></li>
+          <li> <a> پرسش های متداول</a> </li>
+          
+        </ul>
+      </div>
       <div class="col-lg-3  col-xl-6  col-md-6 common-link-container   col-xs-12"> 
         <h2 class="title q-mr-sm"> لینک های پر کاربرد </h2>
         <ul class="contactus">
@@ -23,50 +56,24 @@
             </li>
         </ul>
       </div>
-      <div class="col-lg-3 col-xl-6  col-md-6 site-feature-container   col-xs-12"> 
-        <h2 class="title q-mr-sm"> امکانات سایت </h2>
-        <ul class="site-features">
-          <li><a>   درباره ما </a></li>
-          <li><a> خدمات ما  </a> </li>
-          <li><a> تماس با ما </a></li>
-          <li><a> پیشنهادات ، انتقادات و شکایات </a></li>
-          <li> <a> پرسش های متداول</a> </li>
-          
-        </ul>
-      </div>
-      <div class="col-lg-3 col-xl-6  col-md-6  col-xs-12 sign-img-container">
-        <q-img class="enahad-sign" src="../../assets/enahad.png" width="150px"></q-img>
-      </div>
-      <div class="col-lg-3  col-xl-6 col-md-6  col-xs-12 sign-img-container"> 
-        <q-img class="international-sign" src="../../assets/internationalSign.png" width="150px"></q-img>
-      </div>
-    </section>
-    <section dir="rtl" class="row justify-center items-center sub-footer ">
-      <div class="col-md-6"> 
-       <q-btn class="logo-btn q-my-md"><q-img src="../../assets/footerLogo.png" width="200px"></q-img></q-btn>
-       <div class="row justify-center items-center q-my-lg q-gutter-sm">
-         <q-img src="../../assets/telegramX.png" width="24px"></q-img>
-         <q-img src="../../assets/linkedin.png" width="24px"></q-img>
-         <q-img src="../../assets/youtube.png" width="24px"></q-img>
-         <q-img src="../../assets/whatsapp.png" width="24px"></q-img>
-        <q-img src="../../assets/telegram.png" width="24px"></q-img>
-       </div>
-       <div class="row justify-center items-center q-gutter-sm ">
-         <div class="q-mb-lg"> <q-img src="../../assets/Call.png" width="24px"></q-img></div>
-         <p class="text-subtitle call-number">021 - 12345678</p>
-       </div>
-       <div class="row justify-center items-center ">
-          <div class="q-mb-xl"><q-img src="../../assets/Location.png" width="24px"></q-img></div>
-            <p class="sub-footer-location-text">
-              تهران  -  خیابان ولیعصر  -   نبش خیابان توانیر(عباس پور)   -   پلاک ۲۴۹۲   -    طبقه ۱  -   واحد ۱۰۴
-            </p>
-       </div>
-      </div>
-      <div class="col-md-6">
-        <div id="footer-map" style="height: 200px; width:640px;"></div>
+      <div class="col-md-3">
+        <div id="footer-map" style="height: 200px; width:340px;"></div>
       </div>
      
     </section>
+
+    <section  class="row justify-center items-center shadow-1 top-footer q-gutter-lg">
+     
+     <div class="col-lg-3 col-xl-6  col-md-6  col-xs-12 sign-img-container">
+       <q-img class="enahad-sign" src="../../assets/enahad.png" width="80px"></q-img>
+     </div>
+     <div class="col-lg-3" v-for="(item , index) in InsuranceCompanies.filter(item => item.id == 32)" :key="index">
+      <q-img :src="item.metaMediaLogoFileUrl" width="80px"> </q-img>
+     </div>
+     <div class="col-lg-3  col-xl-6 col-md-6  col-xs-12 sign-img-container"> 
+       <q-img class="international-sign" src="../../assets/internationalSign.png" width="80px"></q-img>
+     </div>
+   </section>
     <q-footer  class="Footer text-center" elevated>
         {{ InsuranceFooterTitle?.footerContent }}
     </q-footer>
@@ -81,7 +88,8 @@
     data() {
       return {
         map: null ,
-        InsuranceFooterTitle : null
+        InsuranceFooterTitle : null ,
+        InsuranceCompanies : []
       }
     },
     mounted() {
@@ -107,6 +115,8 @@
           .getPolicyIntroduction('sabz')
           .then((response) => {
             this.InsuranceFooterTitle = response.data.message;
+            this.InsuranceCompanies =
+            response.data.message?.insuranceCentre?.insuranceCompanies || [];
             console.log(this.InsuranceFooterTitle);
           })
           .catch((error) => {
@@ -136,7 +146,7 @@
   .sub-footer{
     padding:40px 30px;
     margin: auto;
-    text-align: center;
+    /* text-align: center; */
     background: #eee;
   }
   #footer-map {
@@ -144,17 +154,18 @@
     height: 100%;
   }
   .site-features , .contactus{
+    list-style-type: none;
     font : 14px 'iransans';
   }
   .site-features li{
-    margin-top: 30px ;
+    margin-top: 20px ;
     cursor: pointer;
   }
   .site-features li:hover{
     color : #007BFF;
   }
   .contactus li{
-    margin-top: 30px ;
+    margin-top: 20px ;
     cursor: pointer;
   }
   .contactus li:hover{
@@ -165,18 +176,14 @@
   color: #003975 !important;
 }
 .common-link-container , .site-feature-container {
-  border : 1px solid #007BFF;
-  border-radius: 20px;
+ 
   width: 288px;
   height: 342px;
   direction: rtl;
 }
 
 .sign-img-container{
-  background: #CCE4FF;
-  border-radius: 20px;
-  width: 186px;
-  height: 342px;
+
   direction: rtl;
   
 }
