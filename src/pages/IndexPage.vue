@@ -3,7 +3,7 @@
     <InsuranceTypes />
 
     <div class="column">
-      <InsurancePlans />
+      <!-- <InsurancePlans /> -->
       <InsuranceFeatures />
       <!-- <InsuranceCompanies /> -->
       <ConsultRequest />
@@ -18,11 +18,10 @@
 <script>
 import { defineComponent } from "vue";
 import InsuranceTypes from "../components/Insurance-Types/insurance-types.vue";
-import InsurancePlans from "../components/Insurance-Plans/insurance-plans.vue";
 import InsuranceFeatures from "../components/Insurance-Options/insurance-features.vue";
 import ConsultRequest from "../components/Consult-Request/consult-request.vue";
 // import InsuranceCompanies from "../components/Co-Companies/insurance-companies.vue";
-import VideoGallery from "../components/Video-Gallery/video-gallery.vue";
+import VideoGallery from "../components/Video-Gallery/video-gallery.vue"; 
 import ImageGallery from "../components/Image-Gallery/image-gallery.vue";
 import InsuranceForm from "../components/Prolong-Insurance/insurance-form.vue";
 import InsuranceNews from "../components/Insurance-News/insurance-news.vue";
@@ -30,7 +29,6 @@ export default defineComponent({
   name: "IndexPage",
   components: {
     InsuranceTypes,
-    InsurancePlans,
     InsuranceFeatures,
     ConsultRequest,
     // InsuranceCompanies,

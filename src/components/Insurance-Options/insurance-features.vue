@@ -1,26 +1,35 @@
 <template>
-  <div class="column justify-between items-center q-pa-md feature-banner">
-    <div class="just-click-title-container q-ml-auto back-move">
-      <p class="just-click-title">فقط با چند کلیک</p>
-    </div>
-
-    <q-card class="card-feature shadow-8 q-my-md">
-      <div class="row justify-center items-center q-gutter-lg">
+  <div class="row justify-center items-center feature-banner">
+    <div class="img-banner-container">
+    <q-img class="fast-banner"  src="../../assets/custom-svg-banner.svg" width="600px" ></q-img>
+   </div>
+  <div class="row justify-center items-center">
+    <div class="card-feature  q-my-sm ">
+      <div class="column justify-center items-center">
+        <div class="just-click-title-container q-ml-auto back-move">
+       <p class="just-click-title">فقط با چند کلیک</p>
+      </div>
         <div
-          class="text-center"
+          class="text-center q-my-md q-ml-auto"
           v-for="item in insuranceFeatures"
           :key="item.id"
         >
-          <div class="feature-img-container">
+        <div class="row justify-around items-center ">
+          <span class="feature-title text-h6">{{ item.title }}</span>
+          <div class="feature-img-container q-mx-lg">
             <q-img :src="item.src" style="width: 80px"></q-img>
           </div>
-          <span class="feature-title text-h6">{{ item.title }}</span>
         </div>
-      </div>
-    </q-card>
-    <div class="insurance-advice-title-container q-mr-auto front-move">
+          
+        </div>
+      
+    <div class="insurance-advice-title-container q-my-md q-ml-auto front-move">
       <p class="insurance-advice-title">خودت رو بیمه کن!</p>
     </div>
+      </div>
+    </div>
+  </div>
+
   </div>
 </template>
 
@@ -50,7 +59,7 @@ export default defineComponent({
 }
 
 .feature-banner {
-  background: url(../../assets/Insure_tech_1.jpg);
+  background: #cce4ff;
   background-size: cover;
   background-position: center;
 }
@@ -58,11 +67,10 @@ export default defineComponent({
   width: 50vw;
   padding: 50px;
   border-radius: 8px;
-  
-  background: #cce4ff;
+ 
 }
 .just-click-title-container {
-  background: #cce4ff;
+  
   color: #003975;
   border-radius: 176px;
   width: 280px;

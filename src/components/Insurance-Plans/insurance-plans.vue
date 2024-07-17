@@ -1,18 +1,18 @@
 <template>
   <div class="flex flex-center q-my-xl q-mx-auto">
-    <q-separator class="q-my-lg" light style="width: 100%;"/>
+    <!-- <q-separator class="q-my-lg" light style="width: 100%;"/> -->
     <section>
       <div class="row justify-around items-center">
-        <q-card
+        <div
           v-for="(item, index) in insurancePlans"
           :key="index"
-          class="text-center cards shadow-10 q-mx-md"
+          class="text-center cards  q-mx-md"
         >
-          <q-card-section class="column justify-between items-center flex-wrap">
+          <div class="column justify-between items-center q-my-lg">
             <q-img :src="item.iconImage" width="60px" />
             <p class="insurance-title">{{ item.title }}</p>
-          </q-card-section>
-        </q-card>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -65,12 +65,13 @@ export default defineComponent({
   width: 145px;
   height: 150px;
   margin: 10px;
-  background-color: #fff;
+  /* background-color: #fff;*/
   border-radius: 35px;
-  border: 2px solid #48bdd5;
+  border: 1px solid #ddd; 
   cursor: pointer;
 }
 .cards:hover {
-  background: #eee;
+  transform: translateY(-8px);
+  transition: all 0.4s ease-in-out linear;
 }
 </style>
