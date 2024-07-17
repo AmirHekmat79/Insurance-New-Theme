@@ -6,15 +6,21 @@
   <div
     class="row justify-center items-center text-center cards-container "
   >
-    <div class="col-md-3" v-for="item in InsuranceNews" :key="item.id">
-      <q-card class="card text-white q-py-sm shadow-1">
+    <div class="col-md-3 q-ma-md " v-for="item in InsuranceNews" :key="item.id">
+      <q-card class="card text-white q-pa-sm shadow-1">
         <q-card-section class="text-center">
           <q-img class="card-img" :src="item.src"></q-img>
-          <h6 class="card-title">عنوان خبر</h6>
+          <div class="row justify-around items-center">
+            <q-badge class="q-pa-sm rounded-borders cursor-pointer" color="blue">
+              جزئیات بیشتر
+            </q-badge>
+            <h6 class="card-title">عنوان خبر</h6>
+          </div>
         </q-card-section>
       </q-card>
     </div>
   </div>
+  
 </template>
 
 <script>
@@ -37,6 +43,8 @@ export default defineComponent({
 </script>
 
 <style scoped>
+
+
 .titleStyle {
   color: #002247;
 }

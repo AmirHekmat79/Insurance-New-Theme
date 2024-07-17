@@ -1,6 +1,6 @@
 <template>
   <div
-    class="q-pa-md q-my-lg q-mx-md-lg q-mx-auto text-center video-full-content shadow-1"
+    class="q-pa-md q-my-lg q-mx-md-lg q-mx-auto text-center video-full-content"
   >
     <div class="row justify-center q-mr-md items-center">
       <q-img src="../../assets/video-status-icon.svg" width="32px"></q-img>
@@ -153,11 +153,7 @@ video {
   display: block;
 }
 
-.video-full-content {
-  background: #dfedfc;
-  border-radius: 80px;
-  padding: 30px;
-}
+
 @media screen and (max-width: 1052px) {
   .video-desktop {
     display: none;

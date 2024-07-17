@@ -85,6 +85,7 @@ export default defineComponent({
   color: #003975 !important;
 }
 .image-full-content {
+  max-width: 100%;
   background: #dfedfc;
   border-radius: 80px;
   padding: 30px;
