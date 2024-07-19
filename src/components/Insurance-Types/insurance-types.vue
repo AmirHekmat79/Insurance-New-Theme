@@ -8,6 +8,9 @@
         <h5 class="insurance-type">نوع بیمه خود را انتخاب کنید</h5>
       </div>
       <div class="row justify-around items-center">
+        <q-btn class="modal-btn rounded-borders" @click="fullWidth = true"
+          >بیشتر...</q-btn
+        >
         <InsurancePlans />
         <div
           v-for="(type, index) in types"
@@ -22,6 +25,21 @@
       </div>
     </section>
   </div>
+  <q-dialog v-model="fullWidth" full-width>
+    <q-card class="card-background">
+      <q-card-section>
+        <div class="text-h6 text-center rounded-borders">طرح های پیشنهادی</div>
+      </q-card-section>
+
+      <q-card-section class="q-pt-none">
+        <InsuranceSuggestedPlans />
+      </q-card-section>
+
+      <q-card-actions align="right" class="text-white">
+        <q-btn class="bg-red-3" flat label="خروج" v-close-popup />
+      </q-card-actions>
+    </q-card>
+  </q-dialog>
 </template>
 
 <script>
@@ -31,10 +49,12 @@ import Doctor from "src/assets/Doctor.png";
 import carInsurance from "src/assets/car-insurance.png";
 import thirdInsurance from "src/assets/third-insurance.png";
 import InsurancePlans from "../Insurance-Plans/insurance-plans.vue";
+import InsuranceSuggestedPlans from "../Suggestion-Plans/insurance-suggested-plans.vue";
 export default defineComponent({
   name: "InsuranceTypes",
   components: {
     InsurancePlans,
+    InsuranceSuggestedPlans,
   },
   data() {
     return {
@@ -44,6 +64,8 @@ export default defineComponent({
         { name: "بیمه بدنه", Src: carInsurance },
         { name: "بیمه ثالث خودرو", Src: thirdInsurance },
       ],
+
+      fullWidth: false,
     };
   },
 });
@@ -94,5 +116,17 @@ h3 {
 .insurance-name {
   padding: 10px 5px 0px;
   font-size: 12px;
+}
+.modal-btn {
+  background: #cce4ff;
+  direction: rtl;
+}
+.card-background {
+  background: linear-gradient(
+    90deg,
+    rgb(93, 93, 96) 0%,
+    rgb(190, 190, 233) 35%,
+    rgb(214, 240, 245) 100%
+  );
 }
 </style>

@@ -1,43 +1,47 @@
 <template>
   <div class="row justify-center items-center feature-banner">
     <div class="img-banner-container">
-    <q-img class="fast-banner"  src="../../assets/custom-svg-banner.svg" width="600px" ></q-img>
-   </div>
-  <div class="row justify-center items-center">
-    <div class="card-feature  q-my-sm ">
-      <div class="column justify-center items-center">
-        <div class="just-click-title-container q-ml-auto back-move">
-       <p class="just-click-title">فقط با چند کلیک</p>
-      </div>
-        <div
-          class="text-center q-my-md q-ml-auto"
-          v-for="item in insuranceFeatures"
-          :key="item.id"
-        >
-        <div class="row justify-around items-center ">
-          <span class="feature-title text-h6">{{ item.title }}</span>
-          <div class="feature-img-container q-mx-lg">
-            <q-img :src="item.src" style="width: 80px"></q-img>
+      <q-img
+        class="fast-banner"
+        src="../../assets/custom-svg-banner.svg"
+        width="600px"
+      ></q-img>
+    </div>
+    <div class="row justify-center items-center">
+      <div class="card-feature q-my-sm">
+        <div class="column justify-center items-center">
+          <div class="just-click-title-container q-ml-auto back-move">
+            <p class="just-click-title">فقط با چند کلیک</p>
+          </div>
+          <div
+            class="text-center q-my-md q-ml-auto"
+            v-for="item in insuranceFeatures"
+            :key="item.id"
+          >
+            <div class="row justify-around items-center">
+              <span class="feature-title text-h6">{{ item.title }}</span>
+              <div class="feature-img-container q-mx-lg">
+                <q-img :src="item.src" style="width: 40px"></q-img>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="insurance-advice-title-container q-my-md q-ml-auto front-move"
+          >
+            <p class="insurance-advice-title">خودت رو بیمه کن!</p>
           </div>
         </div>
-          
-        </div>
-      
-    <div class="insurance-advice-title-container q-my-md q-ml-auto front-move">
-      <p class="insurance-advice-title">خودت رو بیمه کن!</p>
-    </div>
       </div>
     </div>
-  </div>
-
   </div>
 </template>
 
 <script>
 import { defineComponent } from "vue";
-import receivePolicy from "../../assets/receivePolicy.png";
-import priceComparison from "../../assets/priceComparison.png";
-import chooseInsurance from "../../assets/chooseInsurance.png";
+import receivePolicy from "../../assets/hand-with-star-icon.svg";
+import priceComparison from "../../assets/scale-icon.svg";
+import chooseInsurance from "../../assets/privacy-document-icon.svg";
 
 export default defineComponent({
   name: "InsuranceFeatures",
@@ -59,7 +63,7 @@ export default defineComponent({
 }
 
 .feature-banner {
-  background: #ECEFF1;
+  background: #eceff1;
   background-size: cover;
   background-position: center;
 }
@@ -67,10 +71,8 @@ export default defineComponent({
   width: 50vw;
   padding: 50px;
   border-radius: 8px;
- 
 }
 .just-click-title-container {
-  
   color: #003975;
   border-radius: 176px;
   width: 280px;
