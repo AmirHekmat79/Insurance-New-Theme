@@ -1,18 +1,18 @@
 <template>
-  
   <div class="flex flex-center Container">
     <section class="insurance-types-container">
       <div class="text-center column justify-center items-center">
-      <h3>بازار آنلاین  خرید بهترین بیمه</h3>
-      <br/>
-      <h5 class="insurance-type">  نوع بیمه خود را انتخاب کنید </h5>
-    </div>
+        <h3>بازار آنلاین خرید بهترین بیمه</h3>
+        <br />
+        <br />
+        <h5 class="insurance-type">نوع بیمه خود را انتخاب کنید</h5>
+      </div>
       <div class="row justify-around items-center">
-        <InsurancePlans/>
+        <InsurancePlans />
         <div
           v-for="(type, index) in types"
           :key="index"
-          class="text-center cards  q-mx-md"
+          class="text-center cards q-mx-md"
         >
           <div class="column justify-center items-center q-my-lg">
             <q-img :src="type.Src" width="50px"></q-img>
@@ -30,12 +30,12 @@ import cureInsurance from "src/assets/cure-insurance.png";
 import Doctor from "src/assets/Doctor.png";
 import carInsurance from "src/assets/car-insurance.png";
 import thirdInsurance from "src/assets/third-insurance.png";
-import InsurancePlans from '../Insurance-Plans/insurance-plans.vue';
+import InsurancePlans from "../Insurance-Plans/insurance-plans.vue";
 export default defineComponent({
   name: "InsuranceTypes",
-  components : {
-    InsurancePlans
-  } ,
+  components: {
+    InsurancePlans,
+  },
   data() {
     return {
       types: [
@@ -62,28 +62,29 @@ export default defineComponent({
     max-width: 80%;
   }
 } */
- 
+
 /* @font-face {
     font-family: 'IRANSans';
     src: url('/fonts/IRANSansXNoEn-Bold.ttf');
 } */
-.Container{
+.Container {
   margin-top: -100px;
 }
-.insurance-type{
+.insurance-type {
   margin: -20px;
 }
-h3{
+h3 {
   font-weight: bolder;
+  margin-top: 20px !important;
 }
 .cards {
-  background:none;
+  background: none;
   width: 145px;
   height: 150px;
   margin: 5px;
   /* background-color: #fff; */
-  border-radius: 35px; 
- border: 1px solid #ddd;
+  border-radius: 35px;
+  border: 1px solid #ddd;
   cursor: pointer;
 }
 .cards:hover {

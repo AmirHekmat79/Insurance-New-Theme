@@ -4,23 +4,28 @@
     <h6 class="titleStyle text-center q-mx-sm">اخبار</h6>
   </div>
   <div
-    class="row justify-center items-center text-center cards-container "
+    class="row justify-center items-center text-center cards-container q-my-xl"
   >
-    <div class="col-md-3 q-ma-md " v-for="item in InsuranceNews" :key="item.id">
-      <q-card class="card text-white q-pa-sm shadow-1">
-        <q-card-section class="text-center">
-          <q-img class="card-img" :src="item.src"></q-img>
-          <div class="row justify-around items-center">
-            <q-badge class="q-pa-sm rounded-borders cursor-pointer" color="blue">
-              جزئیات بیشتر
-            </q-badge>
-            <h6 class="card-title">عنوان خبر</h6>
-          </div>
+    <div
+      class="col-md-3 col-sm-4 col-xs-6 q-ma-md"
+      v-for="item in InsuranceNews"
+      :key="item.id"
+    >
+      <q-card class="my-card shadow-1">
+        <q-img class="card-img" :src="item.src">
+          <div class="absolute-bottom text-h6">{{ item.title }}</div>
+        </q-img>
+
+        <q-card-section dir="rtl">
+          {{ item.caption }}
         </q-card-section>
+        <q-separator light />
+        <q-btn class="details-btn text-center q-my-sm rounded-borders"
+          >جزئیات بیشتر</q-btn
+        >
       </q-card>
     </div>
   </div>
-  
 </template>
 
 <script>
@@ -33,9 +38,27 @@ export default defineComponent({
   data() {
     return {
       InsuranceNews: [
-        { id: 1, src: compassion },
-        { id: 2, src: rain },
-        { id: 3, src: samples },
+        {
+          id: 1,
+          src: compassion,
+          title: "بیمه درمان",
+          caption:
+            " بیمه درمان یا بیمه تکمیلی درمان یک بیمه‌نامه مکمل بیمه پایه محسوب می شود...",
+        },
+        {
+          id: 2,
+          src: rain,
+          title: "بیمه کار",
+          caption:
+            " بیمه کار مبلغی است که برای استفاده از مزایای بیمه به شرکت بیمه پرداخت می شود...",
+        },
+        {
+          id: 3,
+          src: samples,
+          title: "بیمه سلامت",
+          caption:
+            "بیمه عمر  قراردادی است که میان یک شرکت بیمه و شخص بیمه شونده  منعقد می‌شود...",
+        },
       ],
     };
   },
@@ -43,8 +66,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
-
 .titleStyle {
   color: #002247;
 }
@@ -58,14 +79,14 @@ export default defineComponent({
   margin: 20px;
 }
 .card-img {
-  width: 100%;
-  height: 100%;
-  margin: auto;
   transition: transform 0.3s ease;
 }
 
 .card-img:hover {
-  transform: scale(1.1);
+  transform: scale(0.9);
   cursor: pointer;
+}
+.details-btn {
+  background: #cce4ff;
 }
 </style>

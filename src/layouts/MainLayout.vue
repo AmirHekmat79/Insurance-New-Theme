@@ -1,7 +1,7 @@
 <template>
   <q-layout view=" Lpr lFf">
     <div class="banner-styles relative-position">
-      <q-header class="q-pa-md header absolute text-white" elevated>
+      <q-header class="q-pa-md header absolute text-white">
         <ToolbarNavigation />
       </q-header>
       <h1
@@ -72,8 +72,8 @@ export default defineComponent({
 .header {
   width: 1280px;
   margin: auto;
-  border-radius: 1000px;
-  margin-top: 60px;
+  border-radius: 500px;
+  margin-top: 50px;
   background: #cce4ff;
 }
 </style>
