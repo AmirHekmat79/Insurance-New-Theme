@@ -88,8 +88,8 @@ export default defineComponent({
   background: #003975;
   border-radius: 210px;
   color: #fff;
-  width: 300px;
-  height: 110px;
+  width: 230px;
+  height: 100px;
 }
 .insurance-advice-title {
   font-size: 1.5rem;

@@ -2,12 +2,12 @@
   <div class="flex flex-center Container">
     <section class="insurance-types-container">
       <div class="text-center column justify-center items-center">
-        <h3>بازار آنلاین خرید بهترین بیمه</h3>
+        <h4>بازار آنلاین خرید بهترین بیمه</h4>
         <br />
         <br />
         <h5 class="insurance-type">نوع بیمه خود را انتخاب کنید</h5>
       </div>
-      <div class="row justify-around items-center">
+      <div class="row justify-around items-center q-mt-md">
         <q-btn class="modal-btn rounded-borders" @click="fullWidth = true"
           >بیشتر...</q-btn
         >
@@ -93,11 +93,11 @@ export default defineComponent({
   margin-top: -100px;
 }
 .insurance-type {
-  margin: -20px;
+  margin: -50px;
 }
 h3 {
   font-weight: bolder;
-  margin-top: 20px !important;
+  margin-top: 30px !important;
 }
 .cards {
   background: none;
@@ -122,11 +122,6 @@ h3 {
   direction: rtl;
 }
 .card-background {
-  background: linear-gradient(
-    90deg,
-    rgb(93, 93, 96) 0%,
-    rgb(190, 190, 233) 35%,
-    rgb(214, 240, 245) 100%
-  );
+  background: #eceff1;
 }
 </style>

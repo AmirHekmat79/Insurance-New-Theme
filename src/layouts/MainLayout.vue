@@ -55,17 +55,15 @@ export default defineComponent({
 
 <style scoped>
 .banner-styles {
-  background: url(../assets/banner.png);
+  background:linear-gradient(#cce4ff , #2ca8fbb7);
   background-position: center;
-  background-size: cover;
+  background-size: center;
   width: 100%;
   height: 400px;
-  opacity: 0/80;
+  opacity: 0/6;
 }
 .banner-title {
   font-weight: 900;
-  background-color: #007bff;
-  opacity: 40%;
   width: 100%;
   padding: 10px;
 }
