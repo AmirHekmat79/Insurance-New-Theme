@@ -1,7 +1,7 @@
 <template>
-  <div class="feature-banner q-py-xl">
+  <div class="feature-banner q-pb-xl ">
     <div class="row justify-center items-center">
-      <q-img src="../../assets/radio.svg" width="32px"></q-img>
+      <q-img src="../../assets/radio.svg" width="22px"></q-img>
       <h6 class="titleStyle text-center q-mx-sm">اخبار</h6>
     </div>
     <div class="row justify-center items-center text-center q-gutter-sm q-my-lg q-pb-xl">

@@ -8,8 +8,8 @@
         <h5 class="insurance-type">نوع بیمه خود را انتخاب کنید</h5>
       </div>
       <div class="row justify-around items-center q-mt-md">
-        <q-btn class="modal-btn rounded-borders" @click="fullWidth = true"
-                >بیشتر...</q-btn
+        <div class="modal-btn rounded-borders" @click="fullWidth = true"
+                >بیشتر...</div
               >
         
         <InsurancePlans />
@@ -120,8 +120,21 @@ h3 {
   font-size: 12px;
 }
 .modal-btn {
-  background: #cce4ff;
+  background: none;
+  width: 145px;
+  height: 150px;
+  display:flex ;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  border-radius: 35px;
+  border: 1px solid #ddd;
+  cursor: pointer;
   direction: rtl;
+}
+.modal-btn:hover {
+  transform: translateY(-8px);
+  transition: all 0.4s ease-in-out linear;
 }
 .card-background {
   background: #eceff1;
