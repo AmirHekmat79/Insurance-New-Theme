@@ -1,7 +1,7 @@
 <template>
   <div class="row justify-center items-center feature-banner">
     <div class="img-banner-container">
-      <q-img class="fast-banner" src="../../assets/custom-svg-banner.svg" width="600px"></q-img>
+      <q-img class="fast-banner" src="../../assets/custom-svg-banner.svg"></q-img>
     </div>
     <div class="row justify-center items-center">
       <div class="card-feature q-my-sm">
@@ -82,7 +82,9 @@ ul {
   background-position: center;
   position: relative;
 }
-
+.fast-banner{
+  width: 600px;
+}
 .card-feature {
   width: 50vw;
   padding: 50px;
@@ -115,7 +117,6 @@ ul {
   color: #fff;
   width: 230px;
   height: 100px;
-  animation: pulse-white 2.5s infinite;
 }
 
 .insurance-advice-title {
@@ -145,7 +146,12 @@ ul {
     flex-direction: column;
     align-items: center;
   }
-
+.fast-banner{
+  width: 250px;
+}
+  .feature-img-container {
+  display: none;
+}
   .circle-number {
    display: none;
   }
