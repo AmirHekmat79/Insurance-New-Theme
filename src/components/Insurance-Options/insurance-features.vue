@@ -65,7 +65,7 @@ export default defineComponent({
 }
 
 .feature-banner {
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(204,228,255,1) 16%, rgba(204,228,255,1) 100%);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(204,228,255,1) 20%, rgba(204,228,255,1) 100%);
   background-size: cover;
   background-position: center;
   position: relative;

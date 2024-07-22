@@ -40,6 +40,7 @@
         </div>
       </div>
     </div>
+    <q-img src="../../assets/Rectangle22.png" class="wave-img" alt=""></q-img>
   </div>
   
 </template>
@@ -97,7 +98,8 @@ export default defineComponent({
   max-width: 100%;
   width: 100%; /* add this */
   box-sizing: border-box; /* add this */
-  background: #ECEFF1;
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(204,228,255,1) 20%, rgba(204,228,255,1) 100%);
+  position: relative;
   padding-top: 20px !important;
   padding-bottom: 50px !important;
   padding-left: 0px;
@@ -118,7 +120,7 @@ export default defineComponent({
   perspective: 1000px;
   margin-top: 20px !important;
   margin-left: 10px !important;
-  border-radius: 80px;
+  border-radius: 10px;
 }
 
 .flip-box-inner {

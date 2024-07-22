@@ -1,28 +1,32 @@
 <template>
-  <div class="row justify-center items-center">
-    <q-img src="../../assets/radio.svg" width="32px"></q-img>
-    <h6 class="titleStyle text-center q-mx-sm">اخبار</h6>
-  </div>
-  <div class="row justify-center items-center text-center q-gutter-sm q-my-xl">
-    <div
-      class="col-lg-3 col-md-4 col-sm-6 col-xs-12"
-      v-for="item in InsuranceNews"
-      :key="item.id"
-    >
-      <q-card class="my-card shadow-1">
-        <q-img class="card-img" :src="item.src">
-          <div class="absolute-bottom text-h6">{{ item.title }}</div>
-        </q-img>
-
-        <q-card-section dir="rtl">
-          {{ item.caption }}
-        </q-card-section>
-        <q-separator light />
-        <q-btn class="details-btn text-center q-my-sm rounded-borders"
-          >جزئیات بیشتر</q-btn
-        >
-      </q-card>
+  <div class="feature-banner q-py-xl">
+    <div class="row justify-center items-center">
+      <q-img src="../../assets/radio.svg" width="32px"></q-img>
+      <h6 class="titleStyle text-center q-mx-sm">اخبار</h6>
     </div>
+    <div class="row justify-center items-center text-center q-gutter-sm q-my-lg q-pb-xl">
+      <div
+        class="col-lg-2 col-md-4   col-xs-6"
+        v-for="item in InsuranceNews"
+        :key="item.id"
+      >
+        <q-card class="my-card shadow-1">
+          <q-img class="card-img" :src="item.src">
+            <div class="absolute-bottom text-h6">{{ item.title }}</div>
+          </q-img>
+  
+          <q-card-section dir="rtl">
+            {{ item.caption }}
+          </q-card-section>
+          <q-separator light />
+          <q-btn class="details-btn text-center q-my-sm rounded-borders"
+            >جزئیات بیشتر</q-btn
+          >
+        </q-card>
+      </div>
+      <q-img src="../../assets/Rectangle22.png" class="wave-img" alt=""></q-img>
+    </div>
+
   </div>
 </template>
 
@@ -73,6 +77,19 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.feature-banner {
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(204,228,255,1) 20%,rgba(204,228,255,1) 100%); 
+background-size:cover;
+background-position: center;
+position: relative;
+}
+
+.wave-img{
+position: absolute;
+width: 100%;
+bottom : 0px;
+
+}
 .titleStyle {
   color: #002247;
 }
