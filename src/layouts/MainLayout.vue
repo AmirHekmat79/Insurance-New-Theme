@@ -1,7 +1,7 @@
 <template>
   <q-layout view=" Lpr lFf">
     <div class="banner-styles relative-position">
-      <q-header class="q-pa-md header absolute text-white">
+      <q-header class="q-pa-md header absolute text-white only-desktop">
         <ToolbarNavigation />
       </q-header>
       <h1
@@ -62,6 +62,7 @@ export default defineComponent({
   height: 400px;
   opacity: 0/6;
 }
+
 .banner-title {
   font-weight: 900;
   width: 100%;
@@ -73,5 +74,10 @@ export default defineComponent({
   border-radius: 500px;
   margin-top: 50px;
   background: #cce4ff;
+}
+@media screen and (max-width : 1020px) {
+  .only-desktop{
+    display: none;
+  }
 }
 </style>

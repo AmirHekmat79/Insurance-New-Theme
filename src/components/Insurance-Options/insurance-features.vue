@@ -34,6 +34,7 @@
         </div>
       </div>
     </div>
+    <q-img src="../../assets/Rectangle22.png" class="wave-img" alt=""></q-img>
   </div>
 </template>
 
@@ -54,6 +55,7 @@ export default defineComponent({
       ],
     };
   },
+  
 });
 </script>
 
@@ -63,14 +65,22 @@ export default defineComponent({
 }
 
 .feature-banner {
-  background: #eceff1;
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(204,228,255,1) 16%, rgba(204,228,255,1) 100%);
   background-size: cover;
   background-position: center;
+  position: relative;
 }
+
 .card-feature {
   width: 50vw;
   padding: 50px;
   border-radius: 8px;
+}
+.wave-img{
+position: absolute;
+width: 100%;
+bottom : 0px;
+
 }
 .just-click-title-container {
   color: #003975;
@@ -94,7 +104,7 @@ export default defineComponent({
 .insurance-advice-title {
   font-size: 1.5rem;
   text-align: center;
-  transform: translateY(40px);
+  transform: translateY(30px);
   direction: rtl;
 }
 .feature-img-container {

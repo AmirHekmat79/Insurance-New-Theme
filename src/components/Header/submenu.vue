@@ -1,5 +1,5 @@
 <template>
-    <div class="q-gutter-md text-center row justify-center q-mx-auto items-center">
+    <div class="q-gutter-md text-center row justify-center q-mx-auto items-center only-desktop">
   <q-btn v-if="!isSubMenu" flat    class="text-dark"  :label="menu.title" @click="handleUrl(menu.url)" > </q-btn>
 <div v-else>
     <q-btn v-if="isFirst"  flat class="text-dark" :label="menu.title"  @click="handleUrl(menu.url)">
@@ -99,6 +99,10 @@
     /* margin-right: auto !important; */
   }
 
-
+ @media screen and (max-width:1020px) {
+  .only-desktop{
+  display: none;
+ }
+ }
   </style>
   

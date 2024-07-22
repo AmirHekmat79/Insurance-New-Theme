@@ -1,5 +1,5 @@
 <template>
-  <q-toolbar>
+  <q-toolbar class="only-desktop">
     <div class="row justify-between items-center toolbar-content">
       <div class="row justify-start items-center q-ml-auto">
         <div class="row justify-around items-center q-gutter-sm">
@@ -143,6 +143,10 @@ export default defineComponent({
 });
 </script>
 <style scoped>
+@media screen and (max-width:1020px) {
+  .only-desktop{
+  display: none;
+ }}
 .search-btn {
   width: 48px;
   border: 2px solid #ababab;

@@ -3,11 +3,9 @@
     <q-img src="../../assets/radio.svg" width="32px"></q-img>
     <h6 class="titleStyle text-center q-mx-sm">اخبار</h6>
   </div>
-  <div
-    class="row justify-center items-center text-center cards-container q-my-xl"
-  >
+  <div class="row justify-center items-center text-center q-gutter-sm q-my-xl">
     <div
-      class="col-md-3 col-sm-4 col-xs-6 q-ma-md"
+      class="col-lg-3 col-md-4 col-sm-6 col-xs-12"
       v-for="item in InsuranceNews"
       :key="item.id"
     >
@@ -33,6 +31,8 @@ import { defineComponent } from "vue";
 import compassion from "../../assets/compassion.png";
 import rain from "../../assets/rain.png";
 import samples from "../../assets/samples.png";
+import transportation from "../../assets/transportation 1 (2).png";
+
 export default defineComponent({
   name: "InsuranceNews",
   data() {
@@ -59,6 +59,13 @@ export default defineComponent({
           caption:
             "بیمه عمر  قراردادی است که میان یک شرکت بیمه و شخص بیمه شونده  منعقد می‌شود...",
         },
+        {
+          id: 4,
+          src: transportation,
+          title: "بیمه حمل و نقل",
+          caption:
+            " بیمه ای است که به موجب آن بیمه گر در مقابل حق بیمه ای که از بیمه گزار دریافت می کند متعهد می شود   و  ...",
+        },
       ],
     };
   },
@@ -69,15 +76,12 @@ export default defineComponent({
 .titleStyle {
   color: #002247;
 }
-.card {
-  width: 300px;
-  height: 300px;
-  background: #fff;
-}
+
 .card-title {
   color: #002247;
   margin: 20px;
 }
+
 .card-img {
   transition: transform 0.3s ease;
 }
@@ -86,6 +90,7 @@ export default defineComponent({
   transform: scale(0.9);
   cursor: pointer;
 }
+
 .details-btn {
   background: #cce4ff;
 }

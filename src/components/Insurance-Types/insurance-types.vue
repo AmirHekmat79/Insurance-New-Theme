@@ -9,8 +9,9 @@
       </div>
       <div class="row justify-around items-center q-mt-md">
         <q-btn class="modal-btn rounded-borders" @click="fullWidth = true"
-          >بیشتر...</q-btn
-        >
+                >بیشتر...</q-btn
+              >
+        
         <InsurancePlans />
         <div
           v-for="(type, index) in types"
@@ -40,6 +41,7 @@
       </q-card-actions>
     </q-card>
   </q-dialog>
+ 
 </template>
 
 <script>

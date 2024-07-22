@@ -60,15 +60,15 @@
     </div>
   </section>
 
-  <section class="row justify-center items-center shadow-1 top-footer">
-    <div class="col-sm-3 col-xs-6 sign-img-container">
+  <section class="row justify-center items-center text-center shadow-1 top-footer">
+    <div class="col-sm-2 col-xs-6 sign-img-container">
       <q-img
         class="enahad-sign"
         src="../../assets/enahad.png"
         width="80px"
       ></q-img>
     </div>
-    <div class="col-sm-3 col-xs-6 sign-img-container">
+    <div class="col-sm-2 col-xs-6 sign-img-container">
       <q-img
         class="kargozar-sign"
         src="../../assets/kargozar.png"
@@ -76,7 +76,7 @@
       ></q-img>
     </div>
     <div
-      class="col-sm-3 col-xs-6"
+      class="col-sm-2 col-xs-6"
       v-for="(item, index) in InsuranceCompanies.filter(
         (item) => item.id == 32
       )"
@@ -84,7 +84,7 @@
     >
       <q-img :src="item.metaMediaLogoFileUrl" width="80px"> </q-img>
     </div>
-    <div class="col-sm-3 col-xs-6 sign-img-container">
+    <div class="col-sm-2 col-xs-6 sign-img-container">
       <q-img
         class="international-sign"
         src="../../assets/internationalSign.png"
