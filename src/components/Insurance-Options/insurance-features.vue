@@ -19,7 +19,7 @@
               
             />
           </div>
-        <div class="row justify-center items-center q-py-lg">
+        <div class="row reverse justify-center items-center q-py-lg">
          
             <div class="text-center card q-my-sm  cursor-pointer" v-for="(item) in insuranceFeatures" :key="item.id">
               <div class="feature-img-container q-mx-lg">
