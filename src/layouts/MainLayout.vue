@@ -55,7 +55,7 @@ export default defineComponent({
 
 <style scoped>
 .banner-styles {
-  background:linear-gradient(#cce4ff , #2ca8fbb7);
+  background: #7E8EF1;
   background-position: center;
   background-size: center;
   width: 100%;
@@ -67,13 +67,14 @@ export default defineComponent({
   font-weight: 900;
   width: 100%;
   padding: 10px;
+  font-size: 50px;
 }
 .header {
   width: 1280px;
   margin: auto;
   border-radius: 500px;
   margin-top: 50px;
-  background: #cce4ff;
+  background: #EEEEEE;
 }
 @media screen and (max-width : 1020px) {
   .only-desktop{

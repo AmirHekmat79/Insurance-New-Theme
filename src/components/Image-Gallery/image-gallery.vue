@@ -40,7 +40,6 @@
         </div>
       </div>
     </div>
-    <q-img src="../../assets/Rectangle22.png" class="wave-img" alt=""></q-img>
   </div>
   
 </template>
@@ -98,7 +97,7 @@ export default defineComponent({
   max-width: 100%;
   width: 100%; /* add this */
   box-sizing: border-box; /* add this */
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(204,228,255,1) 20%, rgba(204,228,255,1) 100%);
+  background: #EEEEEE;
   position: relative;
   padding-top: 20px !important;
   padding-bottom: 50px !important;

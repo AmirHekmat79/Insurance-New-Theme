@@ -165,7 +165,7 @@ export default defineComponent({
 .register-btn {
   width: 160px;
   height: 40px;
-  background: #007bff;
+  background: #615EFC;
   color: #ffffff;
   font-size: 17px;
   border-radius: 16px;
@@ -206,7 +206,7 @@ export default defineComponent({
   width: 160px;
   height: 40px;
   margin-right: 10px;
-  background: #007bff;
+  background: #615EFC;
   color: #ffffff;
   font-size: 17px;
   border-radius: 16px;

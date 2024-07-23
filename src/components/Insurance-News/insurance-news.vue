@@ -24,7 +24,6 @@
           >
         </q-card>
       </div>
-      <q-img src="../../assets/Rectangle22.png" class="wave-img" alt=""></q-img>
     </div>
 
   </div>
@@ -78,18 +77,13 @@ export default defineComponent({
 
 <style scoped>
 .feature-banner {
-background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(204,228,255,1) 20%,rgba(204,228,255,1) 100%); 
+background: #EEEEEE;
 background-size:cover;
 background-position: center;
 position: relative;
 }
 
-.wave-img{
-position: absolute;
-width: 100%;
-bottom : 0px;
 
-}
 .titleStyle {
   color: #002247;
 }

@@ -1,9 +1,14 @@
 <template>
-  <div class="row justify-around text-center items-center feature-banner">
+  <div class="row justify-center text-center items-center feature-banner">
     <!-- <div class="img-banner-container">
       <q-img class="fast-banner" src="../../assets/custom-svg-banner.svg"></q-img>
     </div> -->
-    <div>
+   
+          <div class="just-click-title-container q-ml-auto">
+            <p class="just-click-title">فقط با چند کلیک  خودت رو بیمه کن!   </p>
+         
+          </div>
+          <div>
             <LottieAnimation
               :animationData="lottieData"
               :loop="true"
@@ -14,45 +19,25 @@
               
             />
           </div>
-          <div class="insurance-advice-title-container q-my-md">
-            <p class="insurance-advice-title">خودت رو بیمه کن!</p>
-          </div>
-      <div class="card-feature q-mb-sm">
-        
-        <div class="column justify-center items-center">
-          <div class="just-click-title-container q-ml-auto back-move">
-            <p class="just-click-title">فقط با چند کلیک</p>
-          </div>
-          <div class="text-center q-my-md q-ml-auto" v-for="(item, index) in insuranceFeatures" :key="item.id">
-            <div class="row justify-around items-center feature-item">
-             
-              <ul>
-                <li>
+        <div class="row justify-center items-center q-py-sm">
+         
+            <q-card class="text-center card q-my-sm q-ml-auto" v-for="(item) in insuranceFeatures" :key="item.id">
+              <div class="feature-img-container q-mx-lg">
+                      <q-img src="../../assets/life-insurance.svg" style="width: 40px"></q-img>
+                    </div>
                   <div class="row justify-center items-center">
                     <span class="feature-title text-h6">{{ item.title }}</span>
-                    <div class="feature-img-container q-mx-lg">
-                      <q-img :src="item.src" style="width: 30px"></q-img>
-                    </div>
-                    <div class="circle-number text-white q-my-auto">{{ index + 1 }}</div>
                   </div>
-                </li>
-                <div class="line q-my-md"></div>
-              </ul>
-            </div>
+        </q-card>
           </div>
-         
-        </div>
       </div>
     
-    <q-img src="../../assets/Rectangle22.png" class="wave-img" alt=""></q-img>
-  </div>
+ 
+  
 </template>
 
 <script>
 import { defineComponent } from "vue";
-import receivePolicy from "../../assets/hand-with-star-icon.svg";
-import priceComparison from "../../assets/scale-icon.svg";
-import chooseInsurance from "../../assets/privacy-document-icon.svg";
 import LottieAnimation from '../lottie-animation.vue';
 import lottieData from 'src/custom-lottie-animation.json';
 export default defineComponent({
@@ -63,9 +48,11 @@ export default defineComponent({
   data() {
     return {
       insuranceFeatures: [
-        { id: 1, title: "دریافت بیمه نامه ", src: receivePolicy },
-        { id: 2, title: "مقایسه قیمت", src: priceComparison },
-        { id: 3, title: "انتخاب بیمه", src: chooseInsurance },
+        { id: 1, title: "بیمه مورد نظرت رو انتخاب کن", },
+        { id: 2, title: "مشخصات مورد بیمه رو وارد کن", },
+        { id: 3, title: "قیمت بیمه رو استعلام کن", },
+        { id: 4, title: "درخواستت رو نهایی کن",  },
+        { id: 5, title: "بیمه نامه  ات آماده است", },
       ],
       lottieData: lottieData
     };
@@ -76,58 +63,34 @@ export default defineComponent({
 </script>
 
 <style scoped>
-ul {
-  list-style-type: none;
+.card{
+  width:300px;
+  margin: 5px;
 }
-
-.line {
-  border: 1px solid white;
-  height: 100%;
-  max-height: 160px;
-  right: 8px;
-  position: relative;
-}
-
-.circle-number {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: linear-gradient(90deg, #1099cb, #003975);
-  position: relative;
-}
-
 .feature-banner {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(204, 228, 255, 1) 16%, rgba(204, 228, 255, 1) 100%);
-  background-size: cover;
+  background: #EEEEEE;
+  /* background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(204, 228, 255, 1) 16%, rgba(204, 228, 255, 1) 100%); */
+  background-size: contain;
   background-position: center;
   position: relative;
 }
 .fast-banner{
   width: 600px;
 }
-.card-feature {
-  padding: 50px;
-  border-radius: 8px;
-}
 
-.wave-img {
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-}
+
+
 
 .just-click-title-container {
   color: #003975;
-  border-radius: 176px;
-  width: 280px;
-  height: 100px;
   text-align: right;
+  direction: rtl;
 }
 
 .just-click-title {
   font-size: 1.5rem;
   text-align: right;
-  transform: translateY(30px);
+  
 }
 
 
@@ -157,13 +120,7 @@ ul {
       box-shadow: 0 0 0 20px transparent;
     }
   }
-.insurance-advice-title {
-  font-size: 1.5rem;
-  text-align: center;
-  transform: translateY(10px);
-  direction: rtl;
-  transition: all 0.7s ease-in-out;
-}
+
 
 .feature-img-container {
   background-color: #f0f7ff;
