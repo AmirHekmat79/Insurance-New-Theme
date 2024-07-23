@@ -1,16 +1,31 @@
 <template>
-  <div class="row justify-center items-center feature-banner">
-    <div class="img-banner-container">
+  <div class="row justify-around text-center items-center feature-banner">
+    <!-- <div class="img-banner-container">
       <q-img class="fast-banner" src="../../assets/custom-svg-banner.svg"></q-img>
-    </div>
-    <div class="row justify-center items-center">
-      <div class="card-feature q-my-sm">
+    </div> -->
+    <div>
+            <LottieAnimation
+              :animationData="lottieData"
+              :loop="true"
+              :autoplay="true"
+              :speed="3"
+              :backgroundColor="red"
+           
+              
+            />
+          </div>
+          <div class="insurance-advice-title-container q-my-md">
+            <p class="insurance-advice-title">خودت رو بیمه کن!</p>
+          </div>
+      <div class="card-feature q-mb-sm">
+        
         <div class="column justify-center items-center">
           <div class="just-click-title-container q-ml-auto back-move">
             <p class="just-click-title">فقط با چند کلیک</p>
           </div>
           <div class="text-center q-my-md q-ml-auto" v-for="(item, index) in insuranceFeatures" :key="item.id">
             <div class="row justify-around items-center feature-item">
+             
               <ul>
                 <li>
                   <div class="row justify-center items-center">
@@ -25,12 +40,10 @@
               </ul>
             </div>
           </div>
-          <div class="insurance-advice-title-container q-my-md q-ml-auto front-move">
-            <p class="insurance-advice-title">خودت رو بیمه کن!</p>
-          </div>
+         
         </div>
       </div>
-    </div>
+    
     <q-img src="../../assets/Rectangle22.png" class="wave-img" alt=""></q-img>
   </div>
 </template>
@@ -40,9 +53,13 @@ import { defineComponent } from "vue";
 import receivePolicy from "../../assets/hand-with-star-icon.svg";
 import priceComparison from "../../assets/scale-icon.svg";
 import chooseInsurance from "../../assets/privacy-document-icon.svg";
-
+import LottieAnimation from '../lottie-animation.vue';
+import lottieData from 'src/custom-lottie-animation.json';
 export default defineComponent({
   name: "InsuranceFeatures",
+  components:{
+    LottieAnimation
+  },
   data() {
     return {
       insuranceFeatures: [
@@ -50,8 +67,11 @@ export default defineComponent({
         { id: 2, title: "مقایسه قیمت", src: priceComparison },
         { id: 3, title: "انتخاب بیمه", src: chooseInsurance },
       ],
+      lottieData: lottieData
     };
   },
+
+  
 });
 </script>
 
@@ -77,7 +97,7 @@ ul {
 }
 
 .feature-banner {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(204, 228, 255, 1) 20%, rgba(204, 228, 255, 1) 100%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(204, 228, 255, 1) 16%, rgba(204, 228, 255, 1) 100%);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -86,7 +106,6 @@ ul {
   width: 600px;
 }
 .card-feature {
-  width: 50vw;
   padding: 50px;
   border-radius: 8px;
 }
@@ -101,28 +120,47 @@ ul {
   color: #003975;
   border-radius: 176px;
   width: 280px;
-  height: 114px;
-  text-align: center;
+  height: 100px;
+  text-align: right;
 }
 
 .just-click-title {
   font-size: 1.5rem;
-  text-align: center;
+  text-align: right;
   transform: translateY(30px);
 }
+
 
 .insurance-advice-title-container {
   background: #003975;
-  border-radius: 210px;
   color: #fff;
-  width: 230px;
-  height: 100px;
+  padding: 10px 25px;
+  border-radius: 60px;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  text-wrap: nowrap;
+  position: relative;
+  z-index: 333;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+  margin-left:118px !important;
+  animation: pulse-white 2s infinite;
 }
 
+@keyframes pulse-white {
+    0% {
+      box-shadow: 0 0 0 0 #2980b9;
+    }
+    100% {
+      box-shadow: 0 0 0 20px transparent;
+    }
+  }
 .insurance-advice-title {
   font-size: 1.5rem;
   text-align: center;
-  transform: translateY(30px);
+  transform: translateY(10px);
   direction: rtl;
   transition: all 0.7s ease-in-out;
 }
@@ -161,25 +199,6 @@ ul {
   }
 }
 
-@keyframes pulse-white {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.622);
-  }
-  100% {
-    box-shadow: 0 0 0 20px transparent;
-  }
-}
-
-@keyframes front-move {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 
 @keyframes back-move {
   0% {
@@ -192,9 +211,6 @@ ul {
   }
 }
 
-.front-move {
-  animation: front-move 4s ease forwards;
-}
 
 .back-move {
   animation: back-move 4s ease forwards;
