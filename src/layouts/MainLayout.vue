@@ -55,7 +55,7 @@ export default defineComponent({
 
 <style scoped>
 .banner-styles {
-  background: #7E8EF1;
+  background: #16697a;
   background-position: center;
   background-size: center;
   width: 100%;
