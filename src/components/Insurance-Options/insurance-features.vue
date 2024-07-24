@@ -12,7 +12,7 @@
         
           <div class="column justify-around items-center">
             <div class="just-click-title-container">
-                <p class="just-click-title">فقط با چند کلیک  خودت رو بیمه کن!   </p>
+                <p class="just-click-title">فقط با چند کلیک <strong class="side-title">خودت رو بیمه کن</strong>!   </p>
              
               </div>
              <div class="row  reverse justify-center items-center q-my-lg ">
@@ -85,7 +85,7 @@ export default defineComponent({
 
 
 .number-value{
-  font-size: 18px !important;
+  font-size: 17px !important;
 }
 
 .just-click-title-container {
@@ -93,7 +93,9 @@ export default defineComponent({
   text-align: right;
   direction: rtl;
 }
-
+.side-title{
+  color: #011e3c;
+}
 .just-click-title {
   font-size: 1.5rem;
   text-align: right;

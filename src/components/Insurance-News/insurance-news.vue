@@ -1,5 +1,12 @@
 <template>
-  <div class="feature-banner q-pb-xl ">
+  <div class="feature-banner q-py-sm ">
+   <div class="text-right q-ma-lg">
+    <q-img class="shape1-img3" src="../../assets/shape1.svg" width="20px"></q-img>
+   </div>
+   <div class="text-right q-ma-lg">
+    <q-img class="shape2-img3" src="../../assets/triangle.svg" width="20px"></q-img>
+   </div>
+  
     <div class="row justify-center items-center">
       <q-img src="../../assets/radio.svg" width="22px"></q-img>
       <h6 class="titleStyle text-center q-mx-sm">اخبار</h6>
@@ -24,8 +31,22 @@
           >
         </q-card>
       </div>
+      <div class="text-right q-ma-lg">
+    <q-img class="shape2-img3" src="../../assets/triangle.svg" width="30px"></q-img>
+   </div>
     </div>
-
+    <div class="shape3-img3 text-right q-ma-lg">
+    <q-img  src="../../assets/shape5.png" width="12px"></q-img>
+   </div>
+    <div class="shape4-img3 text-right q-ma-lg">
+    <q-img  src="../../assets/shape5.png" width="25px"></q-img>
+   </div>
+    <div class="shape6-img3 text-right q-ma-lg">
+    <q-img  src="../../assets/shape1.svg" width="15px"></q-img>
+   </div>
+    <div class="shape5-img3 text-right q-ma-lg">
+    <q-img  src="../../assets/shape5.png" width="26px"></q-img>
+   </div>
   </div>
 </template>
 
@@ -76,8 +97,55 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.shape1-img3{
+  animation: shape-img3 4s infinite 2s linear;
+  position: absolute;
+  bottom:10px;
+}
+.shape2-img3{
+  animation: shape-img3 4s infinite 2s linear;
+  position: absolute;
+  top:20%;
+}
+.shape3-img3{
+  animation: shape-circle-img3 4s infinite 2s linear;
+  position: absolute;
+  bottom:20px;
+}
+.shape4-img3{
+  animation: shape-circle-img3 4s infinite 2s linear;
+  position: absolute;
+  bottom:30px;
+}
+.shape5-img3{
+  animation: shape-circle-img3 4s infinite 2s linear;
+  position: absolute;
+  top:30px;
+}
+.shape6-img3{
+  animation: shape-img3 4s infinite 2s linear;
+  position: absolute;
+  top:10px;
+}
+
+@keyframes shape-img3 {
+  0%{
+    transform: rotate(360deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+@keyframes shape-circle-img3 {
+  0%{
+    transform: translate(100px , -30px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
 .feature-banner {
-background: #EEEEEE;
+background: #eeeeee;
 background-size:cover;
 background-position: center;
 position: relative;
