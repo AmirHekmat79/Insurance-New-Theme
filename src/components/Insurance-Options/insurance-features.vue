@@ -1,36 +1,37 @@
 <template>
-  <div class="row justify-center text-center items-center feature-banner q-py-lg">
-    <!-- <div class="img-banner-container">
-      <q-img class="fast-banner" src="../../assets/custom-svg-banner.svg"></q-img>
-    </div> -->
-   
-          <div class="just-click-title-container q-ml-auto">
-            <p class="just-click-title">فقط با چند کلیک  خودت رو بیمه کن!   </p>
-         
-          </div>
+  <section class="row justify-around items-center feature-banner q-pa-md q-gutter-sm">
+        <div class="row justify-center items-center q-my-sm">
+          
           <div>
             <LottieAnimation
-              :animationData="lottieData"
-              :loop="true"
-              :autoplay="true"
-              :speed="3"
-              :backgroundColor="red"
-           
-              
+            :animationData="lottieData"
+            :loop="true"
+            :autoplay="true"
             />
           </div>
-        <div class="row reverse justify-center items-center q-py-lg">
-         
-            <div class="text-center card q-my-sm  cursor-pointer" v-for="(item) in insuranceFeatures" :key="item.id">
-              <div class="feature-img-container q-mx-lg">
-                      <q-img src="../../assets/life-insurance.svg" style="width: 40px"></q-img>
+        
+          <div class="column justify-around items-center">
+            <div class="just-click-title-container">
+                <p class="just-click-title">فقط با چند کلیک  خودت رو بیمه کن!   </p>
+             
+              </div>
+             <div class="row  reverse justify-center items-center q-my-lg ">
+              <div class="text-center card  cursor-pointer " v-for="(item , index) in insuranceFeatures" :key="item.id">
+              <div class="feature-img-container q-my-sm">
+                      <!-- <q-img src="../../assets/life-insurance.svg" style="width: 40px"></q-img> -->
+                       <q-badge rounded color="teal q-pa-sm" class="number-value" :label="(index + 1).toLocaleString('fa-IR')" />
                     </div>
                   <div class="row justify-center items-center">
                     <span class="feature-title text-h6">{{ item.title }}</span>
                   </div>
                 </div>
+             </div>
           </div>
-      </div>
+          
+
+        </div>
+       
+      </section>
     
  
   
@@ -69,7 +70,7 @@ export default defineComponent({
   margin: 5px;
   border-radius: 35px;
   background: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid #eee;
   cursor: pointer;
 }
 .feature-banner {
@@ -77,14 +78,15 @@ export default defineComponent({
   /* background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(204, 228, 255, 1) 16%, rgba(204, 228, 255, 1) 100%); */
   background-size: contain;
   background-position: center;
-  position: relative;
 }
 .fast-banner{
   width: 600px;
 }
 
 
-
+.number-value{
+  font-size: 18px !important;
+}
 
 .just-click-title-container {
   color: #003975;

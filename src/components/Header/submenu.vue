@@ -8,7 +8,7 @@
      </q-item-section>
         <q-menu dir="rtl"  anchor="bottom left" self="top left">
           <q-list>
-            <q-item v-for="subMenu in menus" flat clickable  :key="subMenu.id" class="linkItems text-dark">
+            <q-item v-for="subMenu in menus" flat clickable  :key="subMenu.id" class="linkItems text-dark" >
               <submenu   :isSubMenu="computeIsSubMenu(subMenu.id)" :menus=computeMenus(subMenu.id) :menu="computeMenu(subMenu.id)" :allMenu = "allMenu" />
               <q-separator light />
             </q-item>
