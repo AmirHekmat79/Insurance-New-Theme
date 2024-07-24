@@ -108,6 +108,7 @@ export default defineComponent({
     },
     closeMenu() {
       this.$refs.menu.hide();
+
     },
     
   },

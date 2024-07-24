@@ -11,7 +11,7 @@
       <q-img src="../../assets/radio.svg" width="22px"></q-img>
       <h6 class="titleStyle text-center q-mx-sm">اخبار</h6>
     </div>
-    <div class="row justify-center items-center text-center q-gutter-sm q-my-lg q-pb-xl">
+    <div class="row justify-center items-center text-center q-gutter-md q-my-lg q-pb-xl">
       <div
         class="col-lg-2 col-md-4   col-xs-6"
         v-for="item in InsuranceNews"

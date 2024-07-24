@@ -1,6 +1,6 @@
 <template>
   <section dir="rtl" class="row justify-center items-center sub-footer">
-    <div class="col-md-3 col-xl-6 col-xs-12">
+    <div class="col-md-3 col-xl-6 col-xs-6">
       <q-btn class="logo-btn q-my-md"
         ><q-img src="../../assets/footerLogo.png" width="200px"></q-img
       ></q-btn>
@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <div class="col-md-3 col-xl-6  site-feature-container col-xs-12">
+    <div class="col-md-3 col-xl-6  site-feature-container col-xs-6">
       <h2 class="title q-mr-sm">امکانات سایت</h2>
       <ul class="site-features">
         <li><a> درباره ما </a></li>
@@ -43,7 +43,7 @@
         <li><a> پرسش های متداول</a></li>
       </ul>
     </div>
-    <div class="col-md-3 col-xl-6  common-link-container col-xs-12">
+    <div class="col-md-3 col-xl-6  common-link-container col-xs-6">
       <h2 class="title q-mr-sm">لینک های پر کاربرد</h2>
       <ul class="contactus">
         <li class="row q-gutter-sm items-center q-my-sm">آدرس بیمه مرکزی</li>
