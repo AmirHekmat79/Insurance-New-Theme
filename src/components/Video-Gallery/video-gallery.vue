@@ -1,12 +1,20 @@
 <template>
   <div
-    class="q-pa-md q-my-lg q-mx-md-lg q-mx-auto text-center video-full-content"
+    class="q-pa-md q-my-lg q-mx-md-lg q-mx-auto text-center video-full-content relative-position"
   >
+  <div class="text-right q-ma-lg">
+    <q-img class="shape1-img3" src="../../assets/shape1.svg" width="20px"></q-img>
+   </div>
+   <div class="text-right q-ma-lg">
+    <q-img class="shape2-img3" src="../../assets/triangle.svg" width="20px"></q-img>
+   </div>
     <div class="row justify-center q-mr-md items-center">
       <h3 class="gallery-title q-my-md q-mx-sm">گالری ویدئوها</h3>
       <q-img src="../../assets/video-status-icon.svg" width="32px"></q-img>
     </div>
+    
     <div class="flex q-my-md">
+      
       <div
         class="col-md-6 video-desktop"
         v-for="(item, itemIndex) in InsuranceVideoGalleries.slice(0, 1)"
@@ -14,6 +22,7 @@
       >
         <div class="bg-white shadow text-white">
           <div class="row justify-center items-center card-section">
+            
             <video class="expand-video" controls>
               <source :src="item.metaMediaFileUrl" type="video/mp4" />
               Your browser does not support the video tag.
@@ -22,6 +31,7 @@
         </div>
       </div>
       <div class="col-md-6">
+        
         <q-carousel
           v-model="currentSlide"
           transition-prev="slide-right"
@@ -44,6 +54,7 @@
             :name="index.toString()"
           >
             <div class="row justify-center items-center text-center">
+              
               <div class="column justify-center items-center q-gutter-sm">
                 <div
                   class="col-auto videos-container text-center"
@@ -68,9 +79,27 @@
             </div>
           </q-carousel-slide>
         </q-carousel>
+        
       </div>
+      
+      <div class="text-right q-ma-lg">
+      <q-img class="shape2-img3 q-mx-xl" src="../../assets/triangle.svg" width="30px"></q-img>
+     </div>
+      </div>
+      <div class="shape3-img3 text-right q-ma-lg">
+      <q-img  src="../../assets/6.png" width="80px"></q-img>
+     </div>
+      <div class="shape4-img3 text-right q-ma-lg">
+      <q-img  src="../../assets/shape5.png" width="25px"></q-img>
+     </div>
+      <div class="shape6-img3 text-right q-ma-lg">
+      <q-img  src="../../assets/shape1.svg" width="15px"></q-img>
+     </div>
+      <div class="shape5-img3 text-right q-ma-lg">
+      <q-img  src="../../assets/shape5.png" width="26px"></q-img>
+     </div>
     </div>
-  </div>
+ 
 </template>
 
 <script>
@@ -120,6 +149,56 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.shape1-img3{
+  animation: shape-img3 4s infinite 2s linear;
+  position: absolute;
+  bottom:10px;
+}
+.shape2-img3{
+  animation: shape-img3 4s infinite 2s linear;
+  position: absolute;
+  top:20%;
+  
+}
+.shape3-img3{
+  animation: shape-circle-img3 4s infinite 2s linear;
+  position: absolute;
+  left:30px;
+}
+.shape4-img3{
+  animation: shape-circle-img3 4s infinite 2s linear;
+  position: absolute;
+  left:30px;
+}
+.shape5-img3{
+  animation: shape-circle-img3 4s infinite 2s linear;
+  position: absolute;
+  top:30px;
+}
+.shape6-img3{
+  animation: shape-img3 4s infinite 2s linear;
+  position: absolute;
+  bottom: 0px !important;
+  z-index: 1;
+}
+
+
+@keyframes shape-img3 {
+  0%{
+    transform: rotate(360deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+@keyframes shape-circle-img3 {
+  0%{
+    transform: translate(50px , -50px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
 .gallery-title {
   font-size: 32px;
   font: 32px "iransans";

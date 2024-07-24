@@ -36,7 +36,7 @@
    </div>
     </div>
     <div class="shape3-img3 text-right q-ma-lg">
-    <q-img  src="../../assets/shape5.png" width="12px"></q-img>
+    <q-img  src="../../assets/6.png" width="80px"></q-img>
    </div>
     <div class="shape4-img3 text-right q-ma-lg">
     <q-img  src="../../assets/shape5.png" width="25px"></q-img>
