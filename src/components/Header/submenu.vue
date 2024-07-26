@@ -1,12 +1,31 @@
 <template>
-  <div class="q-gutter-md text-center row justify-center q-mx-auto items-center only-desktop">
-    <q-btn v-if="!isSubMenu" flat class="text-dark" :label="menu.title" @click="handleUrl(menu.url)"></q-btn>
+  <div
+    class="q-gutter-md text-center row justify-center q-mx-auto items-center only-desktop"
+  >
+    <q-btn
+      v-if="!isSubMenu"
+      flat
+      class="text-dark"
+      :label="menu.title"
+      @click="handleUrl(menu.url)"
+    ></q-btn>
     <div v-else>
-      <q-btn v-if="isFirst" flat class="text-dark" :label="menu.title" @mouseenter="openMenu" >
+      <q-btn
+        v-if="isFirst"
+        flat
+        class="text-dark"
+        :label="menu.title"
+        @mouseover="openMenu = true"
+      >
         <q-item-section side>
           <q-icon color="black" name="keyboard_arrow_down" />
         </q-item-section>
-        <q-menu ref="menu" dir="rtl" anchor="bottom left" self="top left" >
+        <q-menu
+          dir="rtl"
+          anchor="bottom left"
+          self="top left"
+          v-model="openMenu"
+        >
           <q-list>
             <q-item
               v-for="subMenu in menus"
@@ -28,12 +47,18 @@
           </q-list>
         </q-menu>
       </q-btn>
-      <q-btn v-else flat class="text-dark" :label="menu.title" @mouseenter="openMenu">
+      <q-btn
+        v-else
+        flat
+        class="text-dark"
+        :label="menu.title"
+        @mouseover="openMenu = true"
+      >
         <q-item-section side>
           <q-icon color="black" name="keyboard_arrow_left" />
         </q-item-section>
-        <q-menu ref="menu" dir="rtl" anchor="top start" self="top end"  >
-          <q-list @mouseenter="openMenu">
+        <q-menu v-model="openMenu" dir="rtl" anchor="top start" self="top end">
+          <q-list>
             <q-item
               flat
               v-for="subMenu in menus"
@@ -59,13 +84,13 @@
 </template>
 
 <script>
-import { defineComponent, ref } from "vue";
+import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "ToolbarNavigation",
   data() {
     return {
-      
+      openMenu: false,
     };
   },
   props: {
@@ -92,25 +117,17 @@ export default defineComponent({
       const urlObject = JSON.parse(URL);
       const { type, url: urlPath } = urlObject;
 
-      const baseUrl = 'https://sabz.easybimeh.com';
+      const baseUrl = "https://sabz.easybimeh.com";
 
-      if (type === 'open') {
+      if (type === "open") {
         window.location.href = `${baseUrl}${urlPath}`;
-      } else if (type === 'redirect') {
+      } else if (type === "redirect") {
         window.location.href = `/`;
       } else {
         console.error("Unsupported URL type:", type);
-        return '#';
+        return "#";
       }
     },
-    openMenu() {
-      this.$refs.menu.show();
-    },
-    closeMenu() {
-      this.$refs.menu.hide();
-
-    },
-    
   },
 });
 </script>
