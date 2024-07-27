@@ -7,15 +7,15 @@
       flat
       class="text-dark"
       :label="menu.title"
-      @click="handleUrl(menu.url)"
+      @click="handleUrl(menu.url)" 
     ></q-btn>
-    <div v-else>
+    <div v-else  @mouseleave="()=>{openSubMenu1 = false ; openSubMenu2 = false;}">
       <q-btn
         v-if="isFirst"
         flat
         class="text-dark"
         :label="menu.title"
-        @mouseover="openMenu = true"
+        @mouseover="openSubMenu1 = true"
       >
         <q-item-section side>
           <q-icon color="black" name="keyboard_arrow_down" />
@@ -24,7 +24,7 @@
           dir="rtl"
           anchor="bottom left"
           self="top left"
-          v-model="openMenu"
+          v-model="openSubMenu1"
         >
           <q-list>
             <q-item
@@ -36,6 +36,7 @@
               @click="handleUrl(subMenu.url)"
             >
               <submenu
+                @mouseover="openSubMenu1 = true"
                 :isSubMenu="computeIsSubMenu(subMenu.id)"
                 :menus="computeMenus(subMenu.id)"
                 :menu="computeMenu(subMenu.id)"
@@ -52,12 +53,13 @@
         flat
         class="text-dark"
         :label="menu.title"
-        @mouseover="openMenu = true"
+        @mouseover="openSubMenu2 = true"
+
       >
         <q-item-section side>
           <q-icon color="black" name="keyboard_arrow_left" />
         </q-item-section>
-        <q-menu v-model="openMenu" dir="rtl" anchor="top start" self="top end">
+        <q-menu v-model="openSubMenu2" dir="rtl" anchor="top start" self="top end">
           <q-list>
             <q-item
               flat
@@ -69,6 +71,7 @@
               @click="handleUrl(subMenu.url)"
             >
               <submenu
+                @mouseover="openSubMenu2 = true"
                 :isSubMenu="computeIsSubMenu(subMenu.id)"
                 :menus="computeMenus(subMenu.id)"
                 :menu="computeMenu(subMenu.id)"
@@ -90,7 +93,8 @@ export default defineComponent({
   name: "ToolbarNavigation",
   data() {
     return {
-      openMenu: false,
+      openSubMenu1: false,
+      openSubMenu2: false,
     };
   },
   props: {
@@ -100,6 +104,7 @@ export default defineComponent({
     allMenu: [Object],
     isFirst: Boolean,
   },
+  
   methods: {
     computeMenus(id) {
       let newMenus = this.allMenu.filter((item) => item.parentId == id);
@@ -114,20 +119,18 @@ export default defineComponent({
       return newIsSubMenu;
     },
     handleUrl(URL) {
-      const urlObject = JSON.parse(URL);
-      const { type, url: urlPath } = urlObject;
+    const urlObject = JSON.parse(URL);
+    const { type, url: urlPath } = urlObject;
 
-      const baseUrl = "https://sabz.easybimeh.com";
-
-      if (type === "open") {
-        window.location.href = `${baseUrl}${urlPath}`;
-      } else if (type === "redirect") {
-        window.location.href = `/`;
-      } else {
-        console.error("Unsupported URL type:", type);
-        return "#";
-      }
-    },
+    if (type === "open") {
+      this.$router.push(urlPath);
+    } else if (type === "redirect") {
+      this.$router.push('/');
+    } else {
+      console.error("Unsupported URL type:", type);
+      return "#";
+    }
+  },
   },
 });
 </script>
