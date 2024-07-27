@@ -1,5 +1,5 @@
 <template>
-  <div class="feature-banner q-py-sm ">
+  <div class="feature-banner  q-py-sm ">
    <div class="text-right q-ma-lg">
     <q-img class="shape1-img3" src="../../assets/shape1.svg" width="20px"></q-img>
    </div>
@@ -13,7 +13,7 @@
     </div>
     <div class="row justify-center items-center text-center q-gutter-md q-my-lg q-pb-xl">
       <div
-        class="col-lg-2 col-md-4   col-xs-6"
+        class="col-lg-2 col-md-3   col-xs-6"
         v-for="item in InsuranceNews"
         :key="item.id"
       >
@@ -88,7 +88,7 @@ export default defineComponent({
           src: transportation,
           title: "بیمه حمل و نقل",
           caption:
-            " بیمه ای است که به موجب آن بیمه گر در مقابل حق بیمه ای که از بیمه گزار دریافت می کند متعهد می شود   و  ...",
+            "بیمه ای  که به موجب آن بیمه گر در مقابل حق بیمه ای که از بیمه گزار دریافت می کند متعهد می شود ...",
         },
       ],
     };
@@ -97,6 +97,9 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.my-card{
+ text-align: center;
+}
 .shape1-img3{
   animation: shape-img3 4s infinite 2s linear;
   position: absolute;
@@ -163,6 +166,7 @@ position: relative;
 
 .card-img {
   transition: transform 0.3s ease;
+  
 }
 
 .card-img:hover {
