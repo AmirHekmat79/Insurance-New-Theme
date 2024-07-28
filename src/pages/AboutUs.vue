@@ -1,6 +1,5 @@
 <template>
-    <q-page style="min-height:400px">
-     
+    <q-page style="min-height:400px">  
       <section dir="rtl" class="q-py-lg ">
           <div class="title q-py-md q-mr-sm">
             <q-img src="../../src/assets/aboutus-icon.svg" width="25px"></q-img>
