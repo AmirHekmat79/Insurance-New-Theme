@@ -1,7 +1,7 @@
 <template>
     <q-page style="min-height:400px">
      
-      <section dir="rtl" class="q-py-lg">
+      <section dir="rtl" class="q-py-lg ">
           <div class="title q-py-md q-mr-sm">
             <q-img src="../../src/assets/aboutus-icon.svg" width="25px"></q-img>
             <span class="q-pr-sm text-primary">درباره ما</span>
@@ -12,7 +12,8 @@
           <div>
             <q-separator inset spaced="50px"/>
           </div>
-        </div>
+         
+         </div>
       </section>
     </q-page>
   </template>

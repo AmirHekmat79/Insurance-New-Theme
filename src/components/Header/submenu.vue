@@ -12,8 +12,9 @@
     <div v-else  @mouseleave="()=>{openSubMenu1 = false ; openSubMenu2 = false;}">
       <q-btn
         v-if="isFirst"
+        ref="menu-hover"
         flat
-        class="text-dark"
+        class="text-dark transition-delay"
         :label="menu.title"
         @mouseover="openSubMenu1 = true"
       >
@@ -82,6 +83,7 @@
           </q-list>
         </q-menu>
       </q-btn>
+      
     </div>
   </div>
 </template>
@@ -134,3 +136,8 @@ export default defineComponent({
   },
 });
 </script>
+<style scoped>
+.transition-delay {
+  transition-delay: 100ms;
+}
+</style>
