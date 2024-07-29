@@ -2,7 +2,26 @@
     <q-page style="min-height:400px">  
       <section dir="rtl" class="q-py-lg ">
        <div class="row justify-center items-center text-center q-gutter-sm">
-        <div class="col-md-6">
+        <div style="height: 100vh !important;" class="col-lg-4">
+                <q-card class="my-card" >
+                    <h5 class="text-center q-py-lg">مطالب جدید</h5>
+                <q-card-section v-for="item in magazines" :key="item.id">
+                        <div class="row justify-between items-center">
+                            {{ item.title }}
+                              <q-btn @click="goToDetails(item)" flat class="text-primary cursor-pointer">
+                                مشاهده جزِئیات
+                              </q-btn>
+                            </div>
+                            <q-separator light class="q-my-lg" />
+                </q-card-section>
+                
+            <div>
+                <q-separator light/>
+            </div>
+          
+        </q-card>
+         </div>
+        <div class="col-md-6" >
             <div class="row justify-center items-center q-gutter-sm">
                 <div class="col-lg-4 card-item" v-for="item in magazines" :key="item.id">
                 <q-card class="my-card">
@@ -19,31 +38,14 @@
             <div>
                 <q-separator light/>
             </div>
-            <q-btn flat color="primary">
+            <q-btn flat color="primary" @click="goToDetails(item)">
                 ادامه مطلب
             </q-btn>
         </q-card>
          </div>
             </div>
         </div>
-         <div class="col-lg-4">
-                <q-card class="my-card">
-           
-                <q-card-section v-for="item in magazines" :key="item.id">
-                        <div class="row justify-between items-center">
-                            {{ item.title }}
-                              <div class="text-primary">
-                                مشاهده
-                              </div>
-                        </div>
-                </q-card-section>
-                
-            <div>
-                <q-separator light/>
-            </div>
-          
-        </q-card>
-         </div>
+       
        </div>
       </section>
     </q-page>
@@ -61,9 +63,19 @@
                 {id : 2 , title : 'بیمه عمر' , src:'src/assets/rain.png' , caption : ' بیمه عمر از دیدگاه حقوقی، قراردادی است که به موجب آن بیمه‌گر در مقابل دریافت حق‌بیمه از بیمه‌گذار متعهد می‌شود'} ,
                 {id : 3 , title : 'بیمه بدنه' , src:'src/assets/body-insurance.jpg' , caption : 'بیمه بدنه، بیمه‌های اختیاری است که میتواند به عنوان مکمل بیمه شخص ثالث استفاده شود.    .'} ,
                 {id : 4 , title : 'بیمه آتش سوزی' , src:'src/assets/fire-insurance.jpg' , caption : 'بیمه آتش سوزی ساختمان، بیمه‌های اختیاری است که متأسفانه لزوم خرید آن، زمانی که خیلی دیر شده است، احساس میشود...'} ,
-                {id : 5 , title : 'بیمه شخص ثالث' , src:'src/assets/car-insurance.jpg' , caption : 'بیمه شخص ثالث، طرح بیمه‌های الزامی برای دارندگان وسایل نقلیه موتوری است.'} ,
+                // {id : 5 , title : 'بیمه شخص ثالث' , src:'src/assets/car-insurance.jpg' , caption : 'بیمه شخص ثالث، طرح بیمه‌های الزامی برای دارندگان وسایل نقلیه موتوری است.'} ,
 
             ]
+        }
+    } ,
+    methods : {
+        goToDetails(item){
+            this.$router.push({
+            name: 'blog',
+            params: {
+            blogId: item.id
+            }
+        });
         }
     }
    
@@ -79,5 +91,9 @@
 /* .card-item{
     height: 500px !important;
 } */
+
+ .my-card{
+    border: 1px solid rgba(0, 0, 0, 0.12);
+ }
 </style>
   

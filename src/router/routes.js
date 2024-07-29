@@ -7,7 +7,17 @@ const routes = [
       { path: '', component: () => import('pages/IndexPage.vue') },
       { path: '/AboutUs', component: () => import('pages/AboutUs.vue') },
       { path: '/ContactUs', component: () => import('pages/ContactUs.vue') },
-      { path: '/InsuranceMagazine', component: () => import('pages/InsuranceMagazine.vue') }
+      {
+        path: 'InsuranceMagazine',
+        component: () => import('pages/InsuranceMagazine.vue'),
+        children: [
+          {
+            path: 'blog/:blogId',
+            component: () => import('pages/BlogDetails.vue'),
+            props: true
+          }
+        ]
+      }
     ]
   },
 
