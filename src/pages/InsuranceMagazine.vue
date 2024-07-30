@@ -1,6 +1,6 @@
 <template>
-    <q-page >  
-      <section dir="rtl" class="q-py-lg ">
+    <q-page class="page-margin">  
+      <section dir="rtl" class="page-margin ">
        <div class="row justify-center items-center text-center q-gutter-sm ">
         <div style="height: auto !important;width: 300px !important;" class="col-lg-4">
                 <div class="my-card curve" >
@@ -35,7 +35,7 @@
         </div>
          </div>
   
-    <div class="col-md-3 q-mx-md" v-for="item in magazines.filter(item => item.id == 5)" :key="item.id">
+    <div  class="col-md-3 q-mx-md" v-for="item in magazines.filter(item => item.id == 5)" :key="item.id">
           <q-img :src="item.src"  class="card-img" style="width: 500px; height: 430px;">
      <div class="absolute-full text-subtitle2 flex flex-center">
        {{ item.title }}
@@ -90,6 +90,10 @@
   </script>
   
 <style scoped>
+.page-margin{
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
 .curve{
     border : 1px solid #eee;
     border-radius: 5px !important;
