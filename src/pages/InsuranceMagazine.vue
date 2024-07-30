@@ -77,12 +77,7 @@
     } ,
     methods : {
         goToDetails(item){
-            this.$router.push({
-            name: 'blog',
-            params: {
-            blogId: item.id
-            }
-        });
+            this.$router.push(`InsuranceMagazine/blog/${item.id}`);
         }
     }
    
