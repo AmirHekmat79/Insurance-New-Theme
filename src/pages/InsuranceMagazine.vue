@@ -2,7 +2,7 @@
     <q-page class="page-margin">  
       <section dir="rtl" class="page-margin ">
        <div class="row justify-center items-center text-center">
-        <div style="height: auto !important;width: 300px !important;" class="col-lg-4">
+        <div style="height: auto !important;width: 300px !important;background: #eee;" class="col-lg-4">
                 <div class="my-card curve" >
                     <h5 class="text-center  q-pt-lg">مطالب جدید</h5>
                     <div class="filter-title-underline1"></div>
@@ -130,7 +130,7 @@ h5{
     margin-bottom: 0px !important;
 }
  .my-card{
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(248, 245, 245, 0.12);
  }
 .filter-title-underline1{
     width: 20%;
