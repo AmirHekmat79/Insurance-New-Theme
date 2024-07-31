@@ -104,11 +104,12 @@
       <q-img src="../../assets/video-status-icon.svg" width="32px"></q-img>
     </div>
  <div class="row justify-around items-center q-py-lg">
-  <div class="col-md-4 q-pa-md" v-for="item in InsuranceVideoGalleries" :key="item.id">
-    <video class="expand-video" controls width="492px" height="276px">
+  <div class="col-md-4 q-pa-md relative-position" v-for="item in InsuranceVideoGalleries.filter(item => item.id !== 51361)" :key="item.id">
+    <video ref="videoPlayer"   class="expand-video"   width="100%" height="276px">
               <source :src="item.metaMediaFileUrl" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
+            <div @click="playVideo"><q-img  width="60px" class="absolute-center" src="../../assets/play-button-round-icon.svg"></q-img></div>
   </div>
  </div>
 </template>
@@ -147,6 +148,10 @@ export default defineComponent({
           console.error("Error fetching insurance centre info:", error);
         });
     },
+ 
+    playVideo(){
+      this.$refs.videoPlayer.target.play();
+    }
   },
 
   // watch: {
@@ -160,6 +165,16 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.gallery-title {
+  font-size: 32px;
+  font: 32px "iransans";
+  margin-right: 13px !important;
+  color: #003975 !important;
+  text-align: right;
+}
+video{
+  border-radius: 8px;
+}
 /* .shape1-img3{
   animation: shape-img3 4s infinite 2s linear;
   position: absolute;
@@ -210,12 +225,7 @@ export default defineComponent({
     transform: translateX(0px);
   }
 }
-.gallery-title {
-  font-size: 32px;
-  font: 32px "iransans";
-  color: #003975 !important;
-  text-align: right;
-}
+ 
 
 video {
   border-radius: 10px;
