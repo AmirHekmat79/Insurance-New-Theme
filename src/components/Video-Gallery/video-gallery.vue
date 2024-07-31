@@ -1,5 +1,5 @@
 <template>
-  <div
+  <!-- <div
     class="q-pa-md q-my-lg q-mx-md-lg q-mx-auto text-center video-full-content relative-position"
   >
   <div class="text-right q-ma-lg">
@@ -98,8 +98,19 @@
       <div class="shape5-img3 text-right q-ma-lg">
       <q-img  src="../../assets/shape5.png" width="26px"></q-img>
      </div>
+    </div> -->
+    <div class="row justify-center q-mr-md items-center q-py-xl">
+      <h3 class="gallery-title q-my-md q-mx-lg">گالری ویدئوها</h3>
+      <q-img src="../../assets/video-status-icon.svg" width="32px"></q-img>
     </div>
- 
+ <div class="row justify-around items-center q-py-lg">
+  <div class="col-md-4 q-pa-md" v-for="item in InsuranceVideoGalleries" :key="item.id">
+    <video class="expand-video" controls width="492px" height="276px">
+              <source :src="item.metaMediaFileUrl" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+  </div>
+ </div>
 </template>
 
 <script>
@@ -138,18 +149,18 @@ export default defineComponent({
     },
   },
 
-  watch: {
-    currentSlide(newSlide) {
-      if (newSlide === this.numSlides.toString()) {
-        this.currentSlide = "0"; // Reset the slide to the first one
-      }
-    },
-  },
+  // watch: {
+  //   currentSlide(newSlide) {
+  //     if (newSlide === this.numSlides.toString()) {
+  //       this.currentSlide = "0"; // Reset the slide to the first one
+  //     }
+  //   },
+  // },
 });
 </script>
 
 <style scoped>
-.shape1-img3{
+/* .shape1-img3{
   animation: shape-img3 4s infinite 2s linear;
   position: absolute;
   bottom:10px;
@@ -241,5 +252,5 @@ video {
     text-align: center;
     width: 100%;
   }
-}
+} */
 </style>

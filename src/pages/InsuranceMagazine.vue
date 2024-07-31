@@ -1,7 +1,7 @@
 <template>
     <q-page class="page-margin">  
       <section dir="rtl" class="page-margin ">
-       <div class="row justify-center items-center text-center q-gutter-sm ">
+       <div class="row justify-center items-center text-center">
         <div style="height: auto !important;width: 300px !important;" class="col-lg-4">
                 <div class="my-card curve" >
                     <h5 class="text-center  q-pt-lg">مطالب جدید</h5>
@@ -18,9 +18,12 @@
                                 <p class="q-mx-sm item-date text-blue-grey-5">
                                     ۲۹ تیر | ۱۴:۳۰
                                 </p>
-                                <q-btn @click="goToDetails(item)" flat class="text-primary cursor-pointer">
+                                <!-- <RouterLink :to="{name:'blog' ,params : {blogId : item.id}}" flat class="text-primary cursor-pointer">
                                  ادامه مطلب
-                              </q-btn>
+                              </RouterLink> -->
+                              <!-- <router-link :to="{ name: 'blog',params : {blogId : item.id} }">  ادامه مطلب</router-link> -->
+                              <!-- <router-link :to="{ path: '/blog', params: { blogId: item.id }}">About</router-link> -->
+                              <q-btn flat class="cursor-pointer text-primary" @click="navigate(item)">ادامه مطلب</q-btn>
                               </div>
                              
                             </q-card>
@@ -75,9 +78,9 @@
             ]
         }
     } ,
-    methods : {
-        goToDetails(item){
-            this.$router.push(`InsuranceMagazine/blog/${item.id}`);
+    methods:{
+        navigate(item){
+        this.$router.push(`/InsuranceMagazine/blog/${item.id}`);
         }
     }
    
@@ -87,7 +90,7 @@
 <style scoped>
 .page-margin{
     margin-top: 0px !important;
-    padding-top: 0px !important;
+    padding-top: 4px !important;
 }
 .curve{
     border : 1px solid #eee;

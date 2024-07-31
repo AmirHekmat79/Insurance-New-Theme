@@ -10,23 +10,28 @@ const routes = [
       {
         path: 'InsuranceMagazine',
         component: () => import('pages/InsuranceMagazine.vue'),
-        children: [
-          {
-            path: 'blog/:blogId',
-            component: () => import('pages/BlogDetails.vue'),
-            props: true
-          }
-        ]
+        // children: [
+        //   {
+        //     path: 'blog/:blogId',
+        //     component: () => import('pages/BlogDetails.vue'),
+        //     props: true
+        //   }
+        // ]
+      },
+      {
+        path: 'InsuranceMagazine/blog/:blogId',
+        component: () => import('pages/BlogDetails.vue'),
+        props: true
       }
     ]
   },
 
   // Always leave this as last one,
   // but you can also remove it
-  {
-    path: '/:catchAll(.*)*',
-    component: () => import('pages/ErrorNotFound.vue')
-  }
+  // {
+  //   path: '/:catchAll(.*)*',
+  //   component: () => import('pages/ErrorNotFound.vue')
+  // }
 ]
 
 export default routes
