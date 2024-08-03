@@ -113,8 +113,9 @@
   </div>
  </div>
  <q-dialog
+     class="Dialog"
       v-model="showDialog"
-       :full-width="$q.screen.lt.lg"
+       :full-width="$q.screen.lt.md"
     >
       <q-card>
         <q-card-actions align="right" class="bg-white text-teal">
@@ -125,7 +126,7 @@
         </q-card-section>
 
         <q-card-section class="q-pt-none">
-          <video ref="videoPlayer"   class="expand-video"   width="100%" height="100%">
+          <video ref="videoPlayer"   class="expand-video"   width="100%">
               <source :src="selectedVideoUrl" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -206,6 +207,9 @@ export default defineComponent({
 video{
   border-radius: 8px;
 }
+/* @media screen and  {
+  
+} */
 /* .shape1-img3{
   animation: shape-img3 4s infinite 2s linear;
   position: absolute;
