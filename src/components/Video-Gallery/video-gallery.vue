@@ -105,13 +105,35 @@
     </div>
  <div class="row justify-around items-center q-py-lg">
   <div class="col-md-4 q-pa-md relative-position" v-for="item in InsuranceVideoGalleries.filter(item => item.id !== 51361)" :key="item.id">
-    <video ref="videoPlayer"   class="expand-video"   width="100%" height="276px">
+    <video  ref="videoPlayer"   class="expand-video"   width="100%" height="276px">
               <source :src="item.metaMediaFileUrl" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div @click="playVideo"><q-img  width="60px" class="absolute-center" src="../../assets/play-button-round-icon.svg"></q-img></div>
+            <div @click="openDialog(item.metaMediaFileUrl , item.title)" class="cursor-pointer"><q-img  width="60px" class="absolute-center" src="../../assets/play-button-round-icon.svg"></q-img></div>
   </div>
  </div>
+ <q-dialog
+      v-model="showDialog"
+       :full-width="$q.screen.lt.lg"
+    >
+      <q-card>
+        <q-card-actions align="right" class="bg-white text-teal">
+           <q-btn class="popup-btn"> <q-icon name="close" v-close-popup ></q-icon></q-btn>
+        </q-card-actions>
+        <q-card-section>
+          <div class="text-h6 text-center">{{videoTitle }}</div>
+        </q-card-section>
+
+        <q-card-section class="q-pt-none">
+          <video ref="videoPlayer"   class="expand-video"   width="100%" height="100%">
+              <source :src="selectedVideoUrl" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+        </q-card-section>
+
+      
+      </q-card>
+    </q-dialog>
 </template>
 
 <script>
@@ -128,6 +150,9 @@ export default defineComponent({
       autoplay: true,
       autoplayInterval: 3000,
       numSlides: 0,
+      showDialog: false,
+      selectedVideoUrl : '' ,
+      videoTitle : ''
     };
   },
 
@@ -142,17 +167,19 @@ export default defineComponent({
         .then((response) => {
           this.InsuranceVideoGalleries =
             response.data.message?.videoGalleries || [];
-          this.numSlides = Math.ceil(this.InsuranceVideoGalleries.length / 3);
+          // this.numSlides = Math.ceil(this.InsuranceVideoGalleries.length / 3);
         })
         .catch((error) => {
           console.error("Error fetching insurance centre info:", error);
         });
     },
  
-    playVideo(){
-      this.$refs.videoPlayer.target.play();
-    }
-  },
+    openDialog(videoUrl , videoTitle) {
+      this.showDialog = true;
+      this.selectedVideoUrl = videoUrl;
+      this.videoTitle = videoTitle;
+    },
+ }
 
   // watch: {
   //   currentSlide(newSlide) {
@@ -165,6 +192,10 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.popup-btn{
+  outline: none !important;
+  box-shadow: none !important;
+}
 .gallery-title {
   font-size: 32px;
   font: 32px "iransans";
