@@ -120,19 +120,26 @@ export default defineComponent({
       let newIsSubMenu = this.allMenu.some((item) => item.parentId == id);
       return newIsSubMenu;
     },
-    handleUrl(URL) {
-    const urlObject = JSON.parse(URL);
-    const { type, url: urlPath } = urlObject;
+    handleUrl(URL){
+          const urlObject = JSON.parse(URL);
+          const { type, url: urlPath } = urlObject;
+          
+          const baseUrl = 'https://sabz.easybimeh.com';
 
-    if (type === "open") {
-      this.$router.push(urlPath);
-    } else if (type === "redirect") {
-      this.$router.push('/');
-    } else {
-      console.error("Unsupported URL type:", type);
-      return "#";
-    }
-  },
+          if (type === 'open') {
+            if(urlPath == '/about'){
+              this.$router.push(`/AboutUs`);
+            }else{
+              window.location.href =  `${baseUrl}${urlPath}`;
+            }
+            
+          } else if (type === 'redirect') {
+            window.location.href =  `/`;
+          } else {
+            console.error("Unsupported URL type:", type);
+            return '#';
+          }
+          },
   },
 });
 </script>

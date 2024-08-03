@@ -7,7 +7,7 @@
       <section dir="rtl" class="q-py-lg q-mx-auto text-center">
 
           <div class="row justify-center items-center  q-gutter-lg">
-            <div class="col-md-4 col-sm-6 col-xs-12 text-center q-gutter-md form-bg q-pa-lg rounded-borders ">
+            <div class="col-md-4 col-sm-6 col-xs-12 text-right q-gutter-md form-bg q-pa-xl rounded-borders ">
               <q-input v-model="text"  bg-color="white" filled
                 >
                 <template v-slot:append>
@@ -51,9 +51,9 @@
                 filled
                 rows="4"
             />
-            <q-btn style="width: 50%;" class="bg-primary text-center q-mx-auto text-white">ارسال</q-btn>
+            <q-btn style="width: 50%;" class="bg-primary text-center q-mx-auto text-white q-my-xl">ارسال</q-btn>
             </div>
-            <div class="col-md-6 custom-bg rounded-borders font-style">
+            <!-- <div class="col-md-6  rounded-borders font-style">
              <div class="info-container">
               <div class=" q-my-md ">
                 <span  class="text-warning">
@@ -110,6 +110,76 @@
               <a class="cursor-pointer"><q-img width="22px" src="/src/icons/bale.svg"/></a>  
                 </div>
              </div>
+            </div> -->
+
+            <div class="col-md-4">
+              <div>
+            <LottieAnimation
+            :animationData="lottieData"
+            :loop="true"
+             style="width: 400px;"
+            :autoplay="true"
+            />
+          </div>
+          <div class="col-md-6 text-right rounded-borders font-style">
+             <div>
+              <div class=" q-my-md ">
+                <span  class="text-primary">
+                    شماره تلفن :
+                </span>
+                <span class="text-info">
+                    02188308288</span>
+              </div>
+              <div class=" q-my-md ">
+                <span class="text-primary">
+                     آدرس :
+                </span>
+                <span class="text-info">
+                    تهران خیابان قائم مقام فراهانی، خیابان سنایی، خیابان مشاهیر، خیابان غفاری، پلاک 12</span>
+              </div>
+              <div class=" q-my-md ">
+                <span   class="q-my-md text-primary">
+                    ایمیل :
+                </span>
+                <span class="text-info">
+                    
+            info@qbimeh.ir
+        </span>
+              </div>
+              <div>
+                  <span  class="text-primary">
+                      شبکه های اجتماعی : 
+                  
+                  </span>
+                  <a class="cursor-pointer">
+          <q-img width="22px" src="/src/icons/whatsapp.svg"/>
+         </a>
+      <a class="cursor-pointer">
+          <q-img width="22px" src="/src/icons/twitter-x.svg"/>
+              </a>
+              <a class="cursor-pointer">
+                  <q-img  width="22px"  src="/src/icons/telegram.svg"/>
+              </a>
+              <a class="cursor-pointer">
+                  <q-img   width="22px" src="/src/icons/robika.svg"/>
+              </a>
+              <a class="cursor-pointer">
+                  <q-img  width="22px"  src="/src/icons/linkedin.svg"/>
+              </a>
+              <a class="cursor-pointer">
+                  <q-img   width="22px" src="/src/icons/instagram.svg"/>
+              </a>
+              <a class="cursor-pointer">
+                  <q-img   width="22px" src="/src/icons/facebook.svg"/>
+              </a>
+              <a class="cursor-pointer">
+                  <q-img   width="22px"  src="/src/icons/eitaa.svg"/>
+              </a>
+              <a class="cursor-pointer"><q-img width="22px" src="/src/icons/bale.svg"/></a>  
+                </div>
+             </div>
+            </div>
+          
             </div>
           </div>
       </section>
@@ -118,16 +188,18 @@
   
   <script>
   import { defineComponent } from "vue";
-
+  import LottieAnimation from '../components/lottie-animation.vue';
+  import lottieData from 'src/contact.json';
   export default defineComponent({
     name: "ContactUs",
     data(){
         return{
-            message : ''
+            message : '' ,
+            lottieData: lottieData
         }
     },
     components: {
-    
+      LottieAnimation
     },
   });
   </script>
@@ -137,7 +209,7 @@
   background: #EEEE;
   background-position: center;
   background-size: cover;
-  height: 80vh;
+  /* height: 75vh; */
   
 
 }
@@ -147,21 +219,8 @@
 .font-style{
   font-size: 18px;
 }
-.info-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 80vh;
-  align-items: center;
-}
-.custom-bg{
-  background-image: url(../assets/insurance-companies.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 80vh;
-  filter:grayscale(0.6);
 
-}
+
  .cursor-pointer{
     margin: 10px;
  }
