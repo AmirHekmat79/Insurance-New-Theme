@@ -159,7 +159,7 @@
   background-position: center;
   background-size: cover;
   height: 80vh;
-  filter:grayscale(0.5);
+  filter:grayscale(0.6);
 
 }
  .cursor-pointer{
