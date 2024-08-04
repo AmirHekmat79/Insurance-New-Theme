@@ -115,18 +115,18 @@
  <q-dialog
      class="Dialog"
       v-model="showDialog"
-       :full-width="$q.screen.lt.md"
+       :maximized="$q.screen.gt.sm"
     >
       <q-card>
-        <q-card-actions align="right" class="bg-white text-teal">
-           <q-btn class="popup-btn"> <q-icon name="close" v-close-popup ></q-icon></q-btn>
+        <q-card-actions align="right" class="bg-white text-white">
+           <q-badge flat class="popup-btn cursor-pointer q-pa-sm rounded-borders bg-red-5" v-close-popup> بستن</q-badge>
         </q-card-actions>
         <q-card-section>
           <div class="text-h6 text-center">{{videoTitle }}</div>
         </q-card-section>
 
         <q-card-section class="q-pt-none">
-          <video ref="videoPlayer"   class="expand-video"   width="100%">
+          <video ref="videoPlayer"   class="expand-video" controls   style="width: 100% !important;">
               <source :src="selectedVideoUrl" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
