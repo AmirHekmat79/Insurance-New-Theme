@@ -1,7 +1,7 @@
 <template>
     <q-page class="page-margin">  
       <section dir="rtl" class="page-margin ">
-       <div class="row justify-center items-center text-center">
+       <div class="row justify-center items-center text-center" style="align-items: flex-start;">
         <div style="height: auto !important;width: 300px !important;background: #eee;" class="col-lg-4">
                 <div class="my-card curve" >
                     <h5 class="text-center  q-pt-lg">مطالب جدید</h5>
