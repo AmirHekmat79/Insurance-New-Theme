@@ -121,9 +121,9 @@
         <q-card-actions align="right" class="bg-white text-white">
            <q-badge flat class="popup-btn cursor-pointer q-pa-sm rounded-borders bg-red-5" v-close-popup> بستن</q-badge>
         </q-card-actions>
-        <q-card-section>
+        <!-- <q-card-section>
           <div class="text-h6 text-center">{{videoTitle }}</div>
-        </q-card-section>
+        </q-card-section> -->
 
         <q-card-section class="q-pt-none">
           <video ref="videoPlayer"   class="expand-video" controls   style="width: 100% !important;">
