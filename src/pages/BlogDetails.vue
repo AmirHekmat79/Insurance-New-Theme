@@ -1,9 +1,20 @@
 <template>
-    <q-page style="min-height:400px">  
-      <section dir="rtl" class="q-pa-lg text-justify">
-         <div class="blogDetails">
+    <q-page>  
+      <div class="row justify-center  text-justify" style="align-items:stretch;">
+         <div class="col-md-6" dir="rtl">
+          <q-card class="blogDetails q-pa-lg">
         <div v-for="item in magazines.filter(item=>item.id == $route.params.blogId)" :key="item.id">
-            <h6 class="text-center text-primary text-weight-bolder">هر آنچه راجع به {{ item.title }} نیاز است بدانید</h6>
+          <div class="row justify-around items-center q-my-sm">
+            <span class="text-blue-grey-10">
+            ۹ مرداد ۱۴۰۳ | ۰۷:۱۴
+          </span>
+          <span class="q-mx-auto blog-title text-primary text-center text-weight-bolder">هر آنچه راجع به {{ item.title }} نیاز است بدانید</span>
+          <span class="text-blue-grey-10">
+            زمان مورد نیاز برای مطالعه: ۱۰۰ دقیقه
+          </span>
+          </div>
+          <q-separator light  class="q-mb-md"/>
+            
            <div class="column justify-center items-center">
             <q-img class="q-mb-xl" style="background-position: center;background-size: cover;" width="100%" height="400px" :src="item.src"></q-img>
            <h2 class="main-title  text-primary">{{ item.title }}    چیست؟</h2>
@@ -15,7 +26,7 @@
             <LottieAnimation
             :animationData="item.lottieData"
             :loop="true"
-            style="width:100%;"
+            style="width:50%;margin: auto;"
             :autoplay="true"
             />
           </div>
@@ -25,8 +36,43 @@
           </p>
            </div>
           </div>
+         </q-card>
          </div>
-      </section>
+         <div class="col-md-4" style="background: #eee;">
+          <div>
+                <div class="my-card curve" >
+                    <h5 class="text-center  q-pt-lg">مطالب جدید</h5>
+                    <div class="filter-title-underline1"></div>
+                    <div class="filter-title-underline2"></div>
+                <div v-for="item in magazines" :key="item.id" class="q-my-lg">
+                        <div class="column justify-center items-center">
+                            <q-card class="sub-blog-card">
+                              <div class="row justify-between items-center q-ml-md">
+                                  <q-img class="card-side-image q-mx-sm" :src="item.src"> </q-img>
+                               <p class="q-mx-sm item-title"> {{ item.title }}</p>
+                              </div>
+                              <div class="row justify-between items-center q-mr-md">
+                                <p class="q-mx-sm item-date text-blue-grey-5">
+                                    ۲۹ تیر | ۱۴:۳۰
+                                </p>
+
+                              <q-btn flat class="cursor-pointer text-primary" @click="navigate(item)">ادامه مطلب</q-btn>
+                              </div>
+                             
+                            </q-card>
+                            </div>
+                            <q-separator light class="q-my-lg" />
+                </div>
+                
+            <div>
+                <!-- <q-separator light/> -->
+            </div>
+          
+        </div>
+        </div>
+    </div>
+
+      </div>
     </q-page>
   </template>
   
@@ -54,12 +100,53 @@
     } , 
     components:{
       LottieAnimation
+    } ,
+    methods:{
+        navigate(item){
+        this.$router.push(`/InsuranceMagazine/blog/${item.id}`);
+        }
     }
     
   });
   </script>
   
 <style scoped>
+.sub-blog-card{
+    width:260px;
+    padding: 8px;
+}
+.blog-title{
+  font-size: 17px;
+}
+ .my-card{
+    border: 1px solid rgba(248, 245, 245, 0.12);
+ }
+.filter-title-underline1{
+    width: 20%;
+    height: 3px;
+    margin: 5px auto;
+    background: #2980b9;
+}
+.filter-title-underline2{
+    width:30%;
+    height: 3px;
+    margin: auto;
+    background: #2980b9;
+}
+.card-image{
+    /* height: 30vh; */
+    background-position: center;
+    background-size: cover;
+}
+.card-side-image{
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+}
+.curve{
+    border : 1px solid #eee;
+    border-radius: 5px !important;
+}
 .text-fontSize{
   font-size: 17px;
   line-height: 30px;
