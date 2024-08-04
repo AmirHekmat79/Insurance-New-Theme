@@ -4,9 +4,9 @@
             <span class="q-pr-sm text-primary text-weight-bolder contact-title">تماس با ما</span>
             <q-img src="../assets/phone.svg" width="20px"></q-img>
           </div>
-      <section dir="rtl" class="q-py-lg q-mx-auto text-center">
+      <section dir="rtl" class="q-pa-lg q-mx-auto text-center">
 
-          <div class="row justify-center items-center  q-gutter-lg">
+          <div class="row justify-center items-center reverse-wrap text-center q-gutter-md">
             <div class="col-md-4 col-sm-6 col-xs-12 text-right q-gutter-md form-bg q-pa-xl rounded-borders ">
               <q-input v-model="text"  bg-color="white" filled
                 >
@@ -112,7 +112,7 @@
              </div>
             </div> -->
 
-            <div class="col-md-4">
+            <div class="col-md-6  text-right rounded-borders font-style">
               <div>
             <LottieAnimation
             :animationData="lottieData"
@@ -121,9 +121,8 @@
             :autoplay="true"
             />
           </div>
-          <div class="col-md-6 text-right rounded-borders font-style">
              <div>
-              <div class=" q-my-md ">
+              <div class=" q-my-sm">
                 <span  class="text-primary">
                     شماره تلفن :
                 </span>
@@ -178,8 +177,7 @@
               <a class="cursor-pointer"><q-img width="22px" src="/src/icons/bale.svg"/></a>  
                 </div>
              </div>
-            </div>
-          
+           
             </div>
           </div>
       </section>
@@ -209,7 +207,7 @@
   background: #EEEE;
   background-position: center;
   background-size: cover;
-  /* height: 75vh; */
+  height: auto;
   
 
 }
