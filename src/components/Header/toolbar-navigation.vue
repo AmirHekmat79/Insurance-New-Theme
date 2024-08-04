@@ -1,5 +1,5 @@
 <template>
-  <q-toolbar class="only-desktop">
+  <q-toolbar>
     <div class="row justify-between items-center toolbar-content">
       <div class="row justify-start items-center q-ml-auto">
         <div class="row justify-around items-center q-gutter-sm">

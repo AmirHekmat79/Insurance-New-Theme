@@ -2,8 +2,8 @@
     <q-page  style="min-height:400px">  
     <div style="margin: auto !important; text-align: center;">
       <div class="title ">
+        <span class="text-center q-mx-md text-primary text-weight-bolder">درباره ما</span>
         <q-img src="../../src/assets/aboutus-icon.svg" width="25px"></q-img>
-        <span class="text-center q-mx-md text-primary">درباره ما</span>
       </div>
       <section dir="rtl" class="q-py-lg ">
         <div class="row justify-center items-center">
@@ -51,7 +51,7 @@
   }
 
  .title span {
-      font-size: 20px;
+      font-size: 24px;
       
     }
     .title {

@@ -7,7 +7,7 @@
       <section dir="rtl" class="q-pa-lg q-mx-auto text-center">
 
           <div class="row justify-center items-center reverse-wrap text-center q-gutter-md">
-            <div class="col-md-4 col-sm-6 col-xs-12 text-right q-gutter-md form-bg q-pa-xl rounded-borders ">
+            <div class="col-md-6 col-sm-6 col-xs-12 text-center q-gutter-md form-bg q-pa-xl rounded-borders ">
               <q-input v-model="text"  bg-color="white" filled
                 >
                 <template v-slot:append>
@@ -112,12 +112,12 @@
              </div>
             </div> -->
 
-            <div class="col-md-6  text-right rounded-borders font-style">
+            <div class="col-md-4  text-right rounded-borders font-style">
               <div>
             <LottieAnimation
             :animationData="lottieData"
             :loop="true"
-             style="width: 400px;"
+             style="width: 400px; margin: auto;"
             :autoplay="true"
             />
           </div>
@@ -126,21 +126,21 @@
                 <span  class="text-primary">
                     شماره تلفن :
                 </span>
-                <span class="text-info">
+                <span class="text-black">
                     02188308288</span>
               </div>
               <div class=" q-my-md ">
                 <span class="text-primary">
                      آدرس :
                 </span>
-                <span class="text-info">
+                <span class="text-black">
                     تهران خیابان قائم مقام فراهانی، خیابان سنایی، خیابان مشاهیر، خیابان غفاری، پلاک 12</span>
               </div>
               <div class=" q-my-md ">
                 <span   class="q-my-md text-primary">
                     ایمیل :
                 </span>
-                <span class="text-info">
+                <span class="text-black">
                     
             info@qbimeh.ir
         </span>
@@ -171,9 +171,9 @@
               <a class="cursor-pointer">
                   <q-img   width="22px" src="/src/icons/facebook.svg"/>
               </a>
-              <a class="cursor-pointer">
+              <!-- <a class="cursor-pointer">
                   <q-img   width="22px"  src="/src/icons/eitaa.svg"/>
-              </a>
+              </a> -->
               <a class="cursor-pointer"><q-img width="22px" src="/src/icons/bale.svg"/></a>  
                 </div>
              </div>
@@ -207,12 +207,12 @@
   background: #EEEE;
   background-position: center;
   background-size: cover;
-  height: auto;
+  height: 80vh;
   
 
 }
 .contact-title{
-  font-size: 17px;
+  font-size: 24px;
 }
 .font-style{
   font-size: 18px;

@@ -127,9 +127,15 @@ export default defineComponent({
           const baseUrl = 'https://sabz.easybimeh.com';
 
           if (type === 'open') {
-            if(urlPath == '/about'){
+            if(urlPath == '/about' ){
               this.$router.push(`/AboutUs`);
-            }else{
+            }else if (urlPath == '/contactUs') {
+              this.$router.push(`/contactUs`);
+            }
+            else if(urlPath == '/blog'){
+              this.$router.push(`/InsuranceMagazine`);
+            }
+              else{
               window.location.href =  `${baseUrl}${urlPath}`;
             }
             
