@@ -2,6 +2,10 @@
   <q-toolbar>
     <div class="row justify-between items-center toolbar-content">
       <div class="row justify-start items-center q-ml-auto">
+        <q-btn   v-if="$q.screen.lt.lg"
+      @click="toggleSidebar"
+      icon="menu">
+    </q-btn>
         <div class="row justify-around items-center q-gutter-sm">
           <q-btn class="register-btn"
             ><a class="q-mx-md">ثبت نام</a
@@ -37,8 +41,9 @@
           v-model="sidebarVisible"
           side="left"
           show-if-above
+        :breakpoint="700"
           class="q-py-md"
-          :style="{ width: '200px' }"
+          :style="{ width: '200px'  }"
         >
           <q-separator class="q-my-xl" color="gray-blue-10" inset />
           <div
@@ -121,6 +126,9 @@ export default defineComponent({
         (item) => item.parentId == itemId
       );
     },
+    toggleSidebar() {
+      this.sidebarVisible = !this.sidebarVisible;
+    }
   },
   computed: {
     sortedMenuItems() {
@@ -131,13 +139,11 @@ export default defineComponent({
   },
   setup() {
     const sidebarVisible = ref(false);
-    function toggleSidebar() {
-      sidebarVisible.value = !sidebarVisible.value;
-    }
+    
 
     return {
       sidebarVisible,
-      toggleSidebar,
+     
     };
   },
 });
@@ -165,7 +171,7 @@ export default defineComponent({
 .register-btn {
   width: 160px;
   height: 40px;
-  background: #615EFC;
+  background: #007bff;
   color: #ffffff;
   font-size: 17px;
   border-radius: 16px;
@@ -206,7 +212,7 @@ export default defineComponent({
   width: 160px;
   height: 40px;
   margin-right: 10px;
-  background: #615EFC;
+  background: #007bff;
   color: #ffffff;
   font-size: 17px;
   border-radius: 16px;
