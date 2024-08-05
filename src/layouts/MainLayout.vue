@@ -70,17 +70,18 @@ export default defineComponent({
   font-size: 50px;
 }
 .header {
+  padding: 20px;
   width: 1280px;
   margin: auto;
-  border-radius: 500px;
-  margin-top: 50px;
+  border-radius: 1000px;
+  margin-top: 40px;
   background: #EEEEEE;
 }
 
-@media screen and (max-width : 1000px){
+@media screen and (max-width : 1280px){
   .header{
-    border-radius:6px;
-   
+    border-radius:0px;
+   width: 100%;
   }
 }
 </style>
