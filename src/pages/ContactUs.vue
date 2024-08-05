@@ -151,30 +151,30 @@
                   
                   </span>
                   <a class="cursor-pointer">
-          <q-img width="22px" src="/src/icons/whatsapp.svg"/>
+          <q-img width="32px" src="/src/icons/whatsapp.svg"/>
          </a>
       <a class="cursor-pointer">
-          <q-img width="22px" src="/src/icons/twitter-x.svg"/>
+          <q-img width="32px" src="/src/icons/twitter-x.svg"/>
               </a>
               <a class="cursor-pointer">
-                  <q-img  width="22px"  src="/src/icons/telegram.svg"/>
+                  <q-img  width="32px"  src="/src/icons/telegram.svg"/>
               </a>
               <a class="cursor-pointer">
-                  <q-img   width="22px" src="/src/icons/robika.svg"/>
+                  <q-img   width="32px" src="/src/icons/robika.svg"/>
               </a>
               <a class="cursor-pointer">
-                  <q-img  width="22px"  src="/src/icons/linkedin.svg"/>
+                  <q-img  width="32px"  src="/src/icons/linkedin.svg"/>
+              </a>
+              <a class="cursor-pointer"  >
+                  <q-img  width="32px" src="/src/icons/instagram.svg"/>
               </a>
               <a class="cursor-pointer">
-                  <q-img   width="22px" src="/src/icons/instagram.svg"/>
-              </a>
-              <a class="cursor-pointer">
-                  <q-img   width="22px" src="/src/icons/facebook.svg"/>
+                  <q-img   width="32px" src="/src/icons/facebook.svg"/>
               </a>
               <!-- <a class="cursor-pointer">
                   <q-img   width="22px"  src="/src/icons/eitaa.svg"/>
               </a> -->
-              <a class="cursor-pointer"><q-img width="22px" src="/src/icons/bale.svg"/></a>  
+              <a class="cursor-pointer"><q-img width="32px" src="/src/icons/bale.svg"/></a>  
                 </div>
              </div>
            

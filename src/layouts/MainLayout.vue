@@ -80,7 +80,7 @@ export default defineComponent({
 @media screen and (max-width : 1000px){
   .header{
     border-radius:6px;
-    display: none;
+   
   }
 }
 </style>

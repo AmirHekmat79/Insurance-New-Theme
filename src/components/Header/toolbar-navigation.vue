@@ -1,7 +1,7 @@
 <template>
-  <q-toolbar>
-    <div class="row justify-between items-center toolbar-content">
-      <div class="row justify-start items-center q-ml-auto">
+  <q-toolbar >
+    <div class="row justify-between items-center toolbar-content"  >
+      <div class="row justify-start items-center q-ml-auto" >
         <q-btn   v-if="$q.screen.lt.lg"
       @click="toggleSidebar"
       icon="menu">
@@ -41,9 +41,9 @@
           v-model="sidebarVisible"
           side="left"
           show-if-above
-        :breakpoint="700"
+          :breakpoint="700"
           class="q-py-md"
-          :style="{ width: '200px'  }"
+         
         >
           <q-separator class="q-my-xl" color="gray-blue-10" inset />
           <div

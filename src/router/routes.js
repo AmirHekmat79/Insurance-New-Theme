@@ -10,13 +10,6 @@ const routes = [
       {
         path: 'InsuranceMagazine',
         component: () => import('pages/InsuranceMagazine.vue'),
-        // children: [
-        //   {
-        //     path: 'blog/:blogId',
-        //     component: () => import('pages/BlogDetails.vue'),
-        //     props: true
-        //   }
-        // ]
       },
       {
         path: 'InsuranceMagazine/blog/:blogId',
