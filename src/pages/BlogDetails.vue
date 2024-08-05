@@ -1,7 +1,7 @@
 <template>
     <q-page>  
-      <div class="row justify-center  text-justify" style="align-items:stretch;">
-         <div class="col-md-6" dir="rtl">
+      <div class="row justify-center q-gutter-lg q-pa-lg text-justify" style="align-items:stretch;">
+         <div class="col-md-8" dir="rtl">
           <q-card class="blogDetails q-pa-lg">
         <div v-for="item in magazines.filter(item=>item.id == $route.params.blogId)" :key="item.id">
           <div class="row justify-around items-center q-my-sm">
@@ -38,7 +38,7 @@
           </div>
          </q-card>
          </div>
-         <div class="col-md-4" style="background: #eee;">
+         <div class="col-md-3 col-sm-6 col-xs-12 " style="background: #eee;">
           <div>
                 <div class="my-card curve" >
                     <h5 class="text-center  q-pt-lg">مطالب جدید</h5>
