@@ -1,7 +1,7 @@
 <template>
     <q-page class="page-margin">  
       <section dir="rtl" class="page-margin ">
-       <div class="row justify-center items-center text-center" style="align-items: flex-start;">
+       <div class="row justify-around items-center q-pa-md text-center" style="align-items: flex-start;">
         <div style="height: auto !important;width: 300px !important;background: #eee;" class="col-lg-4">
                 <div class="my-card curve" >
                     <h5 class="text-center  q-pt-lg">مطالب جدید</h5>
@@ -38,8 +38,8 @@
         </div>
          </div>
   
-    <div  class="col-md-3 q-mx-md" v-for="item in magazines.filter(item => item.id == 5)" :key="item.id">
-          <q-img :src="item.src"  class="card-img" style="width: 500px; height: 430px;">
+    <div  class="col-md-3 q-mx-lg"  v-for="item in magazines.filter(item => item.id == 5)" :key="item.id">
+          <q-img :src="item.src"  class="card-img" style="width: 500px; height: 70vh;">
      <div class="absolute-full text-subtitle2 flex flex-center">
        {{ item.title }}
      </div>

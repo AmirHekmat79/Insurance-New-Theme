@@ -208,8 +208,6 @@
   background-position: center;
   background-size: cover;
   height: 80vh;
-  
-
 }
 .contact-title{
   font-size: 24px;
