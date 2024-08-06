@@ -1,8 +1,8 @@
 <template>
     <q-page class="page-margin">  
-      <section dir="rtl" class="page-margin ">
-       <div class="row justify-around items-center q-pa-md text-center" style="align-items: flex-start;">
-        <div style="width:300px!important ;height: auto !important;background: #eee;" class="col-lg-3">
+      <section dir="rtl" class="page-margin q-px-md ">
+       <div class="row justify-center items-center  text-center" style="align-items: flex-start;">
+        <div class="col-md-3 col-xs-12" style="width:310px!important ;height: auto !important;background: #eee;" >
                 <div class="my-card curve" >
                     <h5 class="text-center  q-pt-lg">مطالب جدید</h5>
                     <div class="filter-title-underline1"></div>
@@ -38,16 +38,16 @@
         </div>
          </div>
   
-    <div  class="col-md-3  q-mx-sm"  v-for="item in magazines.filter(item => item.id == 5)" :key="item.id">
-          <q-img :src="item.src"  class="card-img" style="width: 600px; height: 71vh;">
+    <div  class="col-md-3 sm-hidden  q-mx-sm"  v-for="item in magazines.filter(item => item.id == 5)" :key="item.id">
+          <q-img :src="item.src"  class="card-img" style="width: 570px; height: 71vh;">
      <div class="absolute-full text-subtitle2 flex flex-center">
        {{ item.title }}
      </div>
    </q-img>
     </div>
-    <div class="col-md-6 col-xs-12" >
+    <div class="col-md-6 text-center col-xs-12" >
             <div class="row justify-center items-center q-gutter-sm">
-                <div class="col-lg-4 card-item" v-for="item in magazines.filter(item => item.id !== 5)" :key="item.id">
+                <div class="col-lg-4  col-sm-6 col-xs-12 card-item" v-for="item in magazines.filter(item => item.id !== 5)" :key="item.id">
         <q-img :src="item.src" class="card-img">
           <div class="absolute-full text-subtitle2 flex flex-center">
             {{ item.title }}
@@ -145,6 +145,11 @@ h5{
     background: #2980b9;
 }
 
+@media screen and (max-width:1600px){
+   .sm-hidden{
+    display: none;
+   }
+}
 /* @media screen and (max-width : 1030px) {
     .only-in-large{
         display: none;
