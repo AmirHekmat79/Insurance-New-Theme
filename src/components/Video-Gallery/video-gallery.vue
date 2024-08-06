@@ -205,7 +205,7 @@ export default defineComponent({
   text-align: right;
 }
 video{
-  border-radius: 8px;
+  border-radius: 10px !important;
 }
 /* @media screen and  {
   

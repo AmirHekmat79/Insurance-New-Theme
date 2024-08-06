@@ -331,7 +331,7 @@ export default defineComponent({
 
 <template>
   <q-toolbar class="text-primary text-center column justify-start items-center q-py-md q-mx-md">
-    <div class="row justify-between items-center">
+    <div class="row justify-between items-center" style="width: 95%;">
       <q-btn @click="toggleSidebar" flat class="text-black  hambergur-menu" icon="menu"></q-btn>
       <!-- <div class="login-btn-group justify-between items-center ">
         <q-btn class="register-btn"><a>ثبت نام</a></q-btn>

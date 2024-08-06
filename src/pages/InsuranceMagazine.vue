@@ -2,7 +2,7 @@
     <q-page class="page-margin">  
       <section dir="rtl" class="page-margin ">
        <div class="row justify-around items-center q-pa-md text-center" style="align-items: flex-start;">
-        <div style="height: auto !important;width: 300px !important;background: #eee;" class="col-lg-4">
+        <div style="width:300px!important ;height: auto !important;background: #eee;" class="col-lg-3">
                 <div class="my-card curve" >
                     <h5 class="text-center  q-pt-lg">مطالب جدید</h5>
                     <div class="filter-title-underline1"></div>
@@ -38,14 +38,14 @@
         </div>
          </div>
   
-    <div  class="col-md-3 q-mx-lg"  v-for="item in magazines.filter(item => item.id == 5)" :key="item.id">
-          <q-img :src="item.src"  class="card-img" style="width: 500px; height: 70vh;">
+    <div  class="col-md-3  q-mx-sm"  v-for="item in magazines.filter(item => item.id == 5)" :key="item.id">
+          <q-img :src="item.src"  class="card-img" style="width: 600px; height: 71vh;">
      <div class="absolute-full text-subtitle2 flex flex-center">
        {{ item.title }}
      </div>
    </q-img>
     </div>
-    <div class="col-md-6" >
+    <div class="col-md-6 col-xs-12" >
             <div class="row justify-center items-center q-gutter-sm">
                 <div class="col-lg-4 card-item" v-for="item in magazines.filter(item => item.id !== 5)" :key="item.id">
         <q-img :src="item.src" class="card-img">
