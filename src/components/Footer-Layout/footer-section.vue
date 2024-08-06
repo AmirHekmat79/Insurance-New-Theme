@@ -117,14 +117,16 @@ export default {
   methods: {
     initMap() {
       this.map = L.map("footer-map", {
-        center: [51.5074, -0.1278],
+        center: [35.72713135221933, 51.4136544156329],
         zoom: 13,
         scrollWheelZoom: false,
+        attributionControl: false
       });
 
-      L.tileLayer("@/assets/map.png", {}).addTo(this.map);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {}).addTo(this.map);
 
-      L.marker([51.5074, -0.1278]).addTo(this.map);
+      L.marker([35.72713135221933, 51.4136544156329]).addTo(this.map);
+      
     },
     getPolicyIntroduction() {
       apiService
