@@ -1,8 +1,8 @@
 <template>
     <q-page>
-        <div class="title text-center q-py-md q-mr-sm">
+        <div class="title row justify-center items-center text-center q-py-md q-mr-sm">
             <span class="q-pr-sm text-primary text-weight-bolder contact-title">تماس با ما</span>
-            <q-img src="../assets/phone.svg" width="20px"></q-img>
+            <q-img src="../assets/phone.svg" width="32px"></q-img>
           </div>
       <section dir="rtl" class="q-pa-lg q-mx-auto text-center">
 
@@ -210,7 +210,7 @@
   height: 80vh;
 }
 .contact-title{
-  font-size: 24px;
+  font-size: 32px;
 }
 .font-style{
   font-size: 18px;

@@ -5,11 +5,21 @@
         ><q-img src="../../assets/footerLogo.png" width="200px"></q-img
       ></q-btn>
       <div class="row justify-start items-center q-my-lg q-gutter-md">
-        <q-img src="../../assets/telegramX.png" width="24px"></q-img>
-        <q-img src="../../assets/linkedin.png" width="24px"></q-img>
-        <q-img src="../../assets/youtube.png" width="24px"></q-img>
-        <q-img src="../../assets/whatsapp.png" width="24px"></q-img>
-        <q-img src="../../assets/telegram.png" width="24px"></q-img>
+        <a class="cursor-pointer">
+                  <q-img  width="24px"  src="/src/icons/telegram (2) 1 (1).svg"/>
+              </a>
+              <a class="cursor-pointer">
+                  <q-img  width="24px"  src="/src/icons/linkedin (1) 1 (2).svg"/>
+              </a>
+              <a class="cursor-pointer">
+          <q-img width="24px" src="/src/icons/twitter (1) 1 (1).svg"/>
+              </a>
+        <a class="cursor-pointer">
+          <q-img width="24px" src="/src/icons/whatsapp 1 (1).svg"/>
+         </a>
+        <a class="cursor-pointer"  >
+                  <q-img   width="24px" src="/src/icons/instagram (3) 1 (1).svg"/>
+              </a>
       </div>
       <div class="row justify-start items-center q-gutter-sm">
         <div class="q-mb-md">
