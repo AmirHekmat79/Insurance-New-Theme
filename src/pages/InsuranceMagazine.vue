@@ -1,66 +1,67 @@
 <template>
-    <q-page class="page-margin">  
-      <section dir="rtl" class="page-margin q-px-md ">
-       <div class="row justify-center items-center  text-center" style="align-items: flex-start;">
-        <div class="col-md-3 col-xs-12" style="width:310px!important ;height: auto !important;background: #eee;" >
-                <div class="my-card curve" >
-                    <h5 class="text-center  q-pt-lg">مطالب جدید</h5>
-                    <div class="filter-title-underline1"></div>
-                    <div class="filter-title-underline2"></div>
-                <div v-for="item in magazines" :key="item.id" class="q-my-lg">
-                        <div class="column justify-center items-center">
-                            <q-card class="sub-blog-card">
-                              <div class="row justify-between items-center q-ml-md">
-                                  <q-img class="card-side-image q-mx-sm" :src="item.src"> </q-img>
-                               <p class="q-mx-sm item-title"> {{ item.title }}</p>
-                              </div>
-                              <div class="row justify-between items-center q-mr-md">
-                                <p class="q-mx-sm item-date text-blue-grey-5">
-                                    ۲۹ تیر | ۱۴:۳۰
-                                </p>
-                                <!-- <RouterLink :to="{name:'blog' ,params : {blogId : item.id}}" flat class="text-primary cursor-pointer">
-                                 ادامه مطلب
-                              </RouterLink> -->
-                              <!-- <router-link :to="{ name: 'blog',params : {blogId : item.id} }">  ادامه مطلب</router-link> -->
-                              <!-- <router-link :to="{ path: '/blog', params: { blogId: item.id }}">About</router-link> -->
-                              <q-btn flat class="cursor-pointer text-primary" @click="navigate(item)">ادامه مطلب</q-btn>
-                              </div>
-                             
-                            </q-card>
-                            </div>
-                            <q-separator light class="q-my-lg" />
+    <q-page class="page-margin">
+      <section dir="rtl" class="container">
+        <div class="row justify-center items-center text-center">
+          <div class="col-md-3 col-xs-12">
+            <div class="my-card curve">
+              <h5 class="text-center q-pt-lg">مطالب جدید</h5>
+              <div class="filter-title-underline1"></div>
+              <div class="filter-title-underline2"></div>
+              <div v-for="item in magazines" :key="item.id" class="q-my-md">
+                <div class="column justify-center items-center">
+                  <q-card class="sub-blog-card">
+                    <div class="row justify-between items-center q-ml-md">
+                      <q-img class="card-side-image q-mx-sm" :src="item.src"></q-img>
+                      <p class="q-mx-sm item-title">{{ item.title }}</p>
+                    </div>
+                    <div class="row justify-between items-center q-mr-md">
+                      <p class="q-mx-sm item-date text-blue-grey-5">
+                        ۲۹ تیر | ۱۴:۳۰
+                      </p>
+                      <q-btn flat class="cursor-pointer text-primary" @click="navigate(item)">ادامه مطلب</q-btn>
+                    </div>
+                  </q-card>
                 </div>
-                
-            <div>
-                <!-- <q-separator light/> -->
+                <q-separator light class="q-my-lg" />
+              </div>
             </div>
-          
-        </div>
-         </div>
-  
-    <div  class="col-md-3 sm-hidden  q-mx-sm"  v-for="item in magazines.filter(item => item.id == 5)" :key="item.id">
-          <q-img :src="item.src"  class="card-img" style="width: 570px; height: 71vh;">
-     <div class="absolute-full text-subtitle2 flex flex-center">
-       {{ item.title }}
-     </div>
-   </q-img>
-    </div>
-    <div class="col-md-6 text-center col-xs-12" >
-            <div class="row justify-center items-center q-gutter-sm">
-                <div class="col-lg-4  col-sm-6 col-xs-12 card-item" v-for="item in magazines.filter(item => item.id !== 5)" :key="item.id">
-        <q-img :src="item.src" class="card-img">
-          <div class="absolute-full text-subtitle2 flex flex-center">
-            {{ item.title }}
           </div>
-        </q-img>
-         </div>
+          <div class="col-md-6  text-center col-xs-12 q-px-lg">
+            <div class="row justify-center items-center q-gutter-sm">
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 card-item" v-for="item in magazines.filter(item => item.id !== 5)" :key="item.id">
+                <q-img :src="item.src" class="card-img">
+                  <div class="absolute-full text-subtitle2 flex flex-center">
+                    {{ item.title }}
+                  </div>
+                </q-img>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-       </div>
+        <div class="row justify-center items-center q-my-sm q-px-lg">
+          <div class="col-md-3 col-xs-12"></div>
+          <div class="col-md-6 text-center col-xs-12">
+            <div class="row justify-center items-center  q-my-md" v-for="item in magazines" :key="item.id">
+              <div class="col-md-12 shadow-10 rounded-borders">
+                <div>
+                  <div  class=" justify-around items-center flex no-wrap q-mx-auto">
+                    <div  class="q-pr-sm">
+                      <q-img class="rounded-borders" width="300px" height="160px" :src="item.src"></q-img>
+                    </div>
+                    <div class="q-px-md">
+                      <h5>{{ item.title }}</h5> 
+                      <div class="q-my-md text-amber"> {{(121212).toLocaleString('fa-IR')}}</div>
+                      <div class="caption">{{ item.caption }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </q-page>
   </template>
-  
   <script>
   import { defineComponent } from "vue";
 
@@ -72,10 +73,11 @@
                 {id : 1 , title : 'بیمه مسافرتی' , src:'src/assets/national-insurance.jpg'  , caption : 'بیمه مسافرتی، بیمه ایست که از شما در برابر خطراتی که در طول سفر تهدیدتان میکند، محافظت میکند.'} ,
                 {id : 2 , title : 'بیمه عمر' , src:'src/assets/rain.png' , caption : ' بیمه عمر از دیدگاه حقوقی، قراردادی است که به موجب آن بیمه‌گر در مقابل دریافت حق‌بیمه از بیمه‌گذار متعهد می‌شود'} ,
                 {id : 3 , title : 'بیمه بدنه' , src:'src/assets/body-insurance.jpg' , caption : 'همچنین مزیت های دیگری نیز دارد.بیمه بدنه، بیمه‌های اختیاری است که میتواند به عنوان مکمل بیمه شخص ثالث استفاده شود.    .'} ,
-                {id : 4 , title : 'بیمه آتش سوزی' , src:'src/assets/fire-insurance.jpg' , caption : 'بیمه آتش سوزی ساختمان، بیمه‌های اختیاری است که متأسفانه لزوم خرید آن، زمانی که خیلی دیر شده است، احساس میشود...'} ,
-                {id : 5 , title : 'بیمه شخص ثالث' , src:'src/assets/car-insurance.jpg' , caption : 'بیمه شخص ثالث، طرح بیمه‌های الزامی برای دارندگان وسایل نقلیه موتوری است.'} ,
+                {id : 4 , title : 'بیمه آتش سوزی' , src:'src/assets/fire-insurance.jpg' , caption : 'همچنین مزیت های دیگری نیز دارد.بیمه آتش سوزی ساختمان، بیمه‌های اختیاری است که متأسفانه لزوم خرید آن، زمانی که ...'} ,
+                {id : 5 , title : 'بیمه شخص ثالث' , src:'src/assets/car-insurance.jpg' , caption : 'همچنین مزیت های دیگری نیز دارد.بیمه شخص ثالث، طرح بیمه‌های الزامی برای دارندگان وسایل نقلیه موتوری است.'} ,
 
-            ]
+            ] ,
+        
         }
     } ,
     methods:{
@@ -123,9 +125,7 @@
     height: 60px;
     border-radius: 5px;
 }
-/* .card-item{
-    height: 500px !important;
-} */
+
 h5{
     margin-bottom: 0px !important;
 }
@@ -150,21 +150,19 @@ h5{
     display: none;
    }
 }
-/* @media screen and (max-width : 1030px) {
-    .only-in-large{
-        display: none;
-    }
-}
-@media screen and (min-width : 1030px) {
 
-    .only-in-small{
-        display: none;
+@media screen  and (max-width : 800px){
+    .caption{
+        font-size: 16px;
     }
 }
-@media screen and (min-width : 1210px) and (max-width : 1350px) {
-   .blog-card{
-    width: 300px;
-   }
-} */
+@media screen  and (min-width : 801px){
+    .caption{
+        font-size: 16px;
+        padding-bottom: 8px !important;
+    }
+}
 </style>
   
+
+   

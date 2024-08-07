@@ -152,7 +152,7 @@ export default {
 }
 .Footer {
   padding: 11px;
-  background: #3d8de8;
+  background: #16697a;
   color: #fff !important;
   position: absolute;
   overflow: hidden;
