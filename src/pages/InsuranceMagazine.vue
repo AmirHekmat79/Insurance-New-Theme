@@ -1,7 +1,7 @@
 <template>
-    <q-page class="page-margin">
+    <q-page>
       <section dir="rtl" class="container">
-        <div class="row justify-center items-center text-center">
+        <div class="row justify-center items-center text-center" style="align-items: stretch;">
           <div class="col-md-3 col-xs-12">
             <div class="my-card curve">
               <h5 class="text-center q-pt-lg">مطالب جدید</h5>
@@ -9,18 +9,18 @@
               <div class="filter-title-underline2"></div>
               <div v-for="item in magazines" :key="item.id" class="q-my-md">
                 <div class="column justify-center items-center">
-                  <q-card class="sub-blog-card">
-                    <div class="row justify-between items-center q-ml-md">
+                  <div class="sub-blog-card">
+                    <div class="row justify-around items-center q-ml-sm">
                       <q-img class="card-side-image q-mx-sm" :src="item.src"></q-img>
-                      <p class="q-mx-sm item-title">{{ item.title }}</p>
+                      <p class="item-title">{{ item.title }}</p>
                     </div>
-                    <div class="row justify-between items-center q-mr-md">
+                    <div class="row justify-around items-center  q-py-sm">
                       <p class="q-mx-sm item-date text-blue-grey-5">
                         ۲۹ تیر | ۱۴:۳۰
                       </p>
                       <q-btn flat class="cursor-pointer text-primary" @click="navigate(item)">ادامه مطلب</q-btn>
                     </div>
-                  </q-card>
+                  </div>
                 </div>
                 <q-separator light class="q-my-lg" />
               </div>
@@ -28,7 +28,7 @@
           </div>
           <div class="col-md-6  text-center col-xs-12 q-px-lg">
             <div class="row justify-center items-center q-gutter-sm">
-              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 card-item" v-for="item in magazines.filter(item => item.id !== 5)" :key="item.id">
+              <div class="col-lg-5 col-md-4 col-sm-6 col-xs-12 card-item" v-for="item in magazines.filter(item => item.id !== 5)" :key="item.id">
                 <q-img :src="item.src" class="card-img">
                   <div class="absolute-full text-subtitle2 flex flex-center">
                     {{ item.title }}
@@ -38,19 +38,19 @@
             </div>
           </div>
         </div>
-        <div class="row justify-center items-center q-my-sm q-px-lg">
+        <div class="row justify-center  text-center items-center q-my-sm q-px-lg">
           <div class="col-md-3 col-xs-12"></div>
           <div class="col-md-6 text-center col-xs-12">
             <div class="row justify-center items-center  q-my-md" v-for="item in magazines" :key="item.id">
               <div class="col-md-12 shadow-10 rounded-borders">
                 <div>
-                  <div  class=" justify-around items-center flex no-wrap q-mx-auto">
+                  <div  class=" justify-center items-center flex no-wrap ">
                     <div  class="q-pr-sm">
                       <q-img class="rounded-borders" width="300px" height="160px" :src="item.src"></q-img>
                     </div>
                     <div class="q-px-md">
                       <h5>{{ item.title }}</h5> 
-                      <div class="q-my-md text-amber"> {{(121212).toLocaleString('fa-IR')}}</div>
+                      <div class="q-my-md text-amber"> {{currentDate}}</div>
                       <div class="caption">{{ item.caption }}</div>
                     </div>
                   </div>
@@ -77,26 +77,33 @@
                 {id : 5 , title : 'بیمه شخص ثالث' , src:'src/assets/car-insurance.jpg' , caption : 'همچنین مزیت های دیگری نیز دارد.بیمه شخص ثالث، طرح بیمه‌های الزامی برای دارندگان وسایل نقلیه موتوری است.'} ,
 
             ] ,
-        
+
+        date : new Date()
         }
     } ,
     methods:{
         navigate(item){
         this.$router.push(`/InsuranceMagazine/blog/${item.id}`);
         }
+    } ,
+
+    computed: {
+    currentDate() {
+      return new Date().getFullYear();
     }
+  }
    
   });
   </script>
   
 <style scoped>
-.page-margin{
+/* .page-margin{
     margin-top: 0px !important;
     padding-top: 4px !important;
-}
+} */
 .curve{
-    border : 1px solid #eee;
-    border-radius: 5px !important;
+    border : 2px solid #e7e5e5;
+    border-radius: 4px !important;
 }
 .item-title{
     font-size: 14px;
@@ -129,9 +136,7 @@
 h5{
     margin-bottom: 0px !important;
 }
- .my-card{
-    border: 1px solid rgba(248, 245, 245, 0.12);
- }
+
 .filter-title-underline1{
     width: 20%;
     height: 3px;
