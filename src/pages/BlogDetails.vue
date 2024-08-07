@@ -38,28 +38,28 @@
           </div>
          </q-card>
          </div>
-         <div class="col-md-3 col-sm-6 col-xs-12 " style="background: #eee;">
+         <div class="col-md-3 col-sm-6 col-xs-12 shadow-1">
           <div>
                 <div class="my-card curve" >
                     <h5 class="text-center  q-pt-lg">مطالب جدید</h5>
                     <div class="filter-title-underline1"></div>
                     <div class="filter-title-underline2"></div>
-                <div v-for="item in magazines" :key="item.id" class="q-my-lg">
+                <div v-for="item in magazines" :key="item.id" class="q-my-md">
                         <div class="column justify-center items-center">
-                            <q-card class="sub-blog-card">
-                              <div class="row justify-between items-center q-ml-md">
-                                  <q-img class="card-side-image q-mx-sm" :src="item.src"> </q-img>
-                               <p class="q-mx-sm item-title"> {{ item.title }}</p>
+                            <div class="sub-blog-card">
+                              <div class="row justify-around items-center q-ml-sm q-my-md">
+                                <p class="q-mx-sm item-title"> {{ item.title }}</p>
+                                <q-img class="card-side-image q-mx-sm" :src="item.src"> </q-img>
                               </div>
-                              <div class="row justify-between items-center q-mr-md">
+                              <div class="row justify-around items-center q-mr-sm ">
+                                
+                                <q-btn flat class="cursor-pointer text-primary" @click="navigate(item)">ادامه مطلب</q-btn>
                                 <p class="q-mx-sm item-date text-blue-grey-5">
                                     ۲۹ تیر | ۱۴:۳۰
                                 </p>
-
-                              <q-btn flat class="cursor-pointer text-primary" @click="navigate(item)">ادامه مطلب</q-btn>
                               </div>
                              
-                            </q-card>
+                            </div>
                             </div>
                             <q-separator light class="q-my-lg" />
                 </div>
@@ -139,8 +139,8 @@
     background-size: cover;
 }
 .card-side-image{
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 5px;
 }
 .curve{

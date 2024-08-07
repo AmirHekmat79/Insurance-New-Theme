@@ -38,13 +38,13 @@
             </div>
           </div>
         </div>
-        <div class="row justify-center  text-center items-center q-my-sm q-px-lg">
+        <div class="row justify-center  text-center items-center q-px-lg" style="align-items: stretch;">
           <div class="col-md-3 col-xs-12"></div>
           <div class="col-md-6 text-center col-xs-12">
             <div class="row justify-center items-center  q-my-md" v-for="item in magazines" :key="item.id">
               <div class="col-md-12 shadow-10 rounded-borders">
                 <div>
-                  <div  class=" justify-center items-center flex no-wrap ">
+                  <div  class="justify-center items-center flex no-wrap ">
                     <div  class="q-pr-sm">
                       <q-img class="rounded-borders" width="300px" height="160px" :src="item.src"></q-img>
                     </div>
